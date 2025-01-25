@@ -13,7 +13,6 @@ OSTrack is an artificial intelligence technology for tracking and locking unmann
 
 ## 2.Usage
 
-
 ## 5.Thanks
 
 ```bash
