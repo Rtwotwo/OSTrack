@@ -86,17 +86,14 @@ def CalculateSpectrogramImage(frame, spec_height=200, spec_width=200):
 
 
 ###############################  配置模型的解析文件  ############################
-# config_file location:
-# ostrack model: MCJT-master\lib\models\ostrack\ostrack.py
-# ostrack test : MCJT-master\tracking\test.py
-# ostrack config: MCJT-master\lib\config\ostrack\config.py
-
 def load_config(config_path):
     """read the configuration file"""
     with open(config_path, 'r') as file:
         config = yaml.safe_load(file)
-    return config
+    return config 
 
+
+###############################  主函数测试分析  ################################ 
 if __name__ == '__main__':
     config_path = './config/vitb_384_mae_ce_32x4_got10k_ep100.yaml'
     config = load_config(config_path)
