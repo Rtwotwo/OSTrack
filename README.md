@@ -1,6 +1,6 @@
 # __OSTrack__
 
-OSTrack is an artificial intelligence technology for tracking and locking unmanned aerial vehicles based on the ViT deep network model. OSTrack is based on the Vision of Transformer deep learning model. For unmanned aerial vehicles moving at high speed in the near and far fields, it uses visual tracking to lock the position of the unmanned aerial vehicle in real-time video frames. The model mainly uses multiple initial anchor bounding boxes, obtains feature maps through feature extraction based on network input, and the position of the unmanned aerial vehicle is determined by the votes of the anchor boxes given by the network model. The trained network model has certain robustness to near and far fields, partial occlusion, and light changes.
+OSTrack is an artificial intelligence technology for tracking and locking unmanned aerial vehicles based on the ViT deep network model. OSTrack is based on the Vision of Transformer deep learning model. For unmanned aerial vehicles moving at high speed in the near and far fields, it uses visual tracking to lock the position of the unmanned aerial vehicle in real-time video frames. The model mainly uses multiple initial anchor bounding boxes, obtains feature maps through feature extraction based on network input, and the position of the unmanned aerial vehicle is determined by the votes of the anchor boxes given by the network model. The trained network model has certain robustness to near and far fields, partial occlusion, and light changes.  
 ![Cover Image](assets/cover_img.png)
 
 ## 1.Runtime Environment
@@ -14,7 +14,8 @@ OSTrack is an artificial intelligence technology for tracking and locking unmann
 ## 2.Usage
 
 Now you can use utils.py to get the ostrack model and use it for training and testing.
-the model architecture is shown below:
+the model architecture is shown below:  
+
 ![1](assets/ostrack_1.png)
 
 ## 3.Thanks
