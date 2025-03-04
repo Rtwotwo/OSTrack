@@ -1,0 +1,179 @@
+2022-12-20 14:29:36,081 INFO    StreamThr :19623 [internal.py:wandb_internal():87] W&B internal server running at pid: 19623, started at: 2022-12-20 14:29:36.080423
+2022-12-20 14:29:36,084 DEBUG   HandlerThread:19623 [handler.py:handle_request():139] handle_request: status
+2022-12-20 14:29:36,086 DEBUG   SenderThread:19623 [sender.py:send_request():317] send_request: status
+2022-12-20 14:29:36,088 INFO    WriterThread:19623 [datastore.py:open_for_write():75] open: /media/estar/Data/LY/Models/OSTrack-v2/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221220_142936-2uzn8cef/run-2uzn8cef.wandb
+2022-12-20 14:29:36,089 DEBUG   SenderThread:19623 [sender.py:send():303] send: header
+2022-12-20 14:29:36,089 DEBUG   SenderThread:19623 [sender.py:send():303] send: run
+2022-12-20 14:29:36,934 DEBUG   HandlerThread:19623 [handler.py:handle_request():139] handle_request: check_version
+2022-12-20 14:29:36,938 INFO    SenderThread:19623 [dir_watcher.py:__init__():216] watching files in: /media/estar/Data/LY/Models/OSTrack-v2/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221220_142936-2uzn8cef/files
+2022-12-20 14:29:36,938 INFO    SenderThread:19623 [sender.py:_start_run_threads():928] run started: 2uzn8cef with start time 1671517776.073579
+2022-12-20 14:29:36,938 DEBUG   SenderThread:19623 [sender.py:send():303] send: summary
+2022-12-20 14:29:36,938 INFO    SenderThread:19623 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-20 14:29:36,939 DEBUG   SenderThread:19623 [sender.py:send_request():317] send_request: check_version
+2022-12-20 14:29:37,942 INFO    Thread-13 :19623 [dir_watcher.py:_on_file_created():275] file/dir created: /media/estar/Data/LY/Models/OSTrack-v2/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221220_142936-2uzn8cef/files/wandb-summary.json
+2022-12-20 14:29:37,975 DEBUG   HandlerThread:19623 [handler.py:handle_request():139] handle_request: run_start
+2022-12-20 14:29:37,982 DEBUG   HandlerThread:19623 [system_info.py:__init__():31] System info init
+2022-12-20 14:29:37,982 DEBUG   HandlerThread:19623 [system_info.py:__init__():46] System info init done
+2022-12-20 14:29:37,983 INFO    HandlerThread:19623 [system_monitor.py:start():150] Starting system monitor
+2022-12-20 14:29:37,983 INFO    SystemMonitor:19623 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2022-12-20 14:29:37,983 INFO    HandlerThread:19623 [system_monitor.py:probe():171] Collecting system info
+2022-12-20 14:29:37,984 INFO    SystemMonitor:19623 [interfaces.py:start():168] Started cpu
+2022-12-20 14:29:37,984 INFO    SystemMonitor:19623 [interfaces.py:start():168] Started disk
+2022-12-20 14:29:37,985 INFO    SystemMonitor:19623 [interfaces.py:start():168] Started gpu
+2022-12-20 14:29:37,985 INFO    SystemMonitor:19623 [interfaces.py:start():168] Started memory
+2022-12-20 14:29:37,986 INFO    SystemMonitor:19623 [interfaces.py:start():168] Started network
+2022-12-20 14:29:38,080 DEBUG   HandlerThread:19623 [system_info.py:probe():195] Probing system
+2022-12-20 14:29:38,087 DEBUG   HandlerThread:19623 [git.py:repo():40] git repository is invalid
+2022-12-20 14:29:38,087 DEBUG   HandlerThread:19623 [system_info.py:probe():241] Probing system done
+2022-12-20 14:29:38,088 DEBUG   HandlerThread:19623 [system_monitor.py:probe():180] {'os': 'Linux-4.15.0-142-generic-x86_64-with-glibc2.17', 'python': '3.8.15', 'heartbeatAt': '2022-12-20T06:29:38.080703', 'startedAt': '2022-12-20T06:29:36.063132', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/media/estar/Data/LY/Models/OSTrack-v2/lib/train/run_training.py', 'codePath': 'run_training.py', 'host': 'estar-SYS-4029GP-TRT', 'username': 'junjie', 'executable': '/home/junjie/libraries/anaconda3/envs/LY-ostrack/bin/python3.8', 'cpu_count': 52, 'cpu_count_logical': 104, 'cpu_freq': {'current': 1866.0006057692312, 'min': 1200.0, 'max': 2501.0}, 'cpu_freq_per_core': [{'current': 1283.897, 'min': 1200.0, 'max': 2501.0}, {'current': 2292.899, 'min': 1200.0, 'max': 2501.0}, {'current': 1200.598, 'min': 1200.0, 'max': 2501.0}, {'current': 1200.911, 'min': 1200.0, 'max': 2501.0}, {'current': 3478.409, 'min': 1200.0, 'max': 2501.0}, {'current': 2175.81, 'min': 1200.0, 'max': 2501.0}, {'current': 1200.841, 'min': 1200.0, 'max': 2501.0}, {'current': 1373.591, 'min': 1200.0, 'max': 2501.0}, {'current': 2090.828, 'min': 1200.0, 'max': 2501.0}, {'current': 1201.045, 'min': 1200.0, 'max': 2501.0}, {'current': 3393.814, 'min': 1200.0, 'max': 2501.0}, {'current': 1300.921, 'min': 1200.0, 'max': 2501.0}, {'current': 1201.108, 'min': 1200.0, 'max': 2501.0}, {'current': 3478.625, 'min': 1200.0, 'max': 2501.0}, {'current': 3411.985, 'min': 1200.0, 'max': 2501.0}, {'current': 3398.036, 'min': 1200.0, 'max': 2501.0}, {'current': 1578.106, 'min': 1200.0, 'max': 2501.0}, {'current': 3370.053, 'min': 1200.0, 'max': 2501.0}, {'current': 1201.164, 'min': 1200.0, 'max': 2501.0}, {'current': 2205.084, 'min': 1200.0, 'max': 2501.0}, {'current': 3414.285, 'min': 1200.0, 'max': 2501.0}, {'current': 1200.927, 'min': 1200.0, 'max': 2501.0}, {'current': 2744.613, 'min': 1200.0, 'max': 2501.0}, {'current': 1201.21, 'min': 1200.0, 'max': 2501.0}, {'current': 1575.649, 'min': 1200.0, 'max': 2501.0}, {'current': 1334.585, 'min': 1200.0, 'max': 2501.0}, {'current': 1855.355, 'min': 1200.0, 'max': 2501.0}, {'current': 1697.808, 'min': 1200.0, 'max': 2501.0}, {'current': 1300.276, 'min': 1200.0, 'max': 2501.0}, {'current': 1201.156, 'min': 1200.0, 'max': 2501.0}, {'current': 1201.001, 'min': 1200.0, 'max': 2501.0}, {'current': 3007.625, 'min': 1200.0, 'max': 2501.0}, {'current': 1200.725, 'min': 1200.0, 'max': 2501.0}, {'current': 1243.515, 'min': 1200.0, 'max': 2501.0}, {'current': 1255.851, 'min': 1200.0, 'max': 2501.0}, {'current': 1962.49, 'min': 1200.0, 'max': 2501.0}, {'current': 1202.143, 'min': 1200.0, 'max': 2501.0}, {'current': 1600.002, 'min': 1200.0, 'max': 2501.0}, {'current': 1940.686, 'min': 1200.0, 'max': 2501.0}, {'current': 1300.004, 'min': 1200.0, 'max': 2501.0}, {'current': 3019.615, 'min': 1200.0, 'max': 2501.0}, {'current': 3328.396, 'min': 1200.0, 'max': 2501.0}, {'current': 1204.637, 'min': 1200.0, 'max': 2501.0}, {'current': 1337.948, 'min': 1200.0, 'max': 2501.0}, {'current': 2496.72, 'min': 1200.0, 'max': 2501.0}, {'current': 1205.523, 'min': 1200.0, 'max': 2501.0}, {'current': 1287.443, 'min': 1200.0, 'max': 2501.0}, {'current': 1298.511, 'min': 1200.0, 'max': 2501.0}, {'current': 1200.697, 'min': 1200.0, 'max': 2501.0}, {'current': 1200.226, 'min': 1200.0, 'max': 2501.0}, {'current': 1240.999, 'min': 1200.0, 'max': 2501.0}, {'current': 3247.999, 'min': 1200.0, 'max': 2501.0}, {'current': 1298.619, 'min': 1200.0, 'max': 2501.0}, {'current': 1667.795, 'min': 1200.0, 'max': 2501.0}, {'current': 1200.064, 'min': 1200.0, 'max': 2501.0}, {'current': 1201.001, 'min': 1200.0, 'max': 2501.0}, {'current': 3499.285, 'min': 1200.0, 'max': 2501.0}, {'current': 1807.759, 'min': 1200.0, 'max': 2501.0}, {'current': 1201.296, 'min': 1200.0, 'max': 2501.0}, {'current': 1788.964, 'min': 1200.0, 'max': 2501.0}, {'current': 2289.539, 'min': 1200.0, 'max': 2501.0}, {'current': 1201.247, 'min': 1200.0, 'max': 2501.0}, {'current': 3474.758, 'min': 1200.0, 'max': 2501.0}, {'current': 1268.822, 'min': 1200.0, 'max': 2501.0}, {'current': 1200.944, 'min': 1200.0, 'max': 2501.0}, {'current': 3297.563, 'min': 1200.0, 'max': 2501.0}, {'current': 3477.075, 'min': 1200.0, 'max': 2501.0}, {'current': 3300.722, 'min': 1200.0, 'max': 2501.0}, {'current': 1749.896, 'min': 1200.0, 'max': 2501.0}, {'current': 3477.695, 'min': 1200.0, 'max': 2501.0}, {'current': 1200.809, 'min': 1200.0, 'max': 2501.0}, {'current': 2499.751, 'min': 1200.0, 'max': 2501.0}, {'current': 3478.617, 'min': 1200.0, 'max': 2501.0}, {'current': 1200.522, 'min': 1200.0, 'max': 2501.0}, {'current': 3224.626, 'min': 1200.0, 'max': 2501.0}, {'current': 1201.05, 'min': 1200.0, 'max': 2501.0}, {'current': 1500.994, 'min': 1200.0, 'max': 2501.0}, {'current': 1203.637, 'min': 1200.0, 'max': 2501.0}, {'current': 1882.35, 'min': 1200.0, 'max': 2501.0}, {'current': 1824.54, 'min': 1200.0, 'max': 2501.0}, {'current': 1299.793, 'min': 1200.0, 'max': 2501.0}, {'current': 1200.199, 'min': 1200.0, 'max': 2501.0}, {'current': 1200.751, 'min': 1200.0, 'max': 2501.0}, {'current': 2568.786, 'min': 1200.0, 'max': 2501.0}, {'current': 1200.877, 'min': 1200.0, 'max': 2501.0}, {'current': 1247.532, 'min': 1200.0, 'max': 2501.0}, {'current': 1240.182, 'min': 1200.0, 'max': 2501.0}, {'current': 2078.099, 'min': 1200.0, 'max': 2501.0}, {'current': 1234.096, 'min': 1200.0, 'max': 2501.0}, {'current': 1599.486, 'min': 1200.0, 'max': 2501.0}, {'current': 1998.745, 'min': 1200.0, 'max': 2501.0}, {'current': 1299.773, 'min': 1200.0, 'max': 2501.0}, {'current': 2825.66, 'min': 1200.0, 'max': 2501.0}, {'current': 3495.541, 'min': 1200.0, 'max': 2501.0}, {'current': 1241.681, 'min': 1200.0, 'max': 2501.0}, {'current': 1301.141, 'min': 1200.0, 'max': 2501.0}, {'current': 2321.15, 'min': 1200.0, 'max': 2501.0}, {'current': 1249.686, 'min': 1200.0, 'max': 2501.0}, {'current': 1243.03, 'min': 1200.0, 'max': 2501.0}, {'current': 1287.937, 'min': 1200.0, 'max': 2501.0}, {'current': 1200.885, 'min': 1200.0, 'max': 2501.0}, {'current': 1236.288, 'min': 1200.0, 'max': 2501.0}, {'current': 1200.56, 'min': 1200.0, 'max': 2501.0}, {'current': 2667.624, 'min': 1200.0, 'max': 2501.0}], 'disk': {'total': 1832.2264556884766, 'used': 1693.0663375854492}, 'gpu': 'GeForce RTX 3090', 'gpu_count': 8, 'gpu_devices': [{'name': 'GeForce RTX 3090', 'memory_total': 25447170048}, {'name': 'GeForce RTX 3090', 'memory_total': 25447170048}, {'name': 'GeForce RTX 3090', 'memory_total': 25447170048}, {'name': 'GeForce RTX 3090', 'memory_total': 25447170048}, {'name': 'GeForce RTX 3090', 'memory_total': 25447170048}, {'name': 'GeForce RTX 3090', 'memory_total': 25447170048}, {'name': 'GeForce RTX 3090', 'memory_total': 25447170048}, {'name': 'GeForce RTX 3090', 'memory_total': 25447170048}], 'memory': {'total': 251.56750869750977}}
+2022-12-20 14:29:38,088 INFO    HandlerThread:19623 [system_monitor.py:probe():181] Finished collecting system info
+2022-12-20 14:29:38,088 INFO    HandlerThread:19623 [system_monitor.py:probe():184] Publishing system info
+2022-12-20 14:29:38,088 DEBUG   HandlerThread:19623 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2022-12-20 14:29:38,089 DEBUG   HandlerThread:19623 [system_info.py:_save_pip():67] Saving pip packages done
+2022-12-20 14:29:38,089 DEBUG   HandlerThread:19623 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2022-12-20 14:29:38,095 ERROR   HandlerThread:19623 [system_info.py:_save_conda():85] Error saving conda packages: [Errno 2] No such file or directory: 'conda'
+Traceback (most recent call last):
+  File "/home/junjie/libraries/anaconda3/envs/LY-ostrack/lib/python3.8/site-packages/wandb/sdk/internal/system/system_info.py", line 81, in _save_conda
+    subprocess.call(
+  File "/home/junjie/libraries/anaconda3/envs/LY-ostrack/lib/python3.8/subprocess.py", line 340, in call
+    with Popen(*popenargs, **kwargs) as p:
+  File "/home/junjie/libraries/anaconda3/envs/LY-ostrack/lib/python3.8/subprocess.py", line 858, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/home/junjie/libraries/anaconda3/envs/LY-ostrack/lib/python3.8/subprocess.py", line 1704, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'conda'
+2022-12-20 14:29:38,096 DEBUG   HandlerThread:19623 [system_info.py:_save_conda():86] Saving conda packages done
+2022-12-20 14:29:38,098 INFO    HandlerThread:19623 [system_monitor.py:probe():186] Finished publishing system info
+2022-12-20 14:29:38,135 DEBUG   SenderThread:19623 [sender.py:send():303] send: files
+2022-12-20 14:29:38,135 INFO    SenderThread:19623 [sender.py:_save_file():1171] saving file wandb-metadata.json with policy now
+2022-12-20 14:29:38,145 DEBUG   HandlerThread:19623 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-20 14:29:38,145 DEBUG   SenderThread:19623 [sender.py:send_request():317] send_request: stop_status
+2022-12-20 14:29:38,517 DEBUG   SenderThread:19623 [sender.py:send():303] send: telemetry
+2022-12-20 14:29:38,939 INFO    Thread-13 :19623 [dir_watcher.py:_on_file_created():275] file/dir created: /media/estar/Data/LY/Models/OSTrack-v2/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221220_142936-2uzn8cef/files/requirements.txt
+2022-12-20 14:29:38,941 INFO    Thread-13 :19623 [dir_watcher.py:_on_file_created():275] file/dir created: /media/estar/Data/LY/Models/OSTrack-v2/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221220_142936-2uzn8cef/files/wandb-metadata.json
+2022-12-20 14:29:38,941 INFO    Thread-13 :19623 [dir_watcher.py:_on_file_created():275] file/dir created: /media/estar/Data/LY/Models/OSTrack-v2/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221220_142936-2uzn8cef/files/conda-environment.yaml
+2022-12-20 14:29:38,942 INFO    Thread-13 :19623 [dir_watcher.py:_on_file_created():275] file/dir created: /media/estar/Data/LY/Models/OSTrack-v2/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221220_142936-2uzn8cef/files/output.log
+2022-12-20 14:29:39,261 INFO    Thread-16 :19623 [upload_job.py:push():143] Uploaded file /tmp/tmpwimu2mg1wandb/1atx6kwk-wandb-metadata.json
+2022-12-20 14:29:40,941 INFO    Thread-13 :19623 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/OSTrack-v2/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221220_142936-2uzn8cef/files/output.log
+2022-12-20 14:29:47,086 DEBUG   SenderThread:19623 [sender.py:send():303] send: exit
+2022-12-20 14:29:47,086 INFO    SenderThread:19623 [sender.py:send_exit():442] handling exit code: 0
+2022-12-20 14:29:47,086 INFO    SenderThread:19623 [sender.py:send_exit():444] handling runtime: 9
+2022-12-20 14:29:47,091 INFO    SenderThread:19623 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-20 14:29:47,092 INFO    SenderThread:19623 [sender.py:send_exit():450] send defer
+2022-12-20 14:29:47,093 DEBUG   HandlerThread:19623 [handler.py:handle_request():139] handle_request: defer
+2022-12-20 14:29:47,093 INFO    HandlerThread:19623 [handler.py:handle_request_defer():162] handle defer: 0
+2022-12-20 14:29:47,093 DEBUG   SenderThread:19623 [sender.py:send_request():317] send_request: defer
+2022-12-20 14:29:47,093 INFO    SenderThread:19623 [sender.py:send_request_defer():459] handle sender defer: 0
+2022-12-20 14:29:47,093 INFO    SenderThread:19623 [sender.py:transition_state():463] send defer: 1
+2022-12-20 14:29:47,094 DEBUG   HandlerThread:19623 [handler.py:handle_request():139] handle_request: defer
+2022-12-20 14:29:47,094 INFO    HandlerThread:19623 [handler.py:handle_request_defer():162] handle defer: 1
+2022-12-20 14:29:47,094 INFO    HandlerThread:19623 [system_monitor.py:finish():160] Stopping system monitor
+2022-12-20 14:29:47,094 DEBUG   SystemMonitor:19623 [system_monitor.py:_start():130] Starting system metrics aggregation loop
+2022-12-20 14:29:47,095 DEBUG   SystemMonitor:19623 [system_monitor.py:_start():137] Finished system metrics aggregation loop
+2022-12-20 14:29:47,096 DEBUG   SystemMonitor:19623 [system_monitor.py:_start():141] Publishing last batch of metrics
+2022-12-20 14:29:47,096 INFO    HandlerThread:19623 [interfaces.py:finish():175] Joined cpu
+2022-12-20 14:29:47,100 INFO    HandlerThread:19623 [interfaces.py:finish():175] Joined disk
+2022-12-20 14:29:47,945 INFO    Thread-13 :19623 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/OSTrack-v2/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221220_142936-2uzn8cef/files/wandb-summary.json
+2022-12-20 14:29:48,068 INFO    HandlerThread:19623 [interfaces.py:finish():175] Joined gpu
+2022-12-20 14:29:48,068 INFO    HandlerThread:19623 [interfaces.py:finish():175] Joined memory
+2022-12-20 14:29:48,068 INFO    HandlerThread:19623 [interfaces.py:finish():175] Joined network
+2022-12-20 14:29:48,069 DEBUG   SenderThread:19623 [sender.py:send_request():317] send_request: defer
+2022-12-20 14:29:48,070 INFO    SenderThread:19623 [sender.py:send_request_defer():459] handle sender defer: 1
+2022-12-20 14:29:48,071 INFO    SenderThread:19623 [sender.py:transition_state():463] send defer: 2
+2022-12-20 14:29:48,071 DEBUG   SenderThread:19623 [sender.py:send():303] send: stats
+2022-12-20 14:29:48,073 DEBUG   HandlerThread:19623 [handler.py:handle_request():139] handle_request: defer
+2022-12-20 14:29:48,073 INFO    HandlerThread:19623 [handler.py:handle_request_defer():162] handle defer: 2
+2022-12-20 14:29:48,073 DEBUG   SenderThread:19623 [sender.py:send_request():317] send_request: defer
+2022-12-20 14:29:48,074 INFO    SenderThread:19623 [sender.py:send_request_defer():459] handle sender defer: 2
+2022-12-20 14:29:48,074 INFO    SenderThread:19623 [sender.py:transition_state():463] send defer: 3
+2022-12-20 14:29:48,074 DEBUG   HandlerThread:19623 [handler.py:handle_request():139] handle_request: defer
+2022-12-20 14:29:48,074 INFO    HandlerThread:19623 [handler.py:handle_request_defer():162] handle defer: 3
+2022-12-20 14:29:48,074 DEBUG   SenderThread:19623 [sender.py:send_request():317] send_request: defer
+2022-12-20 14:29:48,075 INFO    SenderThread:19623 [sender.py:send_request_defer():459] handle sender defer: 3
+2022-12-20 14:29:48,075 INFO    SenderThread:19623 [sender.py:transition_state():463] send defer: 4
+2022-12-20 14:29:48,075 DEBUG   HandlerThread:19623 [handler.py:handle_request():139] handle_request: defer
+2022-12-20 14:29:48,075 INFO    HandlerThread:19623 [handler.py:handle_request_defer():162] handle defer: 4
+2022-12-20 14:29:48,075 DEBUG   SenderThread:19623 [sender.py:send():303] send: summary
+2022-12-20 14:29:48,076 INFO    SenderThread:19623 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-20 14:29:48,076 DEBUG   SenderThread:19623 [sender.py:send_request():317] send_request: defer
+2022-12-20 14:29:48,076 INFO    SenderThread:19623 [sender.py:send_request_defer():459] handle sender defer: 4
+2022-12-20 14:29:48,077 INFO    SenderThread:19623 [sender.py:transition_state():463] send defer: 5
+2022-12-20 14:29:48,077 DEBUG   HandlerThread:19623 [handler.py:handle_request():139] handle_request: defer
+2022-12-20 14:29:48,077 INFO    HandlerThread:19623 [handler.py:handle_request_defer():162] handle defer: 5
+2022-12-20 14:29:48,077 DEBUG   SenderThread:19623 [sender.py:send_request():317] send_request: defer
+2022-12-20 14:29:48,078 INFO    SenderThread:19623 [sender.py:send_request_defer():459] handle sender defer: 5
+2022-12-20 14:29:48,086 DEBUG   HandlerThread:19623 [handler.py:handle_request():139] handle_request: poll_exit
+2022-12-20 14:29:48,555 INFO    SenderThread:19623 [sender.py:transition_state():463] send defer: 6
+2022-12-20 14:29:48,555 DEBUG   SenderThread:19623 [sender.py:send_request():317] send_request: poll_exit
+2022-12-20 14:29:48,557 DEBUG   HandlerThread:19623 [handler.py:handle_request():139] handle_request: defer
+2022-12-20 14:29:48,557 INFO    HandlerThread:19623 [handler.py:handle_request_defer():162] handle defer: 6
+2022-12-20 14:29:48,557 DEBUG   SenderThread:19623 [sender.py:send_request():317] send_request: defer
+2022-12-20 14:29:48,558 INFO    SenderThread:19623 [sender.py:send_request_defer():459] handle sender defer: 6
+2022-12-20 14:29:48,946 INFO    Thread-13 :19623 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/OSTrack-v2/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221220_142936-2uzn8cef/files/config.yaml
+2022-12-20 14:29:48,946 INFO    Thread-13 :19623 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/OSTrack-v2/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221220_142936-2uzn8cef/files/wandb-summary.json
+2022-12-20 14:29:48,946 INFO    Thread-13 :19623 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/OSTrack-v2/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221220_142936-2uzn8cef/files/output.log
+2022-12-20 14:29:49,087 DEBUG   HandlerThread:19623 [handler.py:handle_request():139] handle_request: poll_exit
+2022-12-20 14:29:50,550 INFO    SenderThread:19623 [sender.py:transition_state():463] send defer: 7
+2022-12-20 14:29:50,550 DEBUG   SenderThread:19623 [sender.py:send_request():317] send_request: poll_exit
+2022-12-20 14:29:50,551 DEBUG   HandlerThread:19623 [handler.py:handle_request():139] handle_request: defer
+2022-12-20 14:29:50,552 INFO    HandlerThread:19623 [handler.py:handle_request_defer():162] handle defer: 7
+2022-12-20 14:29:50,552 DEBUG   SenderThread:19623 [sender.py:send_request():317] send_request: defer
+2022-12-20 14:29:50,552 INFO    SenderThread:19623 [sender.py:send_request_defer():459] handle sender defer: 7
+2022-12-20 14:29:50,552 INFO    SenderThread:19623 [dir_watcher.py:finish():362] shutting down directory watcher
+2022-12-20 14:29:50,946 INFO    Thread-13 :19623 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/OSTrack-v2/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221220_142936-2uzn8cef/files/output.log
+2022-12-20 14:29:50,947 INFO    SenderThread:19623 [dir_watcher.py:finish():392] scan: /media/estar/Data/LY/Models/OSTrack-v2/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221220_142936-2uzn8cef/files
+2022-12-20 14:29:50,948 INFO    SenderThread:19623 [dir_watcher.py:finish():406] scan save: /media/estar/Data/LY/Models/OSTrack-v2/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221220_142936-2uzn8cef/files/requirements.txt requirements.txt
+2022-12-20 14:29:50,948 INFO    SenderThread:19623 [dir_watcher.py:finish():406] scan save: /media/estar/Data/LY/Models/OSTrack-v2/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221220_142936-2uzn8cef/files/wandb-metadata.json wandb-metadata.json
+2022-12-20 14:29:50,948 INFO    SenderThread:19623 [dir_watcher.py:finish():406] scan save: /media/estar/Data/LY/Models/OSTrack-v2/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221220_142936-2uzn8cef/files/output.log output.log
+2022-12-20 14:29:50,952 INFO    SenderThread:19623 [dir_watcher.py:finish():406] scan save: /media/estar/Data/LY/Models/OSTrack-v2/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221220_142936-2uzn8cef/files/wandb-summary.json wandb-summary.json
+2022-12-20 14:29:50,952 INFO    SenderThread:19623 [dir_watcher.py:finish():406] scan save: /media/estar/Data/LY/Models/OSTrack-v2/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221220_142936-2uzn8cef/files/conda-environment.yaml conda-environment.yaml
+2022-12-20 14:29:50,963 INFO    SenderThread:19623 [dir_watcher.py:finish():406] scan save: /media/estar/Data/LY/Models/OSTrack-v2/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221220_142936-2uzn8cef/files/config.yaml config.yaml
+2022-12-20 14:29:50,964 INFO    SenderThread:19623 [sender.py:transition_state():463] send defer: 8
+2022-12-20 14:29:50,965 DEBUG   HandlerThread:19623 [handler.py:handle_request():139] handle_request: defer
+2022-12-20 14:29:50,970 INFO    HandlerThread:19623 [handler.py:handle_request_defer():162] handle defer: 8
+2022-12-20 14:29:50,971 DEBUG   SenderThread:19623 [sender.py:send_request():317] send_request: defer
+2022-12-20 14:29:50,971 INFO    SenderThread:19623 [sender.py:send_request_defer():459] handle sender defer: 8
+2022-12-20 14:29:50,971 INFO    SenderThread:19623 [file_pusher.py:finish():168] shutting down file pusher
+2022-12-20 14:29:52,009 INFO    Thread-17 :19623 [upload_job.py:push():143] Uploaded file /media/estar/Data/LY/Models/OSTrack-v2/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221220_142936-2uzn8cef/files/requirements.txt
+2022-12-20 14:29:52,017 INFO    Thread-18 :19623 [upload_job.py:push():143] Uploaded file /media/estar/Data/LY/Models/OSTrack-v2/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221220_142936-2uzn8cef/files/output.log
+2022-12-20 14:29:52,052 INFO    Thread-19 :19623 [upload_job.py:push():143] Uploaded file /media/estar/Data/LY/Models/OSTrack-v2/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221220_142936-2uzn8cef/files/wandb-summary.json
+2022-12-20 14:29:52,193 INFO    Thread-20 :19623 [upload_job.py:push():143] Uploaded file /media/estar/Data/LY/Models/OSTrack-v2/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221220_142936-2uzn8cef/files/config.yaml
+2022-12-20 14:29:52,394 INFO    Thread-12 :19623 [sender.py:transition_state():463] send defer: 9
+2022-12-20 14:29:52,395 DEBUG   HandlerThread:19623 [handler.py:handle_request():139] handle_request: defer
+2022-12-20 14:29:52,395 INFO    HandlerThread:19623 [handler.py:handle_request_defer():162] handle defer: 9
+2022-12-20 14:29:52,396 DEBUG   SenderThread:19623 [sender.py:send_request():317] send_request: defer
+2022-12-20 14:29:52,396 INFO    SenderThread:19623 [sender.py:send_request_defer():459] handle sender defer: 9
+2022-12-20 14:29:52,396 INFO    SenderThread:19623 [file_pusher.py:join():173] waiting for file pusher
+2022-12-20 14:29:52,396 INFO    SenderThread:19623 [sender.py:transition_state():463] send defer: 10
+2022-12-20 14:29:52,396 DEBUG   HandlerThread:19623 [handler.py:handle_request():139] handle_request: defer
+2022-12-20 14:29:52,396 INFO    HandlerThread:19623 [handler.py:handle_request_defer():162] handle defer: 10
+2022-12-20 14:29:52,397 DEBUG   SenderThread:19623 [sender.py:send_request():317] send_request: defer
+2022-12-20 14:29:52,397 INFO    SenderThread:19623 [sender.py:send_request_defer():459] handle sender defer: 10
+2022-12-20 14:29:52,624 INFO    SenderThread:19623 [sender.py:transition_state():463] send defer: 11
+2022-12-20 14:29:52,625 DEBUG   HandlerThread:19623 [handler.py:handle_request():139] handle_request: defer
+2022-12-20 14:29:52,625 INFO    HandlerThread:19623 [handler.py:handle_request_defer():162] handle defer: 11
+2022-12-20 14:29:52,625 DEBUG   SenderThread:19623 [sender.py:send_request():317] send_request: defer
+2022-12-20 14:29:52,625 INFO    SenderThread:19623 [sender.py:send_request_defer():459] handle sender defer: 11
+2022-12-20 14:29:52,626 INFO    SenderThread:19623 [sender.py:transition_state():463] send defer: 12
+2022-12-20 14:29:52,626 DEBUG   HandlerThread:19623 [handler.py:handle_request():139] handle_request: defer
+2022-12-20 14:29:52,626 DEBUG   SenderThread:19623 [sender.py:send():303] send: final
+2022-12-20 14:29:52,626 INFO    HandlerThread:19623 [handler.py:handle_request_defer():162] handle defer: 12
+2022-12-20 14:29:52,627 DEBUG   SenderThread:19623 [sender.py:send():303] send: footer
+2022-12-20 14:29:52,627 DEBUG   SenderThread:19623 [sender.py:send_request():317] send_request: defer
+2022-12-20 14:29:52,627 INFO    SenderThread:19623 [sender.py:send_request_defer():459] handle sender defer: 12
+2022-12-20 14:29:52,628 DEBUG   HandlerThread:19623 [handler.py:handle_request():139] handle_request: poll_exit
+2022-12-20 14:29:52,629 DEBUG   SenderThread:19623 [sender.py:send_request():317] send_request: poll_exit
+2022-12-20 14:29:52,629 DEBUG   HandlerThread:19623 [handler.py:handle_request():139] handle_request: server_info
+2022-12-20 14:29:52,630 DEBUG   SenderThread:19623 [sender.py:send_request():317] send_request: server_info
+2022-12-20 14:29:52,634 DEBUG   HandlerThread:19623 [handler.py:handle_request():139] handle_request: get_summary
+2022-12-20 14:29:52,635 DEBUG   HandlerThread:19623 [handler.py:handle_request():139] handle_request: sampled_history
+2022-12-20 14:29:53,516 INFO    MainThread:19623 [wandb_run.py:_footer_history_summary_info():3408] rendering history
+2022-12-20 14:29:53,516 INFO    MainThread:19623 [wandb_run.py:_footer_history_summary_info():3440] rendering summary
+2022-12-20 14:29:53,516 INFO    MainThread:19623 [wandb_run.py:_footer_sync_info():3364] logging synced files
+2022-12-20 14:29:53,517 DEBUG   HandlerThread:19623 [handler.py:handle_request():139] handle_request: shutdown
+2022-12-20 14:29:53,518 INFO    HandlerThread:19623 [handler.py:finish():814] shutting down handler
+2022-12-20 14:29:53,627 INFO    WriterThread:19623 [datastore.py:close():279] close: /media/estar/Data/LY/Models/OSTrack-v2/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221220_142936-2uzn8cef/run-2uzn8cef.wandb
+2022-12-20 14:29:54,515 INFO    SenderThread:19623 [sender.py:finish():1331] shutting down sender
+2022-12-20 14:29:54,516 INFO    SenderThread:19623 [file_pusher.py:finish():168] shutting down file pusher
+2022-12-20 14:29:54,516 INFO    SenderThread:19623 [file_pusher.py:join():173] waiting for file pusher
+2022-12-20 14:29:54,521 INFO    MainThread:19623 [internal.py:handle_exit():77] Internal process exited

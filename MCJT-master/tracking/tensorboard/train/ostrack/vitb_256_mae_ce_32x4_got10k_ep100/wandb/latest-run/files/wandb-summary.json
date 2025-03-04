@@ -1,0 +1,1 @@
+{"train/Loss/total": 2.798329726018404, "train/epoch": 1, "train/Loss/giou": 0.4435532418677681, "train/Loss/l1": 0.05240248145731656, "train/Loss/location": 1.649210843820321, "train/IoU": 0.6106533117239412, "train/LearningRate/group0": 0.0004, "train/LearningRate/group1": 4e-05, "_timestamp": 1670830748.4830554, "_runtime": 1177.7883563041687, "_step": 608}

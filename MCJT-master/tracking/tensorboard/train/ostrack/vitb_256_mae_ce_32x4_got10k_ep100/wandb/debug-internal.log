@@ -1,0 +1,476 @@
+2022-12-12 15:19:30,697 INFO    StreamThr :30641 [internal.py:wandb_internal():87] W&B internal server running at pid: 30641, started at: 2022-12-12 15:19:30.696833
+2022-12-12 15:19:30,698 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: status
+2022-12-12 15:19:30,699 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: status
+2022-12-12 15:19:30,699 DEBUG   SenderThread:30641 [sender.py:send():303] send: header
+2022-12-12 15:19:30,700 INFO    WriterThread:30641 [datastore.py:open_for_write():75] open: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/run-2y5oaotk.wandb
+2022-12-12 15:19:30,700 DEBUG   SenderThread:30641 [sender.py:send():303] send: run
+2022-12-12 15:19:31,562 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: check_version
+2022-12-12 15:19:31,566 INFO    SenderThread:30641 [dir_watcher.py:__init__():216] watching files in: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files
+2022-12-12 15:19:31,566 INFO    SenderThread:30641 [sender.py:_start_run_threads():928] run started: 2y5oaotk with start time 1670829570.694699
+2022-12-12 15:19:31,566 DEBUG   SenderThread:30641 [sender.py:send():303] send: summary
+2022-12-12 15:19:31,566 INFO    SenderThread:30641 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-12 15:19:31,567 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: check_version
+2022-12-12 15:19:32,567 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_created():275] file/dir created: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/wandb-summary.json
+2022-12-12 15:19:36,567 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: run_start
+2022-12-12 15:19:36,570 DEBUG   HandlerThread:30641 [system_info.py:__init__():31] System info init
+2022-12-12 15:19:36,570 DEBUG   HandlerThread:30641 [system_info.py:__init__():46] System info init done
+2022-12-12 15:19:36,570 INFO    HandlerThread:30641 [system_monitor.py:start():150] Starting system monitor
+2022-12-12 15:19:36,570 INFO    SystemMonitor:30641 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2022-12-12 15:19:36,570 INFO    HandlerThread:30641 [system_monitor.py:probe():171] Collecting system info
+2022-12-12 15:19:36,570 INFO    SystemMonitor:30641 [interfaces.py:start():168] Started cpu
+2022-12-12 15:19:36,570 INFO    SystemMonitor:30641 [interfaces.py:start():168] Started disk
+2022-12-12 15:19:36,571 INFO    SystemMonitor:30641 [interfaces.py:start():168] Started gpu
+2022-12-12 15:19:36,571 INFO    SystemMonitor:30641 [interfaces.py:start():168] Started memory
+2022-12-12 15:19:36,571 INFO    SystemMonitor:30641 [interfaces.py:start():168] Started network
+2022-12-12 15:19:36,593 DEBUG   HandlerThread:30641 [system_info.py:probe():195] Probing system
+2022-12-12 15:19:36,599 DEBUG   HandlerThread:30641 [git.py:repo():40] git repository is invalid
+2022-12-12 15:19:36,600 DEBUG   HandlerThread:30641 [system_info.py:probe():241] Probing system done
+2022-12-12 15:19:36,600 DEBUG   HandlerThread:30641 [system_monitor.py:probe():180] {'os': 'Linux-4.15.0-142-generic-x86_64-with-glibc2.17', 'python': '3.8.15', 'heartbeatAt': '2022-12-12T07:19:36.593790', 'startedAt': '2022-12-12T07:19:30.690607', 'docker': None, 'cuda': '10.2.89', 'args': ('--script', 'ostrack', '--config', 'vitb_256_mae_ce_32x4_got10k_ep100', '--save_dir', './output', '--use_lmdb', '0', '--script_prv', 'None', '--config_prv', 'baseline', '--distill', '0', '--script_teacher', 'None', '--config_teacher', 'None', '--use_wandb', '1'), 'state': 'running', 'program': '../lib/train/run_training.py', 'host': 'cvlab-MS-7A71', 'username': 'cvlab', 'executable': '/home/cvlab/anaconda3/envs/ostrack/bin/python', 'cpu_count': 4, 'cpu_count_logical': 8, 'cpu_freq': {'current': 4400.04825, 'min': 800.0, 'max': 4500.0}, 'cpu_freq_per_core': [{'current': 4399.999, 'min': 800.0, 'max': 4500.0}, {'current': 4400.282, 'min': 800.0, 'max': 4500.0}, {'current': 4400.009, 'min': 800.0, 'max': 4500.0}, {'current': 4400.089, 'min': 800.0, 'max': 4500.0}, {'current': 4400.0, 'min': 800.0, 'max': 4500.0}, {'current': 4400.008, 'min': 800.0, 'max': 4500.0}, {'current': 4400.0, 'min': 800.0, 'max': 4500.0}, {'current': 4399.999, 'min': 800.0, 'max': 4500.0}], 'disk': {'total': 74.97257995605469, 'used': 14.431663513183594}, 'gpu': 'NVIDIA GeForce GTX 1080 Ti', 'gpu_count': 2, 'gpu_devices': [{'name': 'NVIDIA GeForce GTX 1080 Ti', 'memory_total': 11720130560}, {'name': 'NVIDIA GeForce GTX 1080 Ti', 'memory_total': 11721506816}], 'memory': {'total': 62.88007354736328}}
+2022-12-12 15:19:36,600 INFO    HandlerThread:30641 [system_monitor.py:probe():181] Finished collecting system info
+2022-12-12 15:19:36,600 INFO    HandlerThread:30641 [system_monitor.py:probe():184] Publishing system info
+2022-12-12 15:19:36,600 DEBUG   HandlerThread:30641 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2022-12-12 15:19:36,600 DEBUG   HandlerThread:30641 [system_info.py:_save_pip():67] Saving pip packages done
+2022-12-12 15:19:36,600 DEBUG   HandlerThread:30641 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2022-12-12 15:19:37,569 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_created():275] file/dir created: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/requirements.txt
+2022-12-12 15:19:37,569 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_created():275] file/dir created: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/conda-environment.yaml
+2022-12-12 15:19:37,962 DEBUG   HandlerThread:30641 [system_info.py:_save_conda():86] Saving conda packages done
+2022-12-12 15:19:37,963 INFO    HandlerThread:30641 [system_monitor.py:probe():186] Finished publishing system info
+2022-12-12 15:19:37,984 DEBUG   SenderThread:30641 [sender.py:send():303] send: files
+2022-12-12 15:19:37,984 INFO    SenderThread:30641 [sender.py:_save_file():1171] saving file wandb-metadata.json with policy now
+2022-12-12 15:19:37,988 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:19:37,988 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:19:38,385 DEBUG   SenderThread:30641 [sender.py:send():303] send: telemetry
+2022-12-12 15:19:38,569 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/conda-environment.yaml
+2022-12-12 15:19:38,569 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_created():275] file/dir created: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/wandb-metadata.json
+2022-12-12 15:19:38,569 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_created():275] file/dir created: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/output.log
+2022-12-12 15:19:39,005 INFO    Thread-16 :30641 [upload_job.py:push():143] Uploaded file /tmp/tmp0dbdv8z5wandb/j5grdhq3-wandb-metadata.json
+2022-12-12 15:19:40,570 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/output.log
+2022-12-12 15:19:44,572 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/output.log
+2022-12-12 15:19:53,388 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:19:53,388 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:20:01,576 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/config.yaml
+2022-12-12 15:20:08,811 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:20:08,811 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:20:12,017 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-12 15:20:14,579 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/output.log
+2022-12-12 15:20:24,168 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:20:24,168 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:20:36,572 DEBUG   SystemMonitor:30641 [system_monitor.py:_start():130] Starting system metrics aggregation loop
+2022-12-12 15:20:36,572 DEBUG   SenderThread:30641 [sender.py:send():303] send: stats
+2022-12-12 15:20:39,636 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:20:39,636 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:20:42,746 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-12 15:20:42,748 DEBUG   SenderThread:30641 [sender.py:send():303] send: history
+2022-12-12 15:20:42,748 DEBUG   SenderThread:30641 [sender.py:send():303] send: summary
+2022-12-12 15:20:42,749 INFO    SenderThread:30641 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-12 15:20:43,587 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/wandb-summary.json
+2022-12-12 15:20:44,587 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/output.log
+2022-12-12 15:20:55,033 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:20:55,033 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:21:06,573 DEBUG   SenderThread:30641 [sender.py:send():303] send: stats
+2022-12-12 15:21:10,411 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:21:10,411 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:21:13,439 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-12 15:21:13,440 DEBUG   SenderThread:30641 [sender.py:send():303] send: history
+2022-12-12 15:21:13,440 DEBUG   SenderThread:30641 [sender.py:send():303] send: summary
+2022-12-12 15:21:13,441 INFO    SenderThread:30641 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-12 15:21:13,594 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/wandb-summary.json
+2022-12-12 15:21:14,594 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/output.log
+2022-12-12 15:21:25,877 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:21:25,877 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:21:36,574 DEBUG   SenderThread:30641 [sender.py:send():303] send: stats
+2022-12-12 15:21:41,271 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:21:41,271 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:21:44,387 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-12 15:21:44,388 DEBUG   SenderThread:30641 [sender.py:send():303] send: history
+2022-12-12 15:21:44,388 DEBUG   SenderThread:30641 [sender.py:send():303] send: summary
+2022-12-12 15:21:44,388 INFO    SenderThread:30641 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-12 15:21:44,602 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/wandb-summary.json
+2022-12-12 15:21:46,603 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/output.log
+2022-12-12 15:21:57,755 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:21:57,755 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:22:06,575 DEBUG   SenderThread:30641 [sender.py:send():303] send: stats
+2022-12-12 15:22:13,149 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:22:13,149 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:22:15,807 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-12 15:22:15,808 DEBUG   SenderThread:30641 [sender.py:send():303] send: history
+2022-12-12 15:22:15,808 DEBUG   SenderThread:30641 [sender.py:send():303] send: summary
+2022-12-12 15:22:15,808 INFO    SenderThread:30641 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-12 15:22:16,611 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/output.log
+2022-12-12 15:22:16,611 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/wandb-summary.json
+2022-12-12 15:22:28,537 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:22:28,537 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:22:36,575 DEBUG   SenderThread:30641 [sender.py:send():303] send: stats
+2022-12-12 15:22:43,936 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:22:43,936 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:22:46,439 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-12 15:22:46,440 DEBUG   SenderThread:30641 [sender.py:send():303] send: history
+2022-12-12 15:22:46,440 DEBUG   SenderThread:30641 [sender.py:send():303] send: summary
+2022-12-12 15:22:46,441 INFO    SenderThread:30641 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-12 15:22:46,618 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/wandb-summary.json
+2022-12-12 15:22:48,618 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/output.log
+2022-12-12 15:22:59,403 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:22:59,403 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:23:06,576 DEBUG   SenderThread:30641 [sender.py:send():303] send: stats
+2022-12-12 15:23:14,779 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:23:14,779 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:23:16,554 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-12 15:23:16,554 DEBUG   SenderThread:30641 [sender.py:send():303] send: history
+2022-12-12 15:23:16,555 DEBUG   SenderThread:30641 [sender.py:send():303] send: summary
+2022-12-12 15:23:16,555 INFO    SenderThread:30641 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-12 15:23:16,626 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/wandb-summary.json
+2022-12-12 15:23:18,626 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/output.log
+2022-12-12 15:23:30,167 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:23:30,167 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:23:36,577 DEBUG   SenderThread:30641 [sender.py:send():303] send: stats
+2022-12-12 15:23:45,533 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:23:45,533 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:23:47,264 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-12 15:23:47,265 DEBUG   SenderThread:30641 [sender.py:send():303] send: history
+2022-12-12 15:23:47,265 DEBUG   SenderThread:30641 [sender.py:send():303] send: summary
+2022-12-12 15:23:47,266 INFO    SenderThread:30641 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-12 15:23:47,633 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/wandb-summary.json
+2022-12-12 15:23:48,634 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/output.log
+2022-12-12 15:24:00,974 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:24:01,343 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:24:06,577 DEBUG   SenderThread:30641 [sender.py:send():303] send: stats
+2022-12-12 15:24:16,737 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:24:16,737 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:24:17,997 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-12 15:24:17,997 DEBUG   SenderThread:30641 [sender.py:send():303] send: history
+2022-12-12 15:24:17,998 DEBUG   SenderThread:30641 [sender.py:send():303] send: summary
+2022-12-12 15:24:17,998 INFO    SenderThread:30641 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-12 15:24:18,643 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/wandb-summary.json
+2022-12-12 15:24:19,643 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/output.log
+2022-12-12 15:24:32,140 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:24:32,140 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:24:36,578 DEBUG   SenderThread:30641 [sender.py:send():303] send: stats
+2022-12-12 15:24:47,641 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:24:47,641 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:24:48,768 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-12 15:24:48,768 DEBUG   SenderThread:30641 [sender.py:send():303] send: history
+2022-12-12 15:24:48,769 DEBUG   SenderThread:30641 [sender.py:send():303] send: summary
+2022-12-12 15:24:48,769 INFO    SenderThread:30641 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-12 15:24:49,650 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/wandb-summary.json
+2022-12-12 15:24:51,651 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/output.log
+2022-12-12 15:25:03,030 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:25:03,031 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:25:06,578 DEBUG   SenderThread:30641 [sender.py:send():303] send: stats
+2022-12-12 15:25:18,419 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:25:18,419 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:25:20,525 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-12 15:25:20,526 DEBUG   SenderThread:30641 [sender.py:send():303] send: history
+2022-12-12 15:25:20,526 DEBUG   SenderThread:30641 [sender.py:send():303] send: summary
+2022-12-12 15:25:20,527 INFO    SenderThread:30641 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-12 15:25:20,660 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/wandb-summary.json
+2022-12-12 15:25:23,661 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/output.log
+2022-12-12 15:25:33,896 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:25:33,897 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:25:36,579 DEBUG   SenderThread:30641 [sender.py:send():303] send: stats
+2022-12-12 15:25:49,260 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:25:49,261 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:25:51,590 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-12 15:25:51,590 DEBUG   SenderThread:30641 [sender.py:send():303] send: history
+2022-12-12 15:25:51,591 DEBUG   SenderThread:30641 [sender.py:send():303] send: summary
+2022-12-12 15:25:51,591 INFO    SenderThread:30641 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-12 15:25:51,669 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/wandb-summary.json
+2022-12-12 15:25:53,670 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/output.log
+2022-12-12 15:26:04,653 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:26:04,653 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:26:06,580 DEBUG   SenderThread:30641 [sender.py:send():303] send: stats
+2022-12-12 15:26:20,091 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:26:20,092 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:26:22,316 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-12 15:26:22,317 DEBUG   SenderThread:30641 [sender.py:send():303] send: history
+2022-12-12 15:26:22,317 DEBUG   SenderThread:30641 [sender.py:send():303] send: summary
+2022-12-12 15:26:22,317 INFO    SenderThread:30641 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-12 15:26:22,680 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/wandb-summary.json
+2022-12-12 15:26:25,680 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/output.log
+2022-12-12 15:26:35,447 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:26:35,447 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:26:36,580 DEBUG   SenderThread:30641 [sender.py:send():303] send: stats
+2022-12-12 15:26:50,874 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:26:50,875 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:26:53,054 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-12 15:26:53,054 DEBUG   SenderThread:30641 [sender.py:send():303] send: history
+2022-12-12 15:26:53,054 DEBUG   SenderThread:30641 [sender.py:send():303] send: summary
+2022-12-12 15:26:53,054 INFO    SenderThread:30641 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-12 15:26:53,687 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/wandb-summary.json
+2022-12-12 15:26:55,688 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/output.log
+2022-12-12 15:27:06,343 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:27:06,344 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:27:06,743 DEBUG   SenderThread:30641 [sender.py:send():303] send: stats
+2022-12-12 15:27:21,745 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:27:21,746 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:27:23,777 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-12 15:27:23,778 DEBUG   SenderThread:30641 [sender.py:send():303] send: history
+2022-12-12 15:27:23,778 DEBUG   SenderThread:30641 [sender.py:send():303] send: summary
+2022-12-12 15:27:23,778 INFO    SenderThread:30641 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-12 15:27:24,697 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/wandb-summary.json
+2022-12-12 15:27:25,697 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/output.log
+2022-12-12 15:27:36,582 DEBUG   SenderThread:30641 [sender.py:send():303] send: stats
+2022-12-12 15:27:37,101 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:27:37,101 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:27:52,511 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:27:52,512 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:27:54,486 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-12 15:27:54,487 DEBUG   SenderThread:30641 [sender.py:send():303] send: history
+2022-12-12 15:27:54,487 DEBUG   SenderThread:30641 [sender.py:send():303] send: summary
+2022-12-12 15:27:54,489 INFO    SenderThread:30641 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-12 15:27:54,705 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/wandb-summary.json
+2022-12-12 15:27:57,706 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/output.log
+2022-12-12 15:28:06,583 DEBUG   SenderThread:30641 [sender.py:send():303] send: stats
+2022-12-12 15:28:07,901 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:28:07,901 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:28:23,267 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:28:23,267 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:28:25,184 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-12 15:28:25,185 DEBUG   SenderThread:30641 [sender.py:send():303] send: history
+2022-12-12 15:28:25,185 DEBUG   SenderThread:30641 [sender.py:send():303] send: summary
+2022-12-12 15:28:25,186 INFO    SenderThread:30641 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-12 15:28:25,713 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/wandb-summary.json
+2022-12-12 15:28:27,713 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/output.log
+2022-12-12 15:28:36,583 DEBUG   SenderThread:30641 [sender.py:send():303] send: stats
+2022-12-12 15:28:38,970 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:28:38,970 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:28:54,355 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:28:54,355 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:28:55,709 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-12 15:28:55,709 DEBUG   SenderThread:30641 [sender.py:send():303] send: history
+2022-12-12 15:28:55,710 DEBUG   SenderThread:30641 [sender.py:send():303] send: summary
+2022-12-12 15:28:55,711 INFO    SenderThread:30641 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-12 15:28:55,721 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/wandb-summary.json
+2022-12-12 15:28:57,722 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/output.log
+2022-12-12 15:29:06,584 DEBUG   SenderThread:30641 [sender.py:send():303] send: stats
+2022-12-12 15:29:09,746 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:29:09,746 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:29:25,140 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:29:25,140 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:29:26,430 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-12 15:29:26,430 DEBUG   SenderThread:30641 [sender.py:send():303] send: history
+2022-12-12 15:29:26,431 DEBUG   SenderThread:30641 [sender.py:send():303] send: summary
+2022-12-12 15:29:26,432 INFO    SenderThread:30641 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-12 15:29:26,732 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/wandb-summary.json
+2022-12-12 15:29:27,732 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/output.log
+2022-12-12 15:29:36,584 DEBUG   SenderThread:30641 [sender.py:send():303] send: stats
+2022-12-12 15:29:40,639 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:29:40,640 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:29:56,072 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:29:56,073 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:29:56,730 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-12 15:29:56,731 DEBUG   SenderThread:30641 [sender.py:send():303] send: history
+2022-12-12 15:29:56,731 DEBUG   SenderThread:30641 [sender.py:send():303] send: summary
+2022-12-12 15:29:56,733 INFO    SenderThread:30641 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-12 15:29:56,740 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/wandb-summary.json
+2022-12-12 15:29:59,741 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/output.log
+2022-12-12 15:30:06,585 DEBUG   SenderThread:30641 [sender.py:send():303] send: stats
+2022-12-12 15:30:11,490 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:30:11,490 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:30:26,940 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:30:26,941 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:30:27,455 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-12 15:30:27,456 DEBUG   SenderThread:30641 [sender.py:send():303] send: history
+2022-12-12 15:30:27,456 DEBUG   SenderThread:30641 [sender.py:send():303] send: summary
+2022-12-12 15:30:27,457 INFO    SenderThread:30641 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-12 15:30:27,748 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/wandb-summary.json
+2022-12-12 15:30:29,749 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/output.log
+2022-12-12 15:30:36,585 DEBUG   SenderThread:30641 [sender.py:send():303] send: stats
+2022-12-12 15:30:42,362 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:30:42,362 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:30:57,815 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-12 15:30:57,816 DEBUG   SenderThread:30641 [sender.py:send():303] send: history
+2022-12-12 15:30:57,816 DEBUG   SenderThread:30641 [sender.py:send():303] send: summary
+2022-12-12 15:30:57,818 INFO    SenderThread:30641 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-12 15:30:57,898 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:30:57,898 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:30:58,757 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/wandb-summary.json
+2022-12-12 15:30:59,758 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/output.log
+2022-12-12 15:31:06,586 DEBUG   SenderThread:30641 [sender.py:send():303] send: stats
+2022-12-12 15:31:13,254 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:31:13,254 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:31:28,535 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-12 15:31:28,537 DEBUG   SenderThread:30641 [sender.py:send():303] send: history
+2022-12-12 15:31:28,537 DEBUG   SenderThread:30641 [sender.py:send():303] send: summary
+2022-12-12 15:31:28,540 INFO    SenderThread:30641 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-12 15:31:28,612 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:31:28,612 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:31:28,765 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/wandb-summary.json
+2022-12-12 15:31:29,765 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/output.log
+2022-12-12 15:31:36,587 DEBUG   SenderThread:30641 [sender.py:send():303] send: stats
+2022-12-12 15:31:44,010 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:31:44,010 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:31:59,243 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-12 15:31:59,244 DEBUG   SenderThread:30641 [sender.py:send():303] send: history
+2022-12-12 15:31:59,244 DEBUG   SenderThread:30641 [sender.py:send():303] send: summary
+2022-12-12 15:31:59,245 INFO    SenderThread:30641 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-12 15:31:59,388 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:31:59,388 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:31:59,772 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/wandb-summary.json
+2022-12-12 15:32:01,773 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/output.log
+2022-12-12 15:32:06,587 DEBUG   SenderThread:30641 [sender.py:send():303] send: stats
+2022-12-12 15:32:14,759 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:32:14,759 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:32:29,963 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-12 15:32:29,964 DEBUG   SenderThread:30641 [sender.py:send():303] send: history
+2022-12-12 15:32:29,964 DEBUG   SenderThread:30641 [sender.py:send():303] send: summary
+2022-12-12 15:32:29,966 INFO    SenderThread:30641 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-12 15:32:30,166 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:32:30,166 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:32:30,780 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/wandb-summary.json
+2022-12-12 15:32:31,780 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/output.log
+2022-12-12 15:32:36,588 DEBUG   SenderThread:30641 [sender.py:send():303] send: stats
+2022-12-12 15:32:45,544 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:32:45,544 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:33:00,691 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-12 15:33:00,692 DEBUG   SenderThread:30641 [sender.py:send():303] send: history
+2022-12-12 15:33:00,692 DEBUG   SenderThread:30641 [sender.py:send():303] send: summary
+2022-12-12 15:33:00,693 INFO    SenderThread:30641 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-12 15:33:00,787 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/wandb-summary.json
+2022-12-12 15:33:00,940 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:33:00,940 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:33:01,787 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/output.log
+2022-12-12 15:33:06,588 DEBUG   SenderThread:30641 [sender.py:send():303] send: stats
+2022-12-12 15:33:16,303 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:33:16,303 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:33:31,411 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-12 15:33:31,413 DEBUG   SenderThread:30641 [sender.py:send():303] send: history
+2022-12-12 15:33:31,413 DEBUG   SenderThread:30641 [sender.py:send():303] send: summary
+2022-12-12 15:33:31,416 INFO    SenderThread:30641 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-12 15:33:31,701 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:33:31,701 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:33:31,795 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/wandb-summary.json
+2022-12-12 15:33:33,796 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/output.log
+2022-12-12 15:33:36,589 DEBUG   SenderThread:30641 [sender.py:send():303] send: stats
+2022-12-12 15:33:47,150 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:33:47,150 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:34:02,139 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-12 15:34:02,140 DEBUG   SenderThread:30641 [sender.py:send():303] send: history
+2022-12-12 15:34:02,140 DEBUG   SenderThread:30641 [sender.py:send():303] send: summary
+2022-12-12 15:34:02,142 INFO    SenderThread:30641 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-12 15:34:02,557 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:34:02,557 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:34:02,805 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/wandb-summary.json
+2022-12-12 15:34:03,805 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/output.log
+2022-12-12 15:34:06,590 DEBUG   SenderThread:30641 [sender.py:send():303] send: stats
+2022-12-12 15:34:17,947 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:34:17,948 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:34:32,855 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-12 15:34:32,856 DEBUG   SenderThread:30641 [sender.py:send():303] send: history
+2022-12-12 15:34:32,856 DEBUG   SenderThread:30641 [sender.py:send():303] send: summary
+2022-12-12 15:34:32,858 INFO    SenderThread:30641 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-12 15:34:33,318 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:34:33,318 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:34:33,814 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/wandb-summary.json
+2022-12-12 15:34:35,815 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/output.log
+2022-12-12 15:34:36,591 DEBUG   SenderThread:30641 [sender.py:send():303] send: stats
+2022-12-12 15:34:48,709 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:34:48,709 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:35:03,563 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-12 15:35:03,564 DEBUG   SenderThread:30641 [sender.py:send():303] send: history
+2022-12-12 15:35:03,564 DEBUG   SenderThread:30641 [sender.py:send():303] send: summary
+2022-12-12 15:35:03,566 INFO    SenderThread:30641 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-12 15:35:03,821 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/wandb-summary.json
+2022-12-12 15:35:04,122 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:35:04,122 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:35:05,822 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/output.log
+2022-12-12 15:35:06,591 DEBUG   SenderThread:30641 [sender.py:send():303] send: stats
+2022-12-12 15:35:19,570 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:35:19,570 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:35:34,303 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-12 15:35:34,304 DEBUG   SenderThread:30641 [sender.py:send():303] send: history
+2022-12-12 15:35:34,304 DEBUG   SenderThread:30641 [sender.py:send():303] send: summary
+2022-12-12 15:35:34,306 INFO    SenderThread:30641 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-12 15:35:34,829 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/wandb-summary.json
+2022-12-12 15:35:34,933 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:35:34,933 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:35:35,829 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/output.log
+2022-12-12 15:35:36,592 DEBUG   SenderThread:30641 [sender.py:send():303] send: stats
+2022-12-12 15:35:50,325 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:35:50,325 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:36:05,019 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-12 15:36:05,020 DEBUG   SenderThread:30641 [sender.py:send():303] send: history
+2022-12-12 15:36:05,020 DEBUG   SenderThread:30641 [sender.py:send():303] send: summary
+2022-12-12 15:36:05,021 INFO    SenderThread:30641 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-12 15:36:05,753 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:36:05,753 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:36:05,836 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/wandb-summary.json
+2022-12-12 15:36:06,593 DEBUG   SenderThread:30641 [sender.py:send():303] send: stats
+2022-12-12 15:36:07,837 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/output.log
+2022-12-12 15:36:21,254 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:36:21,255 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:36:35,755 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-12 15:36:35,756 DEBUG   SenderThread:30641 [sender.py:send():303] send: history
+2022-12-12 15:36:35,756 DEBUG   SenderThread:30641 [sender.py:send():303] send: summary
+2022-12-12 15:36:35,757 INFO    SenderThread:30641 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-12 15:36:35,843 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/wandb-summary.json
+2022-12-12 15:36:36,593 DEBUG   SenderThread:30641 [sender.py:send():303] send: stats
+2022-12-12 15:36:36,672 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:36:36,672 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:36:37,844 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/output.log
+2022-12-12 15:36:52,075 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:36:52,075 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:37:06,471 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-12 15:37:06,472 DEBUG   SenderThread:30641 [sender.py:send():303] send: history
+2022-12-12 15:37:06,472 DEBUG   SenderThread:30641 [sender.py:send():303] send: summary
+2022-12-12 15:37:06,474 INFO    SenderThread:30641 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-12 15:37:06,594 DEBUG   SenderThread:30641 [sender.py:send():303] send: stats
+2022-12-12 15:37:06,853 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/wandb-summary.json
+2022-12-12 15:37:07,470 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:37:07,470 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:37:07,853 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/output.log
+2022-12-12 15:37:22,904 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:37:22,904 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:37:36,594 DEBUG   SenderThread:30641 [sender.py:send():303] send: stats
+2022-12-12 15:37:37,187 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-12 15:37:37,188 DEBUG   SenderThread:30641 [sender.py:send():303] send: history
+2022-12-12 15:37:37,188 DEBUG   SenderThread:30641 [sender.py:send():303] send: summary
+2022-12-12 15:37:37,189 INFO    SenderThread:30641 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-12 15:37:37,860 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/wandb-summary.json
+2022-12-12 15:37:38,329 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:37:38,329 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:37:39,861 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/output.log
+2022-12-12 15:37:53,701 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:37:53,701 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:38:06,595 DEBUG   SenderThread:30641 [sender.py:send():303] send: stats
+2022-12-12 15:38:07,895 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-12 15:38:07,896 DEBUG   SenderThread:30641 [sender.py:send():303] send: history
+2022-12-12 15:38:07,896 DEBUG   SenderThread:30641 [sender.py:send():303] send: summary
+2022-12-12 15:38:07,896 INFO    SenderThread:30641 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-12 15:38:08,868 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/wandb-summary.json
+2022-12-12 15:38:09,097 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:38:09,097 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:38:09,868 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/output.log
+2022-12-12 15:38:24,486 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:38:24,486 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:38:36,596 DEBUG   SenderThread:30641 [sender.py:send():303] send: stats
+2022-12-12 15:38:38,603 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-12 15:38:38,604 DEBUG   SenderThread:30641 [sender.py:send():303] send: history
+2022-12-12 15:38:38,604 DEBUG   SenderThread:30641 [sender.py:send():303] send: summary
+2022-12-12 15:38:38,604 INFO    SenderThread:30641 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-12 15:38:38,875 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/wandb-summary.json
+2022-12-12 15:38:39,875 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/output.log
+2022-12-12 15:38:39,882 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:38:39,882 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:38:55,275 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:38:55,276 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:39:06,597 DEBUG   SenderThread:30641 [sender.py:send():303] send: stats
+2022-12-12 15:39:08,523 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-12 15:39:08,524 DEBUG   SenderThread:30641 [sender.py:send():303] send: history
+2022-12-12 15:39:08,524 DEBUG   SenderThread:30641 [sender.py:send():303] send: summary
+2022-12-12 15:39:08,524 INFO    SenderThread:30641 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-12 15:39:08,882 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/wandb-summary.json
+2022-12-12 15:39:09,883 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/output.log
+2022-12-12 15:39:10,657 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:39:10,657 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:39:26,040 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:39:26,041 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:39:36,598 DEBUG   SenderThread:30641 [sender.py:send():303] send: stats
+2022-12-12 15:39:39,659 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-12 15:39:39,660 DEBUG   SenderThread:30641 [sender.py:send():303] send: history
+2022-12-12 15:39:39,660 DEBUG   SenderThread:30641 [sender.py:send():303] send: summary
+2022-12-12 15:39:39,660 INFO    SenderThread:30641 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-12 15:39:39,890 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/wandb-summary.json
+2022-12-12 15:39:41,462 DEBUG   HandlerThread:30641 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 15:39:41,462 DEBUG   SenderThread:30641 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 15:39:41,890 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/output.log
+2022-12-12 15:39:47,893 INFO    Thread-13 :30641 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_151930-2y5oaotk/files/output.log

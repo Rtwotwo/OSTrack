@@ -1,0 +1,40 @@
+
+No matching checkpoint file found
+Training crashed at epoch 1
+Traceback for the error!
+Traceback (most recent call last):
+  File "/media/cvlab/data1/LY/SOT/Models/OSTrack-main/lib/train/../../lib/train/trainers/base_trainer.py", line 85, in train
+    self.train_epoch()
+  File "/media/cvlab/data1/LY/SOT/Models/OSTrack-main/lib/train/../../lib/train/trainers/ltr_trainer.py", line 133, in train_epoch
+    self.cycle_dataset(loader)
+  File "/media/cvlab/data1/LY/SOT/Models/OSTrack-main/lib/train/../../lib/train/trainers/ltr_trainer.py", line 86, in cycle_dataset
+    loss, stats = self.actor(data)
+  File "/media/cvlab/data1/LY/SOT/Models/OSTrack-main/lib/train/../../lib/train/actors/ostrack.py", line 31, in __call__
+    out_dict = self.forward_pass(data)
+  File "/media/cvlab/data1/LY/SOT/Models/OSTrack-main/lib/train/../../lib/train/actors/ostrack.py", line 69, in forward_pass
+    out_dict = self.net(template=template_list,
+  File "/home/cvlab/anaconda3/envs/ostrack/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/media/cvlab/data1/LY/SOT/Models/OSTrack-main/lib/train/../../lib/models/ostrack/ostrack.py", line 55, in forward
+    out = self.forward_head(feat_last, None)
+  File "/media/cvlab/data1/LY/SOT/Models/OSTrack-main/lib/train/../../lib/models/ostrack/ostrack.py", line 82, in forward_head
+    score_map_ctr, bbox, size_map, offset_map = self.box_head(opt_feat, gt_score_map)
+  File "/home/cvlab/anaconda3/envs/ostrack/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/media/cvlab/data1/LY/SOT/Models/OSTrack-main/lib/train/../../lib/models/layers/head.py", line 132, in forward
+    score_map_ctr, size_map, offset_map = self.get_score_map(x)
+  File "/media/cvlab/data1/LY/SOT/Models/OSTrack-main/lib/train/../../lib/models/layers/head.py", line 182, in get_score_map
+    x_ctr1 = self.conv1_ctr(x)
+  File "/home/cvlab/anaconda3/envs/ostrack/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/cvlab/anaconda3/envs/ostrack/lib/python3.8/site-packages/torch/nn/modules/container.py", line 139, in forward
+    input = module(input)
+  File "/home/cvlab/anaconda3/envs/ostrack/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/cvlab/anaconda3/envs/ostrack/lib/python3.8/site-packages/torch/nn/modules/batchnorm.py", line 167, in forward
+    return F.batch_norm(
+  File "/home/cvlab/anaconda3/envs/ostrack/lib/python3.8/site-packages/torch/nn/functional.py", line 2281, in batch_norm
+    return torch.batch_norm(
+RuntimeError: CUDA out of memory. Tried to allocate 20.00 MiB (GPU 0; 10.92 GiB total capacity; 9.62 GiB already allocated; 32.31 MiB free; 9.67 GiB reserved in total by PyTorch)
+Restarting training from last epoch ...
+Finished training!

@@ -1,0 +1,982 @@
+2022-12-29 19:27:42,984 INFO    StreamThr :30911 [internal.py:wandb_internal():87] W&B internal server running at pid: 30911, started at: 2022-12-29 19:27:42.983057
+2022-12-29 19:27:42,987 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: status
+2022-12-29 19:27:42,988 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: status
+2022-12-29 19:27:42,991 DEBUG   SenderThread:30911 [sender.py:send():303] send: header
+2022-12-29 19:27:42,991 INFO    WriterThread:30911 [datastore.py:open_for_write():75] open: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/run-24ji6uc4.wandb
+2022-12-29 19:27:42,991 DEBUG   SenderThread:30911 [sender.py:send():303] send: run
+2022-12-29 19:27:44,265 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: check_version
+2022-12-29 19:27:44,267 INFO    SenderThread:30911 [dir_watcher.py:__init__():216] watching files in: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files
+2022-12-29 19:27:44,267 INFO    SenderThread:30911 [sender.py:_start_run_threads():928] run started: 24ji6uc4 with start time 1672313262.978482
+2022-12-29 19:27:44,267 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:27:44,268 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:27:44,268 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: check_version
+2022-12-29 19:27:45,064 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: run_start
+2022-12-29 19:27:45,070 DEBUG   HandlerThread:30911 [system_info.py:__init__():31] System info init
+2022-12-29 19:27:45,070 DEBUG   HandlerThread:30911 [system_info.py:__init__():46] System info init done
+2022-12-29 19:27:45,070 INFO    HandlerThread:30911 [system_monitor.py:start():150] Starting system monitor
+2022-12-29 19:27:45,070 INFO    SystemMonitor:30911 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2022-12-29 19:27:45,071 INFO    HandlerThread:30911 [system_monitor.py:probe():171] Collecting system info
+2022-12-29 19:27:45,071 INFO    SystemMonitor:30911 [interfaces.py:start():168] Started cpu
+2022-12-29 19:27:45,072 INFO    SystemMonitor:30911 [interfaces.py:start():168] Started disk
+2022-12-29 19:27:45,072 INFO    SystemMonitor:30911 [interfaces.py:start():168] Started gpu
+2022-12-29 19:27:45,073 INFO    SystemMonitor:30911 [interfaces.py:start():168] Started memory
+2022-12-29 19:27:45,074 INFO    SystemMonitor:30911 [interfaces.py:start():168] Started network
+2022-12-29 19:27:45,144 DEBUG   HandlerThread:30911 [system_info.py:probe():195] Probing system
+2022-12-29 19:27:45,151 DEBUG   HandlerThread:30911 [git.py:repo():40] git repository is invalid
+2022-12-29 19:27:45,151 DEBUG   HandlerThread:30911 [system_info.py:probe():241] Probing system done
+2022-12-29 19:27:45,151 DEBUG   HandlerThread:30911 [system_monitor.py:probe():180] {'os': 'Linux-4.15.0-142-generic-x86_64-with-glibc2.17', 'python': '3.8.15', 'heartbeatAt': '2022-12-29T11:27:45.144465', 'startedAt': '2022-12-29T11:27:42.671350', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/media/estar/Data/LY/Models/Anti-UAV/ostrack/lib/train/run_training.py', 'codePath': 'run_training.py', 'host': 'estar-SYS-4029GP-TRT', 'username': 'junjie', 'executable': '/home/junjie/libraries/anaconda3/envs/LY-ostrack/bin/python3.8', 'cpu_count': 52, 'cpu_count_logical': 104, 'cpu_freq': {'current': 2340.862153846154, 'min': 1200.0, 'max': 2501.0}, 'cpu_freq_per_core': [{'current': 1958.765, 'min': 1200.0, 'max': 2501.0}, {'current': 2254.057, 'min': 1200.0, 'max': 2501.0}, {'current': 2501.242, 'min': 1200.0, 'max': 2501.0}, {'current': 2018.535, 'min': 1200.0, 'max': 2501.0}, {'current': 2500.675, 'min': 1200.0, 'max': 2501.0}, {'current': 2362.274, 'min': 1200.0, 'max': 2501.0}, {'current': 2781.229, 'min': 1200.0, 'max': 2501.0}, {'current': 3436.06, 'min': 1200.0, 'max': 2501.0}, {'current': 2501.289, 'min': 1200.0, 'max': 2501.0}, {'current': 2503.077, 'min': 1200.0, 'max': 2501.0}, {'current': 2501.468, 'min': 1200.0, 'max': 2501.0}, {'current': 2741.477, 'min': 1200.0, 'max': 2501.0}, {'current': 2501.336, 'min': 1200.0, 'max': 2501.0}, {'current': 2501.342, 'min': 1200.0, 'max': 2501.0}, {'current': 2354.09, 'min': 1200.0, 'max': 2501.0}, {'current': 1241.159, 'min': 1200.0, 'max': 2501.0}, {'current': 3236.095, 'min': 1200.0, 'max': 2501.0}, {'current': 3497.091, 'min': 1200.0, 'max': 2501.0}, {'current': 2729.724, 'min': 1200.0, 'max': 2501.0}, {'current': 3301.342, 'min': 1200.0, 'max': 2501.0}, {'current': 2150.577, 'min': 1200.0, 'max': 2501.0}, {'current': 1941.668, 'min': 1200.0, 'max': 2501.0}, {'current': 2255.657, 'min': 1200.0, 'max': 2501.0}, {'current': 3200.442, 'min': 1200.0, 'max': 2501.0}, {'current': 2501.985, 'min': 1200.0, 'max': 2501.0}, {'current': 3487.265, 'min': 1200.0, 'max': 2501.0}, {'current': 1300.166, 'min': 1200.0, 'max': 2501.0}, {'current': 3155.804, 'min': 1200.0, 'max': 2501.0}, {'current': 3441.432, 'min': 1200.0, 'max': 2501.0}, {'current': 3353.902, 'min': 1200.0, 'max': 2501.0}, {'current': 1300.009, 'min': 1200.0, 'max': 2501.0}, {'current': 1545.127, 'min': 1200.0, 'max': 2501.0}, {'current': 1201.004, 'min': 1200.0, 'max': 2501.0}, {'current': 3430.9, 'min': 1200.0, 'max': 2501.0}, {'current': 1529.584, 'min': 1200.0, 'max': 2501.0}, {'current': 1287.95, 'min': 1200.0, 'max': 2501.0}, {'current': 1846.002, 'min': 1200.0, 'max': 2501.0}, {'current': 1287.373, 'min': 1200.0, 'max': 2501.0}, {'current': 1320.162, 'min': 1200.0, 'max': 2501.0}, {'current': 2500.0, 'min': 1200.0, 'max': 2501.0}, {'current': 1300.01, 'min': 1200.0, 'max': 2501.0}, {'current': 2406.848, 'min': 1200.0, 'max': 2501.0}, {'current': 1276.995, 'min': 1200.0, 'max': 2501.0}, {'current': 2500.0, 'min': 1200.0, 'max': 2501.0}, {'current': 2000.0, 'min': 1200.0, 'max': 2501.0}, {'current': 1200.794, 'min': 1200.0, 'max': 2501.0}, {'current': 1279.549, 'min': 1200.0, 'max': 2501.0}, {'current': 2500.257, 'min': 1200.0, 'max': 2501.0}, {'current': 1201.58, 'min': 1200.0, 'max': 2501.0}, {'current': 1299.531, 'min': 1200.0, 'max': 2501.0}, {'current': 1699.197, 'min': 1200.0, 'max': 2501.0}, {'current': 3261.723, 'min': 1200.0, 'max': 2501.0}, {'current': 1473.816, 'min': 1200.0, 'max': 2501.0}, {'current': 1361.468, 'min': 1200.0, 'max': 2501.0}, {'current': 2499.492, 'min': 1200.0, 'max': 2501.0}, {'current': 2005.527, 'min': 1200.0, 'max': 2501.0}, {'current': 2500.488, 'min': 1200.0, 'max': 2501.0}, {'current': 2457.824, 'min': 1200.0, 'max': 2501.0}, {'current': 2861.137, 'min': 1200.0, 'max': 2501.0}, {'current': 3383.69, 'min': 1200.0, 'max': 2501.0}, {'current': 2500.353, 'min': 1200.0, 'max': 2501.0}, {'current': 2500.0, 'min': 1200.0, 'max': 2501.0}, {'current': 2500.054, 'min': 1200.0, 'max': 2501.0}, {'current': 3209.917, 'min': 1200.0, 'max': 2501.0}, {'current': 2500.043, 'min': 1200.0, 'max': 2501.0}, {'current': 2499.747, 'min': 1200.0, 'max': 2501.0}, {'current': 2506.403, 'min': 1200.0, 'max': 2501.0}, {'current': 2088.781, 'min': 1200.0, 'max': 2501.0}, {'current': 2943.538, 'min': 1200.0, 'max': 2501.0}, {'current': 2761.925, 'min': 1200.0, 'max': 2501.0}, {'current': 3380.066, 'min': 1200.0, 'max': 2501.0}, {'current': 3487.614, 'min': 1200.0, 'max': 2501.0}, {'current': 2057.335, 'min': 1200.0, 'max': 2501.0}, {'current': 2956.505, 'min': 1200.0, 'max': 2501.0}, {'current': 1763.026, 'min': 1200.0, 'max': 2501.0}, {'current': 3486.811, 'min': 1200.0, 'max': 2501.0}, {'current': 2500.356, 'min': 1200.0, 'max': 2501.0}, {'current': 3391.263, 'min': 1200.0, 'max': 2501.0}, {'current': 1299.993, 'min': 1200.0, 'max': 2501.0}, {'current': 3420.466, 'min': 1200.0, 'max': 2501.0}, {'current': 3494.741, 'min': 1200.0, 'max': 2501.0}, {'current': 2732.646, 'min': 1200.0, 'max': 2501.0}, {'current': 1300.012, 'min': 1200.0, 'max': 2501.0}, {'current': 1510.715, 'min': 1200.0, 'max': 2501.0}, {'current': 1201.348, 'min': 1200.0, 'max': 2501.0}, {'current': 3370.986, 'min': 1200.0, 'max': 2501.0}, {'current': 1460.436, 'min': 1200.0, 'max': 2501.0}, {'current': 1300.011, 'min': 1200.0, 'max': 2501.0}, {'current': 1525.547, 'min': 1200.0, 'max': 2501.0}, {'current': 1300.042, 'min': 1200.0, 'max': 2501.0}, {'current': 1395.322, 'min': 1200.0, 'max': 2501.0}, {'current': 2500.456, 'min': 1200.0, 'max': 2501.0}, {'current': 1300.011, 'min': 1200.0, 'max': 2501.0}, {'current': 2398.064, 'min': 1200.0, 'max': 2501.0}, {'current': 1300.016, 'min': 1200.0, 'max': 2501.0}, {'current': 2503.548, 'min': 1200.0, 'max': 2501.0}, {'current': 1998.878, 'min': 1200.0, 'max': 2501.0}, {'current': 1479.651, 'min': 1200.0, 'max': 2501.0}, {'current': 1302.155, 'min': 1200.0, 'max': 2501.0}, {'current': 2501.47, 'min': 1200.0, 'max': 2501.0}, {'current': 1343.659, 'min': 1200.0, 'max': 2501.0}, {'current': 1300.025, 'min': 1200.0, 'max': 2501.0}, {'current': 1441.761, 'min': 1200.0, 'max': 2501.0}, {'current': 3450.244, 'min': 1200.0, 'max': 2501.0}], 'disk': {'total': 1832.2264556884766, 'used': 1694.008876800537}, 'gpu': 'GeForce RTX 3090', 'gpu_count': 8, 'gpu_devices': [{'name': 'GeForce RTX 3090', 'memory_total': 25447170048}, {'name': 'GeForce RTX 3090', 'memory_total': 25447170048}, {'name': 'GeForce RTX 3090', 'memory_total': 25447170048}, {'name': 'GeForce RTX 3090', 'memory_total': 25447170048}, {'name': 'GeForce RTX 3090', 'memory_total': 25447170048}, {'name': 'GeForce RTX 3090', 'memory_total': 25447170048}, {'name': 'GeForce RTX 3090', 'memory_total': 25447170048}, {'name': 'GeForce RTX 3090', 'memory_total': 25447170048}], 'memory': {'total': 251.56750869750977}}
+2022-12-29 19:27:45,151 INFO    HandlerThread:30911 [system_monitor.py:probe():181] Finished collecting system info
+2022-12-29 19:27:45,151 INFO    HandlerThread:30911 [system_monitor.py:probe():184] Publishing system info
+2022-12-29 19:27:45,151 DEBUG   HandlerThread:30911 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2022-12-29 19:27:45,152 DEBUG   HandlerThread:30911 [system_info.py:_save_pip():67] Saving pip packages done
+2022-12-29 19:27:45,152 DEBUG   HandlerThread:30911 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2022-12-29 19:27:45,156 ERROR   HandlerThread:30911 [system_info.py:_save_conda():85] Error saving conda packages: [Errno 2] No such file or directory: 'conda'
+Traceback (most recent call last):
+  File "/home/junjie/libraries/anaconda3/envs/LY-ostrack/lib/python3.8/site-packages/wandb/sdk/internal/system/system_info.py", line 81, in _save_conda
+    subprocess.call(
+  File "/home/junjie/libraries/anaconda3/envs/LY-ostrack/lib/python3.8/subprocess.py", line 340, in call
+    with Popen(*popenargs, **kwargs) as p:
+  File "/home/junjie/libraries/anaconda3/envs/LY-ostrack/lib/python3.8/subprocess.py", line 858, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/home/junjie/libraries/anaconda3/envs/LY-ostrack/lib/python3.8/subprocess.py", line 1704, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'conda'
+2022-12-29 19:27:45,158 DEBUG   HandlerThread:30911 [system_info.py:_save_conda():86] Saving conda packages done
+2022-12-29 19:27:45,159 INFO    HandlerThread:30911 [system_monitor.py:probe():186] Finished publishing system info
+2022-12-29 19:27:45,198 DEBUG   SenderThread:30911 [sender.py:send():303] send: files
+2022-12-29 19:27:45,199 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-metadata.json with policy now
+2022-12-29 19:27:45,207 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:27:45,207 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:27:45,271 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_created():275] file/dir created: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/requirements.txt
+2022-12-29 19:27:45,271 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_created():275] file/dir created: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:27:45,272 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_created():275] file/dir created: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/conda-environment.yaml
+2022-12-29 19:27:45,272 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_created():275] file/dir created: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-metadata.json
+2022-12-29 19:27:45,578 DEBUG   SenderThread:30911 [sender.py:send():303] send: telemetry
+2022-12-29 19:27:46,269 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_created():275] file/dir created: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:27:46,355 INFO    Thread-16 :30911 [upload_job.py:push():143] Uploaded file /tmp/tmpwol7z34zwandb/3bqcztfq-wandb-metadata.json
+2022-12-29 19:27:48,269 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:27:51,270 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:28:00,663 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:28:00,664 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:28:10,327 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:28:12,278 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:28:14,279 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/config.yaml
+2022-12-29 19:28:16,297 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:28:16,297 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:28:32,355 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:28:32,358 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:28:32,359 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:28:32,362 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:28:33,288 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:28:34,289 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:28:34,687 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:28:34,687 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:28:45,075 DEBUG   SystemMonitor:30911 [system_monitor.py:_start():130] Starting system metrics aggregation loop
+2022-12-29 19:28:45,078 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:28:50,331 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:28:50,332 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:28:54,528 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:28:54,529 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:28:54,529 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:28:54,532 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:28:55,297 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:28:56,298 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:29:05,702 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:29:05,703 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:29:15,081 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:29:16,783 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:29:16,784 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:29:16,785 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:29:16,787 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:29:17,306 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:29:18,306 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:29:21,082 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:29:21,082 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:29:36,459 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:29:36,459 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:29:38,953 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:29:38,954 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:29:38,954 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:29:38,957 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:29:39,315 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:29:40,315 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:29:45,086 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:29:51,825 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:29:51,825 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:30:01,163 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:30:01,164 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:30:01,165 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:30:01,165 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:30:01,324 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:30:02,324 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:30:07,198 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:30:07,198 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:30:15,090 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:30:22,858 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:30:22,859 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:30:23,374 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:30:23,494 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:30:23,494 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:30:23,498 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:30:24,333 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:30:24,334 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:30:38,499 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:30:38,500 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:30:45,094 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:30:45,667 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:30:45,668 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:30:45,668 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:30:45,669 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:30:46,342 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:30:46,342 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:30:53,876 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:30:53,877 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:31:07,910 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:31:07,912 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:31:07,912 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:31:07,912 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:31:08,351 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:31:09,247 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:31:09,248 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:31:10,352 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:31:15,097 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:31:24,617 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:31:24,618 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:31:30,223 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:31:30,225 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:31:30,225 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:31:30,251 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:31:30,360 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:31:32,361 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:31:39,998 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:31:39,998 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:31:45,100 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:31:45,303 WARNING FileStreamThread:30911 [file_stream.py:request_with_retry():667] requests_with_retry encountered retryable exception: 408 Client Error: Request Timeout for url: https://api.wandb.ai/files/1053504537/tracking/24ji6uc4/file_stream. func: <bound method Session.post of <requests.sessions.Session object at 0x7faed661f280>>, args: ('https://api.wandb.ai/files/1053504537/tracking/24ji6uc4/file_stream',), kwargs: {'json': {'files': {'wandb-events.jsonl': {'offset': 4, 'content': ['{"system.disk": 97.4, "system.network.sent": 3322958.73, "system.network.recv": 3382780.2, "system.proc.memory.availableMB": 204604.52, "system.memory": 20.57, "system.proc.memory.rssMB": 4851.05, "system.proc.memory.percent": 1.88, "system.cpu": 0.96, "system.cpu.0.cpu_percent": 79.82, "system.cpu.1.cpu_percent": 62.41, "system.cpu.2.cpu_percent": 36.91, "system.cpu.3.cpu_percent": 36.19, "system.cpu.4.cpu_percent": 26.8, "system.cpu.5.cpu_percent": 21.65, "system.cpu.6.cpu_percent": 22.99, "system.cpu.7.cpu_percent": 14.71, "system.cpu.8.cpu_percent": 74.99, "system.cpu.9.cpu_percent": 7.37, "system.cpu.10.cpu_percent": 36.29, "system.cpu.11.cpu_percent": 18.19, "system.cpu.12.cpu_percent": 28.73, "system.cpu.13.cpu_percent": 24.03, "system.cpu.14.cpu_percent": 13.96, "system.cpu.15.cpu_percent": 23.11, "system.cpu.16.cpu_percent": 23.21, "system.cpu.17.cpu_percent": 6.93, "system.cpu.18.cpu_percent": 7.43, "system.cpu.19.cpu_percent": 13.92, "system.cpu.20.cpu_percent": 22.2, "system.cpu.21.cpu_percent": 7.59, "system.cpu.22.cpu_percent": 23.4, "system.cpu.23.cpu_percent": 38.05, "system.cpu.24.cpu_percent": 41.72, "system.cpu.25.cpu_percent": 51.1, "system.cpu.26.cpu_percent": 70.7, "system.cpu.27.cpu_percent": 80.53, "system.cpu.28.cpu_percent": 72.45, "system.cpu.29.cpu_percent": 62.91, "system.cpu.30.cpu_percent": 69.51, "system.cpu.31.cpu_percent": 55.76, "system.cpu.32.cpu_percent": 41.52, "system.cpu.33.cpu_percent": 43.48, "system.cpu.34.cpu_percent": 42.27, "system.cpu.35.cpu_percent": 33.47, "system.cpu.36.cpu_percent": 15.73, "system.cpu.37.cpu_percent": 17.81, "system.cpu.38.cpu_percent": 11.91, "system.cpu.39.cpu_percent": 24.82, "system.cpu.40.cpu_percent": 27.99, "system.cpu.41.cpu_percent": 10.94, "system.cpu.42.cpu_percent": 15.87, "system.cpu.43.cpu_percent": 23.07, "system.cpu.44.cpu_percent": 14.51, "system.cpu.45.cpu_percent": 6.15, "system.cpu.46.cpu_percent": 8.44, "system.cpu.47.cpu_percent": 12.91, "system.cpu.48.cpu_percent": 18.09, "system.cpu.49.cpu_percent": 7.81, "system.cpu.50.cpu_percent": 7.69, "system.cpu.51.cpu_percent": 2.29, "system.cpu.52.cpu_percent": 11.64, "system.cpu.53.cpu_percent": 20.3, "system.cpu.54.cpu_percent": 26.77, "system.cpu.55.cpu_percent": 12.42, "system.cpu.56.cpu_percent": 16.91, "system.cpu.57.cpu_percent": 20.39, "system.cpu.58.cpu_percent": 8.15, "system.cpu.59.cpu_percent": 7.69, "system.cpu.60.cpu_percent": 13.85, "system.cpu.61.cpu_percent": 12.28, "system.cpu.62.cpu_percent": 7.23, "system.cpu.63.cpu_percent": 23.17, "system.cpu.64.cpu_percent": 12.88, "system.cpu.65.cpu_percent": 10.77, "system.cpu.66.cpu_percent": 10.11, "system.cpu.67.cpu_percent": 12.88, "system.cpu.68.cpu_percent": 25.05, "system.cpu.69.cpu_percent": 28.46, "system.cpu.70.cpu_percent": 11.91, "system.cpu.71.cpu_percent": 7.84, "system.cpu.72.cpu_percent": 9.58, "system.cpu.73.cpu_percent": 7.77, "system.cpu.74.cpu_percent": 12.97, "system.cpu.75.cpu_percent": 7.24, "system.cpu.76.cpu_percent": 7.1, "system.cpu.77.cpu_percent": 6.5, "system.cpu.78.cpu_percent": 2.31, "system.cpu.79.cpu_percent": 1.0, "system.cpu.80.cpu_percent": 4.35, "system.cpu.81.cpu_percent": 11.72, "system.cpu.82.cpu_percent": 3.86, "system.cpu.83.cpu_percent": 9.46, "system.cpu.84.cpu_percent": 24.52, "system.cpu.85.cpu_percent": 2.93, "system.cpu.86.cpu_percent": 10.18, "system.cpu.87.cpu_percent": 23.68, "system.cpu.88.cpu_percent": 29.09, "system.cpu.89.cpu_percent": 5.95, "system.cpu.90.cpu_percent": 12.54, "system.cpu.91.cpu_percent": 8.82, "system.cpu.92.cpu_percent": 9.38, "system.cpu.93.cpu_percent": 17.65, "system.cpu.94.cpu_percent": 24.55, "system.cpu.95.cpu_percent": 12.45, "system.cpu.96.cpu_percent": 4.93, "system.cpu.97.cpu_percent": 7.47, "system.cpu.98.cpu_percent": 4.37, "system.cpu.99.cpu_percent": 5.35, "system.cpu.100.cpu_percent": 17.1, "system.cpu.101.cpu_percent": 17.11, "system.cpu.102.cpu_percent": 8.75, "system.cpu.103.cpu_percent": 96.27, "system.proc.cpu.threads": 73, "system.gpu.0.memoryAllocated": 26.59, "system.gpu.1.memoryAllocated": 84.37, "system.gpu.process.1.memoryAllocated": 84.37, "system.gpu.2.memoryAllocated": 88.79, "system.gpu.3.memoryAllocated": 70.87, "system.gpu.4.memoryAllocated": 0.01, "system.gpu.5.memoryAllocated": 0.01, "system.gpu.6.memoryAllocated": 0.01, "system.gpu.7.memoryAllocated": 6.7, "system.gpu.0.memory": 15.0, "system.gpu.1.memory": 59.8, "system.gpu.process.1.memory": 59.8, "system.gpu.2.memory": 34.47, "system.gpu.3.memory": 33.4, "system.gpu.4.memory": 0.0, "system.gpu.5.memory": 0.0, "system.gpu.6.memory": 0.0, "system.gpu.7.memory": 0.93, "system.gpu.0.gpu": 21.87, "system.gpu.1.gpu": 93.6, "system.gpu.process.1.gpu": 93.6, "system.gpu.2.gpu": 63.2, "system.gpu.3.gpu": 52.47, "system.gpu.4.gpu": 0.0, "system.gpu.5.gpu": 0.0, "system.gpu.6.gpu": 0.0, "system.gpu.7.gpu": 14.8, "system.gpu.0.temp": 63.33, "system.gpu.1.temp": 75.8, "system.gpu.process.1.temp": 75.8, "system.gpu.2.temp": 62.47, "system.gpu.3.temp": 63.6, "system.gpu.4.temp": 26.0, "system.gpu.5.temp": 27.0, "system.gpu.6.temp": 30.0, "system.gpu.7.temp": 51.0, "system.gpu.0.powerWatts": 195.56, "system.gpu.1.powerWatts": 337.36, "system.gpu.process.1.powerWatts": 337.36, "system.gpu.2.powerWatts": 294.7, "system.gpu.3.powerWatts": 241.02, "system.gpu.4.powerWatts": 18.05, "system.gpu.5.powerWatts": 23.33, "system.gpu.6.powerWatts": 20.38, "system.gpu.7.powerWatts": 127.64, "system.gpu.0.powerPercent": 56.22, "system.gpu.1.powerPercent": 96.43, "system.gpu.process.1.powerPercent": 96.43, "system.gpu.2.powerPercent": 84.2, "system.gpu.3.powerPercent": 68.86, "system.gpu.4.powerPercent": 5.16, "system.gpu.5.powerPercent": 6.66, "system.gpu.6.powerPercent": 5.82, "system.gpu.7.powerPercent": 36.47, "_wandb": true, "_timestamp": 1672313445.089407, "_runtime": 182.110925}']}}, 'dropped': 0}}
+2022-12-29 19:31:52,515 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:31:52,516 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:31:52,517 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:31:52,518 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:31:53,373 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:31:54,373 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:31:55,447 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:31:55,447 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:32:10,911 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:32:10,912 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:32:14,743 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:32:14,783 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:32:14,783 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:32:14,786 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:32:15,103 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:32:15,382 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:32:16,383 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:32:26,276 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:32:26,277 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:32:37,011 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:32:37,012 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:32:37,013 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:32:37,015 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:32:37,392 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:32:38,392 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:32:41,641 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:32:41,641 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:32:45,107 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:32:57,030 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:32:57,030 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:32:59,209 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:32:59,210 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:32:59,210 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:32:59,211 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:32:59,401 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:33:00,402 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:33:12,400 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:33:12,400 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:33:15,111 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:33:21,531 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:33:21,532 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:33:21,532 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:33:21,533 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:33:22,411 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:33:22,412 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:33:27,770 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:33:27,770 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:33:43,149 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:33:43,150 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:33:43,791 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:33:43,792 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:33:43,793 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:33:43,793 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:33:44,420 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:33:44,421 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:33:45,115 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:33:58,765 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:33:58,766 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:34:06,139 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:34:06,140 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:34:06,140 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:34:06,141 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:34:06,430 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:34:08,430 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:34:14,146 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:34:14,146 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:34:15,118 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:34:28,551 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:34:28,552 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:34:28,552 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:34:28,553 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:34:29,439 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:34:29,793 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:34:29,793 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:34:30,440 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:34:45,122 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:34:45,170 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:34:45,188 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:34:50,859 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:34:50,860 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:34:50,860 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:34:50,861 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:34:51,449 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:34:52,450 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:35:00,567 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:35:00,567 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:35:13,195 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:35:13,196 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:35:13,196 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:35:13,197 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:35:13,458 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:35:14,459 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:35:15,126 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:35:16,204 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:35:16,205 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:35:34,732 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:35:34,732 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:35:35,450 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:35:35,451 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:35:35,452 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:35:35,452 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:35:35,468 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:35:36,468 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:35:45,130 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:35:50,098 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:35:50,099 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:35:57,775 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:35:57,776 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:35:57,776 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:35:57,777 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:35:58,477 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:35:58,477 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:36:05,734 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:36:05,734 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:36:15,132 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:36:15,337 WARNING FileStreamThread:30911 [file_stream.py:request_with_retry():667] requests_with_retry encountered retryable exception: 408 Client Error: Request Timeout for url: https://api.wandb.ai/files/1053504537/tracking/24ji6uc4/file_stream. func: <bound method Session.post of <requests.sessions.Session object at 0x7faed661f280>>, args: ('https://api.wandb.ai/files/1053504537/tracking/24ji6uc4/file_stream',), kwargs: {'json': {'files': {'wandb-summary.json': {'offset': 0, 'content': ['{"train/Loss/total": 8.375672263910896, "train/epoch": 1, "train/Loss/giou": 0.5275450210351693, "train/Loss/l1": 0.07955530405436692, "train/Loss/location": 6.922805698733581, "train/IoU": 0.538412072624227, "train/LearningRate/group0": 0.0002, "train/LearningRate/group1": 2e-05, "_timestamp": 1672313690.8146503, "_runtime": 427.83616828918457, "_step": 304}']}, 'wandb-history.jsonl': {'offset': 17, 'content': ['{"train/Loss/total": 8.768734278480212, "train/epoch": 1, "train/Loss/giou": 0.5399735517799854, "train/Loss/l1": 0.08264133220952419, "train/Loss/location": 7.275580510927571, "train/IoU": 0.5285304586392724, "train/LearningRate/group0": 0.0002, "train/LearningRate/group1": 2e-05, "_timestamp": 1672313668.5078747, "_runtime": 405.5293927192688, "_step": 288}', '{"train/Loss/total": 8.375672263910896, "train/epoch": 1, "train/Loss/giou": 0.5275450210351693, "train/Loss/l1": 0.07955530405436692, "train/Loss/location": 6.922805698733581, "train/IoU": 0.538412072624227, "train/LearningRate/group0": 0.0002, "train/LearningRate/group1": 2e-05, "_timestamp": 1672313690.8146503, "_runtime": 427.83616828918457, "_step": 304}']}, 'wandb-events.jsonl': {'offset': 13, 'content': ['{"system.disk": 97.4, "system.network.sent": 10104062.0, "system.network.recv": 10143672.73, "system.proc.memory.availableMB": 204980.58, "system.memory": 20.42, "system.proc.memory.rssMB": 4854.62, "system.proc.memory.percent": 1.88, "system.cpu": 0.96, "system.cpu.0.cpu_percent": 34.47, "system.cpu.1.cpu_percent": 20.71, "system.cpu.2.cpu_percent": 32.83, "system.cpu.3.cpu_percent": 91.87, "system.cpu.4.cpu_percent": 21.65, "system.cpu.5.cpu_percent": 48.25, "system.cpu.6.cpu_percent": 21.61, "system.cpu.7.cpu_percent": 23.05, "system.cpu.8.cpu_percent": 27.31, "system.cpu.9.cpu_percent": 27.92, "system.cpu.10.cpu_percent": 20.39, "system.cpu.11.cpu_percent": 15.05, "system.cpu.12.cpu_percent": 34.08, "system.cpu.13.cpu_percent": 19.94, "system.cpu.14.cpu_percent": 45.8, "system.cpu.15.cpu_percent": 72.1, "system.cpu.16.cpu_percent": 40.13, "system.cpu.17.cpu_percent": 28.34, "system.cpu.18.cpu_percent": 28.7, "system.cpu.19.cpu_percent": 48.43, "system.cpu.20.cpu_percent": 42.4, "system.cpu.21.cpu_percent": 44.0, "system.cpu.22.cpu_percent": 44.59, "system.cpu.23.cpu_percent": 37.99, "system.cpu.24.cpu_percent": 23.91, "system.cpu.25.cpu_percent": 47.11, "system.cpu.26.cpu_percent": 72.16, "system.cpu.27.cpu_percent": 76.29, "system.cpu.28.cpu_percent": 53.63, "system.cpu.29.cpu_percent": 44.56, "system.cpu.30.cpu_percent": 69.15, "system.cpu.31.cpu_percent": 95.88, "system.cpu.32.cpu_percent": 22.81, "system.cpu.33.cpu_percent": 47.92, "system.cpu.34.cpu_percent": 24.0, "system.cpu.35.cpu_percent": 39.15, "system.cpu.36.cpu_percent": 30.31, "system.cpu.37.cpu_percent": 20.52, "system.cpu.38.cpu_percent": 19.94, "system.cpu.39.cpu_percent": 32.73, "system.cpu.40.cpu_percent": 12.21, "system.cpu.41.cpu_percent": 17.27, "system.cpu.42.cpu_percent": 26.47, "system.cpu.43.cpu_percent": 23.01, "system.cpu.44.cpu_percent": 7.06, "system.cpu.45.cpu_percent": 34.44, "system.cpu.46.cpu_percent": 13.24, "system.cpu.47.cpu_percent": 23.77, "system.cpu.48.cpu_percent": 21.67, "system.cpu.49.cpu_percent": 15.57, "system.cpu.50.cpu_percent": 11.57, "system.cpu.51.cpu_percent": 1.1, "system.cpu.52.cpu_percent": 27.99, "system.cpu.53.cpu_percent": 12.13, "system.cpu.54.cpu_percent": 11.96, "system.cpu.55.cpu_percent": 9.12, "system.cpu.56.cpu_percent": 11.78, "system.cpu.57.cpu_percent": 11.11, "system.cpu.58.cpu_percent": 12.28, "system.cpu.59.cpu_percent": 12.58, "system.cpu.60.cpu_percent": 11.89, "system.cpu.61.cpu_percent": 14.47, "system.cpu.62.cpu_percent": 26.31, "system.cpu.63.cpu_percent": 16.69, "system.cpu.64.cpu_percent": 14.81, "system.cpu.65.cpu_percent": 14.91, "system.cpu.66.cpu_percent": 11.61, "system.cpu.67.cpu_percent": 10.64, "system.cpu.68.cpu_percent": 13.25, "system.cpu.69.cpu_percent": 20.89, "system.cpu.70.cpu_percent": 11.94, "system.cpu.71.cpu_percent": 15.59, "system.cpu.72.cpu_percent": 24.93, "system.cpu.73.cpu_percent": 11.21, "system.cpu.74.cpu_percent": 23.19, "system.cpu.75.cpu_percent": 16.07, "system.cpu.76.cpu_percent": 16.45, "system.cpu.77.cpu_percent": 27.69, "system.cpu.78.cpu_percent": 5.4, "system.cpu.79.cpu_percent": 3.63, "system.cpu.80.cpu_percent": 4.2, "system.cpu.81.cpu_percent": 19.8, "system.cpu.82.cpu_percent": 2.69, "system.cpu.83.cpu_percent": 0.87, "system.cpu.84.cpu_percent": 29.25, "system.cpu.85.cpu_percent": 10.03, "system.cpu.86.cpu_percent": 8.05, "system.cpu.87.cpu_percent": 6.7, "system.cpu.88.cpu_percent": 8.75, "system.cpu.89.cpu_percent": 9.91, "system.cpu.90.cpu_percent": 3.87, "system.cpu.91.cpu_percent": 8.79, "system.cpu.92.cpu_percent": 21.75, "system.cpu.93.cpu_percent": 31.6, "system.cpu.94.cpu_percent": 34.21, "system.cpu.95.cpu_percent": 12.93, "system.cpu.96.cpu_percent": 17.81, "system.cpu.97.cpu_percent": 11.02, "system.cpu.98.cpu_percent": 7.07, "system.cpu.99.cpu_percent": 4.69, "system.cpu.100.cpu_percent": 18.08, "system.cpu.101.cpu_percent": 13.37, "system.cpu.102.cpu_percent": 11.31, "system.cpu.103.cpu_percent": 95.24, "system.proc.cpu.threads": 73, "system.gpu.0.memoryAllocated": 26.59, "system.gpu.1.memoryAllocated": 84.37, "system.gpu.process.1.memoryAllocated": 84.37, "system.gpu.2.memoryAllocated": 88.79, "system.gpu.3.memoryAllocated": 70.87, "system.gpu.4.memoryAllocated": 0.01, "system.gpu.5.memoryAllocated": 0.01, "system.gpu.6.memoryAllocated": 0.01, "system.gpu.7.memoryAllocated": 6.7, "system.gpu.0.memory": 22.47, "system.gpu.1.memory": 59.67, "system.gpu.process.1.memory": 59.67, "system.gpu.2.memory": 40.8, "system.gpu.3.memory": 19.53, "system.gpu.4.memory": 0.0, "system.gpu.5.memory": 0.0, "system.gpu.6.memory": 0.0, "system.gpu.7.memory": 0.93, "system.gpu.0.gpu": 31.2, "system.gpu.1.gpu": 94.0, "system.gpu.process.1.gpu": 94.0, "system.gpu.2.gpu": 73.13, "system.gpu.3.gpu": 31.67, "system.gpu.4.gpu": 0.0, "system.gpu.5.gpu": 0.0, "system.gpu.6.gpu": 0.0, "system.gpu.7.gpu": 14.47, "system.gpu.0.temp": 64.93, "system.gpu.1.temp": 76.13, "system.gpu.process.1.temp": 76.13, "system.gpu.2.temp": 64.07, "system.gpu.3.temp": 62.67, "system.gpu.4.temp": 26.0, "system.gpu.5.temp": 27.0, "system.gpu.6.temp": 30.0, "system.gpu.7.temp": 51.27, "system.gpu.0.powerWatts": 211.05, "system.gpu.1.powerWatts": 336.23, "system.gpu.process.1.powerWatts": 336.23, "system.gpu.2.powerWatts": 308.93, "system.gpu.3.powerWatts": 221.37, "system.gpu.4.powerWatts": 17.86, "system.gpu.5.powerWatts": 23.45, "system.gpu.6.powerWatts": 20.67, "system.gpu.7.powerWatts": 128.24, "system.gpu.0.powerPercent": 60.3, "system.gpu.1.powerPercent": 96.07, "system.gpu.process.1.powerPercent": 96.07, "system.gpu.2.powerPercent": 88.24, "system.gpu.3.powerPercent": 62.93, "system.gpu.4.powerPercent": 5.1, "system.gpu.5.powerPercent": 6.7, "system.gpu.6.powerPercent": 5.91, "system.gpu.7.powerPercent": 36.64, "_wandb": true, "_timestamp": 1672313715.121445, "_runtime": 452.142963}']}, 'output.log': {'offset': 21, 'content': ['2022-12-29T11:34:52.178773 [train: 1, 950 / 3750] FPS: 35.7 (35.9)  ,  DataTime: 0.012 (0.015)  ,  ForwardTime: 0.421  ,  TotalTime: 0.448  ,  Loss/total: 8.37567  ,  Loss/giou: 0.52755  ,  Loss/l1: 0.07956  ,  Loss/location: 6.92281  ,  IoU: 0.53841\n', '2022-12-29T11:35:14.206499 [train: 1, 1000 / 3750] FPS: 35.7 (35.9)  ,  DataTime: 0.012 (0.015)  ,  ForwardTime: 0.421  ,  TotalTime: 0.448  ,  Loss/total: 8.01911  ,  Loss/giou: 0.51583  ,  Loss/l1: 0.07657  ,  Loss/location: 6.60459  ,  IoU: 0.54756\n']}}, 'dropped': 0}}
+2022-12-29 19:36:20,082 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:36:20,083 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:36:20,084 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:36:20,085 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:36:20,486 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:36:21,421 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:36:21,421 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:36:22,486 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:36:36,793 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:36:36,793 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:36:42,326 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:36:42,328 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:36:42,328 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:36:42,399 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:36:42,494 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:36:44,495 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:36:45,136 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:36:52,163 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:36:52,163 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:37:04,570 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:37:04,572 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:37:04,572 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:37:04,575 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:37:05,503 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:37:06,504 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:37:07,638 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:37:07,639 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:37:15,138 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:37:23,006 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:37:23,007 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:37:26,834 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:37:26,835 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:37:26,836 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:37:26,836 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:37:27,512 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:37:28,512 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:37:38,375 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:37:38,375 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:37:45,139 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:37:49,207 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:37:49,208 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:37:49,209 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:37:49,209 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:37:49,520 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:37:50,520 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:37:53,756 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:37:53,756 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:38:09,131 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:38:09,131 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:38:11,401 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:38:11,402 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:38:11,403 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:38:11,403 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:38:11,528 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:38:12,529 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:38:15,143 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:38:24,509 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:38:24,509 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:38:33,803 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:38:33,804 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:38:33,805 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:38:33,806 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:38:34,538 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:38:34,539 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:38:39,878 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:38:39,879 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:38:49,261 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:38:56,110 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:38:56,112 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:38:56,113 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:38:56,113 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:38:56,548 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:38:56,548 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:38:59,879 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:38:59,879 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:39:15,151 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:39:15,512 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:39:15,512 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:39:18,404 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:39:18,404 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:39:18,405 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:39:18,405 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:39:18,557 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:39:18,557 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:39:30,888 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:39:30,889 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:39:40,806 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:39:40,807 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:39:40,808 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:39:40,810 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:39:41,567 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:39:43,568 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:39:45,156 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:39:46,263 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:39:46,263 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:40:01,657 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:40:01,658 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:40:02,934 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:40:02,935 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:40:02,935 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:40:02,936 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:40:03,577 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:40:05,578 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:40:15,157 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:40:17,099 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:40:17,099 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:40:25,202 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:40:25,204 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:40:25,204 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:40:25,205 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:40:25,586 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:40:27,586 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:40:34,955 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:40:34,955 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:40:45,162 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:40:47,362 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:40:47,364 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:40:47,364 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:40:47,365 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:40:47,595 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:40:49,596 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:40:50,664 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:40:50,665 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:41:06,039 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:41:06,039 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:41:09,524 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:41:09,525 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:41:09,526 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:41:09,526 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:41:09,604 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:41:11,605 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:41:15,167 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:41:21,412 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:41:21,412 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:41:31,639 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:41:31,640 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:41:31,640 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:41:31,641 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:41:32,614 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:41:33,614 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:41:37,206 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:41:37,206 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:41:45,170 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:41:52,649 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:41:52,650 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:41:53,707 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:41:53,709 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:41:53,709 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:41:53,710 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:41:54,622 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:41:55,623 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:42:08,099 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:42:08,100 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:42:15,174 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:42:15,891 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:42:15,895 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:42:15,896 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:42:15,896 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:42:16,632 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:42:17,632 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:42:23,751 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:42:23,751 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:42:37,907 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:42:37,907 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:42:37,908 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:42:37,908 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:42:38,641 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:42:39,577 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:42:39,577 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:42:39,641 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:42:45,180 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:42:55,329 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:42:55,329 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:42:59,937 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:42:59,938 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:42:59,939 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:42:59,939 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:43:00,649 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:43:01,650 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:43:10,700 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:43:10,700 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:43:15,181 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:43:22,047 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:43:22,048 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:43:22,048 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:43:22,049 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:43:22,658 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:43:23,659 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:43:26,069 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:43:26,070 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:43:41,454 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:43:41,454 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:43:44,020 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:43:44,021 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:43:44,022 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:43:44,022 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:43:44,667 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:43:45,184 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:43:45,668 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:43:56,833 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:43:56,833 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:44:06,071 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:44:06,072 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:44:06,073 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:44:06,074 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:44:06,676 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:44:07,676 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:44:12,203 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:44:12,203 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:44:15,188 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:44:27,588 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:44:27,589 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:44:28,045 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:44:28,046 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:44:28,047 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:44:28,048 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:44:28,685 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:44:29,685 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:44:42,957 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:44:42,958 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:44:45,191 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:44:50,171 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:44:50,172 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:44:50,172 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:44:50,173 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:44:50,694 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:44:51,694 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:44:58,328 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:44:58,328 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:45:12,190 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:45:12,192 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:45:12,193 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:45:12,195 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:45:12,703 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:45:13,703 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:45:13,705 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:45:13,705 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:45:15,196 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:45:29,069 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:45:29,070 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:45:34,195 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:45:34,196 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:45:34,197 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:45:34,198 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:45:34,711 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:45:35,712 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:45:44,424 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:45:44,424 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:45:45,199 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:45:56,242 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:45:56,244 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:45:56,244 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:45:56,245 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:45:56,720 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:45:57,721 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:45:59,805 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:45:59,805 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:46:15,204 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:46:15,675 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:46:15,675 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:46:18,261 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:46:18,262 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:46:18,263 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:46:18,263 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:46:18,730 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:46:19,730 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:46:31,063 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:46:31,063 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:46:40,323 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:46:40,324 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:46:40,324 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:46:40,325 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:46:40,738 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:46:41,739 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:46:45,208 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:46:46,432 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:46:46,433 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:47:02,060 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:47:02,060 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:47:02,317 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:47:02,508 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:47:02,508 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:47:02,510 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:47:02,747 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:47:03,747 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:47:15,212 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:47:17,511 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:47:17,511 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:47:24,334 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:47:24,335 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:47:24,336 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:47:24,336 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:47:24,755 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:47:25,755 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:47:34,668 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:47:34,668 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:47:45,216 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:47:46,447 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:47:46,448 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:47:46,448 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:47:46,449 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:47:46,764 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:47:47,765 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:47:50,043 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:47:50,044 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:48:05,408 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:48:05,408 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:48:08,432 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:48:10,502 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:48:10,502 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:48:10,503 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:48:10,774 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:48:11,774 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:48:15,219 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:48:25,409 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:48:25,409 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:48:30,448 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:48:30,450 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:48:30,450 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:48:30,451 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:48:30,782 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:48:31,782 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:48:41,037 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:48:41,037 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:48:45,222 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:48:52,478 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:48:52,480 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:48:52,480 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:48:52,481 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:48:52,791 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:48:53,791 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:48:56,411 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:48:56,412 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:49:11,786 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:49:11,787 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:49:14,436 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:49:14,438 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:49:14,438 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:49:14,439 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:49:14,800 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:49:15,227 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:49:15,801 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:49:27,703 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:49:27,703 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:49:36,495 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:49:36,496 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:49:36,496 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:49:36,497 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:49:36,809 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:49:37,810 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:49:43,321 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:49:43,321 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:49:45,231 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:49:58,479 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:49:58,480 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:49:58,481 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:49:58,482 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:49:58,688 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:49:58,688 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:49:58,819 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:49:59,820 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:50:14,065 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:50:14,065 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:50:15,232 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:50:20,479 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:50:20,480 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:50:20,480 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:50:20,481 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:50:20,829 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:50:21,829 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:50:29,446 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:50:29,447 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:50:42,499 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:50:42,500 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:50:42,500 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:50:42,501 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:50:42,838 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:50:43,838 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:50:44,832 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:50:44,833 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:50:45,237 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:51:00,204 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:51:00,204 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:51:04,393 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:51:04,394 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:51:04,395 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:51:04,395 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:51:04,847 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:51:05,847 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:51:15,240 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:51:15,563 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:51:15,564 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:51:26,435 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:51:26,436 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:51:26,437 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:51:26,438 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:51:26,856 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:51:27,856 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:51:31,260 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:51:31,260 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:51:45,243 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:51:46,639 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:51:46,639 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:51:48,374 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:51:48,375 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:51:48,375 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:51:48,376 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:51:48,865 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:51:49,865 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:52:02,025 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:52:02,025 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:52:10,418 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:52:10,419 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:52:10,420 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:52:10,421 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:52:10,876 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:52:11,877 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:52:15,247 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:52:17,754 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:52:17,754 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:52:32,402 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:52:32,404 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:52:32,404 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:52:32,405 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:52:32,886 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:52:33,886 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:52:34,132 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:52:34,132 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:52:45,250 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:52:49,496 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:52:49,496 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:52:54,347 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:52:54,348 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:52:54,348 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:52:54,349 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:52:54,894 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:52:55,895 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:53:04,863 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:53:04,863 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:53:15,254 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:53:16,399 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:53:16,400 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:53:16,400 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:53:16,400 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:53:16,903 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:53:17,904 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:53:20,226 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:53:20,227 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:53:35,600 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:53:35,601 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:53:38,334 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:53:38,335 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:53:38,335 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:53:38,335 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:53:38,912 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:53:39,913 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:53:45,256 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:53:50,967 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:53:50,968 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:54:00,391 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:54:00,392 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:54:00,392 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:54:00,393 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:54:00,922 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:54:01,922 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:54:06,357 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:54:06,358 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:54:15,261 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:54:21,724 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:54:21,724 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:54:22,386 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:54:22,387 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:54:22,387 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:54:22,388 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:54:22,931 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:54:23,931 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:54:37,344 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:54:37,345 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:54:44,347 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:54:44,349 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:54:44,349 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:54:44,349 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:54:44,940 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:54:45,264 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:54:45,940 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:54:57,345 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:54:57,346 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:55:06,419 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:55:06,420 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:55:06,420 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:55:06,421 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:55:06,948 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:55:07,949 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:55:12,723 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:55:12,723 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:55:15,266 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:55:28,347 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:55:28,348 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:55:28,348 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:55:28,349 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:55:28,383 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:55:28,383 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:55:28,958 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:55:29,959 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:55:43,919 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:55:43,920 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:55:45,268 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:55:52,079 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:55:52,080 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:55:52,080 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:55:52,081 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:55:52,967 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:55:54,968 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:55:59,284 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:55:59,284 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:56:13,971 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:56:13,972 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:56:13,973 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:56:13,973 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:56:13,976 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:56:14,664 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:56:14,664 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:56:15,325 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:56:16,977 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:56:30,331 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:56:30,332 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:56:35,927 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:56:35,928 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:56:35,929 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:56:35,929 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:56:35,985 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:56:38,986 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:56:45,276 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:56:45,701 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:56:45,702 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:56:57,923 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:56:57,924 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:56:57,924 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:56:57,927 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:56:57,993 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:57:00,995 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:57:01,159 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:57:01,159 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:57:15,279 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:57:16,786 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:57:16,786 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:57:19,878 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:57:19,879 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:57:19,880 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:57:19,881 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:57:20,003 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:57:23,004 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:57:33,168 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:57:33,169 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:57:41,922 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:57:41,924 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:57:41,924 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:57:41,927 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:57:42,012 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:57:45,014 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:57:45,283 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:57:48,549 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:57:48,550 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:58:03,894 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:58:03,895 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:58:03,896 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:58:03,896 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:58:03,995 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:58:03,995 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:58:04,021 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:58:05,022 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:58:15,287 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:58:19,378 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:58:19,378 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:58:25,871 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:58:25,872 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:58:25,873 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:58:25,874 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:58:26,030 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:58:27,030 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:58:34,847 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:58:34,848 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:58:45,292 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:58:47,842 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:58:47,844 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:58:47,844 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:58:47,845 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:58:48,038 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:58:49,039 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:58:50,479 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:58:50,480 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:59:06,109 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:59:06,109 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:59:09,804 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:59:09,806 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:59:09,806 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:59:09,807 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:59:10,046 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:59:11,047 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:59:15,295 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:59:21,487 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:59:21,488 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:59:31,803 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:59:31,803 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:59:31,804 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:59:31,804 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:59:32,056 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:59:33,056 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 19:59:36,866 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:59:36,866 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:59:45,298 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 19:59:52,231 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 19:59:52,232 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 19:59:53,771 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: partial_history
+2022-12-29 19:59:53,772 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 19:59:53,772 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 19:59:53,773 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 19:59:54,064 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 19:59:55,064 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 20:00:07,865 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-29 20:00:07,866 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: stop_status
+2022-12-29 20:00:13,326 DEBUG   SenderThread:30911 [sender.py:send():303] send: exit
+2022-12-29 20:00:13,327 INFO    SenderThread:30911 [sender.py:send_exit():442] handling exit code: 0
+2022-12-29 20:00:13,327 INFO    SenderThread:30911 [sender.py:send_exit():444] handling runtime: 1948
+2022-12-29 20:00:13,328 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 20:00:13,328 INFO    SenderThread:30911 [sender.py:send_exit():450] send defer
+2022-12-29 20:00:13,329 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: defer
+2022-12-29 20:00:13,329 INFO    HandlerThread:30911 [handler.py:handle_request_defer():162] handle defer: 0
+2022-12-29 20:00:13,329 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: defer
+2022-12-29 20:00:13,329 INFO    SenderThread:30911 [sender.py:send_request_defer():459] handle sender defer: 0
+2022-12-29 20:00:13,329 INFO    SenderThread:30911 [sender.py:transition_state():463] send defer: 1
+2022-12-29 20:00:13,330 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: defer
+2022-12-29 20:00:13,330 INFO    HandlerThread:30911 [handler.py:handle_request_defer():162] handle defer: 1
+2022-12-29 20:00:13,330 INFO    HandlerThread:30911 [system_monitor.py:finish():160] Stopping system monitor
+2022-12-29 20:00:13,333 DEBUG   SystemMonitor:30911 [system_monitor.py:_start():137] Finished system metrics aggregation loop
+2022-12-29 20:00:13,333 DEBUG   SystemMonitor:30911 [system_monitor.py:_start():141] Publishing last batch of metrics
+2022-12-29 20:00:13,339 INFO    HandlerThread:30911 [interfaces.py:finish():175] Joined cpu
+2022-12-29 20:00:13,339 INFO    HandlerThread:30911 [interfaces.py:finish():175] Joined disk
+2022-12-29 20:00:14,073 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 20:00:14,100 INFO    HandlerThread:30911 [interfaces.py:finish():175] Joined gpu
+2022-12-29 20:00:14,100 INFO    HandlerThread:30911 [interfaces.py:finish():175] Joined memory
+2022-12-29 20:00:14,101 INFO    HandlerThread:30911 [interfaces.py:finish():175] Joined network
+2022-12-29 20:00:14,101 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: defer
+2022-12-29 20:00:14,101 INFO    SenderThread:30911 [sender.py:send_request_defer():459] handle sender defer: 1
+2022-12-29 20:00:14,102 INFO    SenderThread:30911 [sender.py:transition_state():463] send defer: 2
+2022-12-29 20:00:14,102 DEBUG   SenderThread:30911 [sender.py:send():303] send: stats
+2022-12-29 20:00:14,104 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: defer
+2022-12-29 20:00:14,104 INFO    HandlerThread:30911 [handler.py:handle_request_defer():162] handle defer: 2
+2022-12-29 20:00:14,106 DEBUG   SenderThread:30911 [sender.py:send():303] send: history
+2022-12-29 20:00:14,106 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 20:00:14,106 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 20:00:14,107 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: defer
+2022-12-29 20:00:14,107 INFO    SenderThread:30911 [sender.py:send_request_defer():459] handle sender defer: 2
+2022-12-29 20:00:14,107 INFO    SenderThread:30911 [sender.py:transition_state():463] send defer: 3
+2022-12-29 20:00:14,107 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: defer
+2022-12-29 20:00:14,107 INFO    HandlerThread:30911 [handler.py:handle_request_defer():162] handle defer: 3
+2022-12-29 20:00:14,108 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: defer
+2022-12-29 20:00:14,108 INFO    SenderThread:30911 [sender.py:send_request_defer():459] handle sender defer: 3
+2022-12-29 20:00:14,108 INFO    SenderThread:30911 [sender.py:transition_state():463] send defer: 4
+2022-12-29 20:00:14,108 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: defer
+2022-12-29 20:00:14,108 INFO    HandlerThread:30911 [handler.py:handle_request_defer():162] handle defer: 4
+2022-12-29 20:00:14,109 DEBUG   SenderThread:30911 [sender.py:send():303] send: summary
+2022-12-29 20:00:14,109 INFO    SenderThread:30911 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-29 20:00:14,110 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: defer
+2022-12-29 20:00:14,110 INFO    SenderThread:30911 [sender.py:send_request_defer():459] handle sender defer: 4
+2022-12-29 20:00:14,110 INFO    SenderThread:30911 [sender.py:transition_state():463] send defer: 5
+2022-12-29 20:00:14,110 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: defer
+2022-12-29 20:00:14,110 INFO    HandlerThread:30911 [handler.py:handle_request_defer():162] handle defer: 5
+2022-12-29 20:00:14,110 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: defer
+2022-12-29 20:00:14,110 INFO    SenderThread:30911 [sender.py:send_request_defer():459] handle sender defer: 5
+2022-12-29 20:00:14,111 INFO    SenderThread:30911 [sender.py:transition_state():463] send defer: 6
+2022-12-29 20:00:14,111 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: defer
+2022-12-29 20:00:14,111 INFO    HandlerThread:30911 [handler.py:handle_request_defer():162] handle defer: 6
+2022-12-29 20:00:14,111 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: defer
+2022-12-29 20:00:14,111 INFO    SenderThread:30911 [sender.py:send_request_defer():459] handle sender defer: 6
+2022-12-29 20:00:14,327 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: poll_exit
+2022-12-29 20:00:15,073 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 20:00:15,073 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 20:00:15,506 WARNING FileStreamThread:30911 [file_stream.py:request_with_retry():667] requests_with_retry encountered retryable exception: 408 Client Error: Request Timeout for url: https://api.wandb.ai/files/1053504537/tracking/24ji6uc4/file_stream. func: <bound method Session.post of <requests.sessions.Session object at 0x7faed661f280>>, args: ('https://api.wandb.ai/files/1053504537/tracking/24ji6uc4/file_stream',), kwargs: {'json': {'files': {'wandb-summary.json': {'offset': 0, 'content': ['{"train/Loss/total": 0.9465574766529931, "train/epoch": 2, "train/Loss/giou": 0.22898067133294212, "train/Loss/l1": 0.014919478880862395, "train/Loss/location": 0.4139987388584349, "train/IoU": 0.7788102769851685, "train/LearningRate/group0": 0.0002, "train/LearningRate/group1": 2e-05, "_timestamp": 1672315127.798488, "_runtime": 1864.8200058937073, "_step": 1344}']}, 'wandb-history.jsonl': {'offset': 82, 'content': ['{"train/Loss/total": 0.9502041229605674, "train/epoch": 2, "train/Loss/giou": 0.22987577069550752, "train/Loss/l1": 0.014942071009427309, "train/Loss/location": 0.4157422259449959, "train/IoU": 0.7778921945393086, "train/LearningRate/group0": 0.0002, "train/LearningRate/group1": 2e-05, "_timestamp": 1672315105.828854, "_runtime": 1842.8503720760345, "_step": 1328}', '{"train/Loss/total": 0.9465574766529931, "train/epoch": 2, "train/Loss/giou": 0.22898067133294212, "train/Loss/l1": 0.014919478880862395, "train/Loss/location": 0.4139987388584349, "train/IoU": 0.7788102769851685, "train/LearningRate/group0": 0.0002, "train/LearningRate/group1": 2e-05, "_timestamp": 1672315127.798488, "_runtime": 1864.8200058937073, "_step": 1344}']}, 'wandb-events.jsonl': {'offset': 61, 'content': ['{"system.disk": 97.4, "system.network.sent": 18925948.33, "system.network.recv": 19166154.4, "system.proc.memory.availableMB": 216681.23, "system.memory": 15.88, "system.proc.memory.rssMB": 4856.93, "system.proc.memory.percent": 1.89, "system.cpu": 0.96, "system.cpu.0.cpu_percent": 27.97, "system.cpu.1.cpu_percent": 46.18, "system.cpu.2.cpu_percent": 23.63, "system.cpu.3.cpu_percent": 21.79, "system.cpu.4.cpu_percent": 13.57, "system.cpu.5.cpu_percent": 12.95, "system.cpu.6.cpu_percent": 16.5, "system.cpu.7.cpu_percent": 17.49, "system.cpu.8.cpu_percent": 19.66, "system.cpu.9.cpu_percent": 18.75, "system.cpu.10.cpu_percent": 39.95, "system.cpu.11.cpu_percent": 36.08, "system.cpu.12.cpu_percent": 28.27, "system.cpu.13.cpu_percent": 10.86, "system.cpu.14.cpu_percent": 17.31, "system.cpu.15.cpu_percent": 16.79, "system.cpu.16.cpu_percent": 30.43, "system.cpu.17.cpu_percent": 12.38, "system.cpu.18.cpu_percent": 17.79, "system.cpu.19.cpu_percent": 11.93, "system.cpu.20.cpu_percent": 11.86, "system.cpu.21.cpu_percent": 11.99, "system.cpu.22.cpu_percent": 12.16, "system.cpu.23.cpu_percent": 21.63, "system.cpu.24.cpu_percent": 14.7, "system.cpu.25.cpu_percent": 11.83, "system.cpu.26.cpu_percent": 11.24, "system.cpu.27.cpu_percent": 6.29, "system.cpu.28.cpu_percent": 6.16, "system.cpu.29.cpu_percent": 13.83, "system.cpu.30.cpu_percent": 12.62, "system.cpu.31.cpu_percent": 13.49, "system.cpu.32.cpu_percent": 11.77, "system.cpu.33.cpu_percent": 11.88, "system.cpu.34.cpu_percent": 7.53, "system.cpu.35.cpu_percent": 13.61, "system.cpu.36.cpu_percent": 5.29, "system.cpu.37.cpu_percent": 4.67, "system.cpu.38.cpu_percent": 8.54, "system.cpu.39.cpu_percent": 2.97, "system.cpu.40.cpu_percent": 4.81, "system.cpu.41.cpu_percent": 3.5, "system.cpu.42.cpu_percent": 3.79, "system.cpu.43.cpu_percent": 1.2, "system.cpu.44.cpu_percent": 6.47, "system.cpu.45.cpu_percent": 12.42, "system.cpu.46.cpu_percent": 11.2, "system.cpu.47.cpu_percent": 20.66, "system.cpu.48.cpu_percent": 4.84, "system.cpu.49.cpu_percent": 9.4, "system.cpu.50.cpu_percent": 7.43, "system.cpu.51.cpu_percent": 10.52, "system.cpu.52.cpu_percent": 11.54, "system.cpu.53.cpu_percent": 10.45, "system.cpu.54.cpu_percent": 12.23, "system.cpu.55.cpu_percent": 12.62, "system.cpu.56.cpu_percent": 34.19, "system.cpu.57.cpu_percent": 11.7, "system.cpu.58.cpu_percent": 11.78, "system.cpu.59.cpu_percent": 15.57, "system.cpu.60.cpu_percent": 12.72, "system.cpu.61.cpu_percent": 12.34, "system.cpu.62.cpu_percent": 19.75, "system.cpu.63.cpu_percent": 11.87, "system.cpu.64.cpu_percent": 14.88, "system.cpu.65.cpu_percent": 44.38, "system.cpu.66.cpu_percent": 16.66, "system.cpu.67.cpu_percent": 30.88, "system.cpu.68.cpu_percent": 26.08, "system.cpu.69.cpu_percent": 15.32, "system.cpu.70.cpu_percent": 11.74, "system.cpu.71.cpu_percent": 11.71, "system.cpu.72.cpu_percent": 11.89, "system.cpu.73.cpu_percent": 11.75, "system.cpu.74.cpu_percent": 12.13, "system.cpu.75.cpu_percent": 11.77, "system.cpu.76.cpu_percent": 23.44, "system.cpu.77.cpu_percent": 11.81, "system.cpu.78.cpu_percent": 3.59, "system.cpu.79.cpu_percent": 2.03, "system.cpu.80.cpu_percent": 4.15, "system.cpu.81.cpu_percent": 6.91, "system.cpu.82.cpu_percent": 3.43, "system.cpu.83.cpu_percent": 6.19, "system.cpu.84.cpu_percent": 4.88, "system.cpu.85.cpu_percent": 7.01, "system.cpu.86.cpu_percent": 4.96, "system.cpu.87.cpu_percent": 25.02, "system.cpu.88.cpu_percent": 5.79, "system.cpu.89.cpu_percent": 6.13, "system.cpu.90.cpu_percent": 9.08, "system.cpu.91.cpu_percent": 11.93, "system.cpu.92.cpu_percent": 10.51, "system.cpu.93.cpu_percent": 18.76, "system.cpu.94.cpu_percent": 2.13, "system.cpu.95.cpu_percent": 15.46, "system.cpu.96.cpu_percent": 9.66, "system.cpu.97.cpu_percent": 7.04, "system.cpu.98.cpu_percent": 3.61, "system.cpu.99.cpu_percent": 7.41, "system.cpu.100.cpu_percent": 17.76, "system.cpu.101.cpu_percent": 1.77, "system.cpu.102.cpu_percent": 1.67, "system.cpu.103.cpu_percent": 5.0, "system.proc.cpu.threads": 73, "system.gpu.0.memoryAllocated": 3.16, "system.gpu.1.memoryAllocated": 84.37, "system.gpu.process.1.memoryAllocated": 84.37, "system.gpu.2.memoryAllocated": 88.79, "system.gpu.3.memoryAllocated": 0.01, "system.gpu.4.memoryAllocated": 0.01, "system.gpu.5.memoryAllocated": 0.01, "system.gpu.6.memoryAllocated": 0.01, "system.gpu.7.memoryAllocated": 6.7, "system.gpu.0.memory": 0.0, "system.gpu.1.memory": 59.13, "system.gpu.process.1.memory": 59.13, "system.gpu.2.memory": 44.8, "system.gpu.3.memory": 0.0, "system.gpu.4.memory": 0.0, "system.gpu.5.memory": 0.0, "system.gpu.6.memory": 0.0, "system.gpu.7.memory": 1.0, "system.gpu.0.gpu": 0.0, "system.gpu.1.gpu": 92.93, "system.gpu.process.1.gpu": 92.93, "system.gpu.2.gpu": 79.93, "system.gpu.3.gpu": 0.0, "system.gpu.4.gpu": 0.0, "system.gpu.5.gpu": 0.0, "system.gpu.6.gpu": 0.0, "system.gpu.7.gpu": 16.4, "system.gpu.0.temp": 33.0, "system.gpu.1.temp": 71.07, "system.gpu.process.1.temp": 71.07, "system.gpu.2.temp": 62.67, "system.gpu.3.temp": 31.0, "system.gpu.4.temp": 25.33, "system.gpu.5.temp": 26.0, "system.gpu.6.temp": 29.0, "system.gpu.7.temp": 50.0, "system.gpu.0.powerWatts": 16.69, "system.gpu.1.powerWatts": 335.6, "system.gpu.process.1.powerWatts": 335.6, "system.gpu.2.powerWatts": 319.16, "system.gpu.3.powerWatts": 18.5, "system.gpu.4.powerWatts": 18.16, "system.gpu.5.powerWatts": 23.44, "system.gpu.6.powerWatts": 20.06, "system.gpu.7.powerWatts": 127.14, "system.gpu.0.powerPercent": 4.77, "system.gpu.1.powerPercent": 95.89, "system.gpu.process.1.powerPercent": 95.89, "system.gpu.2.powerPercent": 91.19, "system.gpu.3.powerPercent": 5.28, "system.gpu.4.powerPercent": 5.19, "system.gpu.5.powerPercent": 6.7, "system.gpu.6.powerPercent": 5.73, "system.gpu.7.powerPercent": 36.33, "_wandb": true, "_timestamp": 1672315155.290827, "_runtime": 1892.312345}']}, 'output.log': {'offset': 90, 'content': ['2022-12-29T11:58:48.219731 [train: 2, 450 / 3750] FPS: 36.1 (36.4)  ,  DataTime: 0.013 (0.014)  ,  ForwardTime: 0.415  ,  TotalTime: 0.443  ,  Loss/total: 0.94656  ,  Loss/giou: 0.22898  ,  Loss/l1: 0.01492  ,  Loss/location: 0.41400  ,  IoU: 0.77881\n', '2022-12-29T11:59:10.250569 [train: 2, 500 / 3750] FPS: 36.1 (36.6)  ,  DataTime: 0.013 (0.014)  ,  ForwardTime: 0.416  ,  TotalTime: 0.443  ,  Loss/total: 0.94544  ,  Loss/giou: 0.22876  ,  Loss/l1: 0.01489  ,  Loss/location: 0.41350  ,  IoU: 0.77902\n']}}, 'dropped': 0}}
+2022-12-29 20:00:16,536 INFO    SenderThread:30911 [sender.py:transition_state():463] send defer: 7
+2022-12-29 20:00:16,537 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: poll_exit
+2022-12-29 20:00:16,538 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: defer
+2022-12-29 20:00:16,538 INFO    HandlerThread:30911 [handler.py:handle_request_defer():162] handle defer: 7
+2022-12-29 20:00:16,538 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: defer
+2022-12-29 20:00:16,538 INFO    SenderThread:30911 [sender.py:send_request_defer():459] handle sender defer: 7
+2022-12-29 20:00:16,538 INFO    SenderThread:30911 [dir_watcher.py:finish():362] shutting down directory watcher
+2022-12-29 20:00:17,074 INFO    Thread-13 :30911 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 20:00:17,075 INFO    SenderThread:30911 [dir_watcher.py:finish():392] scan: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files
+2022-12-29 20:00:17,075 INFO    SenderThread:30911 [dir_watcher.py:finish():406] scan save: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/requirements.txt requirements.txt
+2022-12-29 20:00:17,076 INFO    SenderThread:30911 [dir_watcher.py:finish():406] scan save: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-metadata.json wandb-metadata.json
+2022-12-29 20:00:17,076 INFO    SenderThread:30911 [dir_watcher.py:finish():406] scan save: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log output.log
+2022-12-29 20:00:17,076 INFO    SenderThread:30911 [dir_watcher.py:finish():406] scan save: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json wandb-summary.json
+2022-12-29 20:00:17,081 INFO    SenderThread:30911 [dir_watcher.py:finish():406] scan save: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/conda-environment.yaml conda-environment.yaml
+2022-12-29 20:00:17,085 INFO    SenderThread:30911 [dir_watcher.py:finish():406] scan save: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/config.yaml config.yaml
+2022-12-29 20:00:17,091 INFO    SenderThread:30911 [sender.py:transition_state():463] send defer: 8
+2022-12-29 20:00:17,096 DEBUG   HandlerThread:30911 [handler.py:handle_request():139] handle_request: defer
+2022-12-29 20:00:17,096 INFO    HandlerThread:30911 [handler.py:handle_request_defer():162] handle defer: 8
+2022-12-29 20:00:17,096 DEBUG   SenderThread:30911 [sender.py:send_request():317] send_request: defer
+2022-12-29 20:00:17,097 INFO    SenderThread:30911 [sender.py:send_request_defer():459] handle sender defer: 8
+2022-12-29 20:00:17,097 INFO    SenderThread:30911 [file_pusher.py:finish():168] shutting down file pusher
+2022-12-29 20:00:18,056 WARNING StreamThr :30911 [internal.py:is_dead():386] Internal process exiting, parent pid 30803 disappeared
+2022-12-29 20:00:18,056 ERROR   StreamThr :30911 [internal.py:wandb_internal():146] Internal process shutdown.
+2022-12-29 20:00:18,097 INFO    SenderThread:30911 [sender.py:finish():1331] shutting down sender
+2022-12-29 20:00:18,097 INFO    SenderThread:30911 [file_pusher.py:finish():168] shutting down file pusher
+2022-12-29 20:00:18,097 INFO    SenderThread:30911 [file_pusher.py:join():173] waiting for file pusher
+2022-12-29 20:00:18,097 INFO    HandlerThread:30911 [handler.py:finish():814] shutting down handler
+2022-12-29 20:00:18,109 INFO    WriterThread:30911 [datastore.py:close():279] close: /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/run-24ji6uc4.wandb
+2022-12-29 20:00:19,151 INFO    Thread-17 :30911 [upload_job.py:push():143] Uploaded file /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/requirements.txt
+2022-12-29 20:00:19,194 INFO    Thread-19 :30911 [upload_job.py:push():143] Uploaded file /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/wandb-summary.json
+2022-12-29 20:00:19,228 INFO    Thread-18 :30911 [upload_job.py:push():143] Uploaded file /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/output.log
+2022-12-29 20:00:19,596 INFO    Thread-20 :30911 [upload_job.py:push():143] Uploaded file /media/estar/Data/LY/Models/Anti-UAV/ostrack/tracking/tensorboard/train/ostrack/vitb_384_mae_ce_32x4_got10k_ep100/wandb/run-20221229_192742-24ji6uc4/files/config.yaml
+2022-12-29 20:00:19,797 INFO    Thread-12 :30911 [sender.py:transition_state():463] send defer: 9

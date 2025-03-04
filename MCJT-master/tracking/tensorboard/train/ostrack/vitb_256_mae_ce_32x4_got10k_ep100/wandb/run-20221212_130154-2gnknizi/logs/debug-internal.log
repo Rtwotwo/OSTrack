@@ -1,0 +1,169 @@
+2022-12-12 13:01:54,859 INFO    StreamThr :27623 [internal.py:wandb_internal():87] W&B internal server running at pid: 27623, started at: 2022-12-12 13:01:54.858985
+2022-12-12 13:01:54,862 DEBUG   HandlerThread:27623 [handler.py:handle_request():139] handle_request: status
+2022-12-12 13:01:54,864 DEBUG   SenderThread:27623 [sender.py:send_request():317] send_request: status
+2022-12-12 13:01:54,865 INFO    WriterThread:27623 [datastore.py:open_for_write():75] open: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_130154-2gnknizi/run-2gnknizi.wandb
+2022-12-12 13:01:54,866 DEBUG   SenderThread:27623 [sender.py:send():303] send: header
+2022-12-12 13:01:54,866 DEBUG   SenderThread:27623 [sender.py:send():303] send: run
+2022-12-12 13:01:55,847 DEBUG   HandlerThread:27623 [handler.py:handle_request():139] handle_request: check_version
+2022-12-12 13:01:55,855 INFO    SenderThread:27623 [dir_watcher.py:__init__():216] watching files in: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_130154-2gnknizi/files
+2022-12-12 13:01:55,856 INFO    SenderThread:27623 [sender.py:_start_run_threads():928] run started: 2gnknizi with start time 1670821314.853622
+2022-12-12 13:01:55,856 DEBUG   SenderThread:27623 [sender.py:send():303] send: summary
+2022-12-12 13:01:55,856 INFO    SenderThread:27623 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-12 13:01:55,856 DEBUG   SenderThread:27623 [sender.py:send_request():317] send_request: check_version
+2022-12-12 13:01:56,860 INFO    Thread-13 :27623 [dir_watcher.py:_on_file_created():275] file/dir created: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_130154-2gnknizi/files/wandb-summary.json
+2022-12-12 13:02:00,850 DEBUG   HandlerThread:27623 [handler.py:handle_request():139] handle_request: run_start
+2022-12-12 13:02:00,853 DEBUG   HandlerThread:27623 [system_info.py:__init__():31] System info init
+2022-12-12 13:02:00,853 DEBUG   HandlerThread:27623 [system_info.py:__init__():46] System info init done
+2022-12-12 13:02:00,853 INFO    HandlerThread:27623 [system_monitor.py:start():150] Starting system monitor
+2022-12-12 13:02:00,853 INFO    SystemMonitor:27623 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2022-12-12 13:02:00,853 INFO    HandlerThread:27623 [system_monitor.py:probe():171] Collecting system info
+2022-12-12 13:02:00,853 INFO    SystemMonitor:27623 [interfaces.py:start():168] Started cpu
+2022-12-12 13:02:00,854 INFO    SystemMonitor:27623 [interfaces.py:start():168] Started disk
+2022-12-12 13:02:00,854 INFO    SystemMonitor:27623 [interfaces.py:start():168] Started gpu
+2022-12-12 13:02:00,854 INFO    SystemMonitor:27623 [interfaces.py:start():168] Started memory
+2022-12-12 13:02:00,855 INFO    SystemMonitor:27623 [interfaces.py:start():168] Started network
+2022-12-12 13:02:00,880 DEBUG   HandlerThread:27623 [system_info.py:probe():195] Probing system
+2022-12-12 13:02:00,884 DEBUG   HandlerThread:27623 [git.py:repo():40] git repository is invalid
+2022-12-12 13:02:00,885 DEBUG   HandlerThread:27623 [system_info.py:probe():241] Probing system done
+2022-12-12 13:02:00,885 DEBUG   HandlerThread:27623 [system_monitor.py:probe():180] {'os': 'Linux-4.15.0-142-generic-x86_64-with-glibc2.17', 'python': '3.8.15', 'heartbeatAt': '2022-12-12T05:02:00.881049', 'startedAt': '2022-12-12T05:01:54.835961', 'docker': None, 'cuda': '10.2.89', 'args': (), 'state': 'running', 'program': '/media/cvlab/data1/LY/SOT/Models/OSTrack-main/lib/train/run_training.py', 'codePath': 'run_training.py', 'host': 'cvlab-MS-7A71', 'username': 'cvlab', 'executable': '/home/cvlab/anaconda3/envs/ostrack/bin/python', 'cpu_count': 4, 'cpu_count_logical': 8, 'cpu_freq': {'current': 4400.033125, 'min': 800.0, 'max': 4500.0}, 'cpu_freq_per_core': [{'current': 4400.055, 'min': 800.0, 'max': 4500.0}, {'current': 4400.014, 'min': 800.0, 'max': 4500.0}, {'current': 4400.0, 'min': 800.0, 'max': 4500.0}, {'current': 4400.004, 'min': 800.0, 'max': 4500.0}, {'current': 4400.058, 'min': 800.0, 'max': 4500.0}, {'current': 4400.077, 'min': 800.0, 'max': 4500.0}, {'current': 4400.056, 'min': 800.0, 'max': 4500.0}, {'current': 4400.001, 'min': 800.0, 'max': 4500.0}], 'disk': {'total': 74.97257995605469, 'used': 14.431568145751953}, 'gpu': 'NVIDIA GeForce GTX 1080 Ti', 'gpu_count': 2, 'gpu_devices': [{'name': 'NVIDIA GeForce GTX 1080 Ti', 'memory_total': 11720130560}, {'name': 'NVIDIA GeForce GTX 1080 Ti', 'memory_total': 11721506816}], 'memory': {'total': 62.88007354736328}}
+2022-12-12 13:02:00,885 INFO    HandlerThread:27623 [system_monitor.py:probe():181] Finished collecting system info
+2022-12-12 13:02:00,885 INFO    HandlerThread:27623 [system_monitor.py:probe():184] Publishing system info
+2022-12-12 13:02:00,885 DEBUG   HandlerThread:27623 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2022-12-12 13:02:00,885 DEBUG   HandlerThread:27623 [system_info.py:_save_pip():67] Saving pip packages done
+2022-12-12 13:02:00,885 DEBUG   HandlerThread:27623 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2022-12-12 13:02:01,859 INFO    Thread-13 :27623 [dir_watcher.py:_on_file_created():275] file/dir created: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_130154-2gnknizi/files/requirements.txt
+2022-12-12 13:02:01,859 INFO    Thread-13 :27623 [dir_watcher.py:_on_file_created():275] file/dir created: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_130154-2gnknizi/files/conda-environment.yaml
+2022-12-12 13:02:02,164 DEBUG   HandlerThread:27623 [system_info.py:_save_conda():86] Saving conda packages done
+2022-12-12 13:02:02,164 INFO    HandlerThread:27623 [system_monitor.py:probe():186] Finished publishing system info
+2022-12-12 13:02:02,187 DEBUG   SenderThread:27623 [sender.py:send():303] send: files
+2022-12-12 13:02:02,187 INFO    SenderThread:27623 [sender.py:_save_file():1171] saving file wandb-metadata.json with policy now
+2022-12-12 13:02:02,190 DEBUG   HandlerThread:27623 [handler.py:handle_request():139] handle_request: stop_status
+2022-12-12 13:02:02,190 DEBUG   SenderThread:27623 [sender.py:send_request():317] send_request: stop_status
+2022-12-12 13:02:02,550 DEBUG   SenderThread:27623 [sender.py:send():303] send: telemetry
+2022-12-12 13:02:02,860 INFO    Thread-13 :27623 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_130154-2gnknizi/files/conda-environment.yaml
+2022-12-12 13:02:02,860 INFO    Thread-13 :27623 [dir_watcher.py:_on_file_created():275] file/dir created: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_130154-2gnknizi/files/wandb-metadata.json
+2022-12-12 13:02:02,860 INFO    Thread-13 :27623 [dir_watcher.py:_on_file_created():275] file/dir created: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_130154-2gnknizi/files/output.log
+2022-12-12 13:02:03,267 INFO    Thread-16 :27623 [upload_job.py:push():143] Uploaded file /tmp/tmp5t94qsrmwandb/1uck3enz-wandb-metadata.json
+2022-12-12 13:02:04,860 INFO    Thread-13 :27623 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_130154-2gnknizi/files/output.log
+2022-12-12 13:02:12,501 DEBUG   SenderThread:27623 [sender.py:send():303] send: exit
+2022-12-12 13:02:12,501 INFO    SenderThread:27623 [sender.py:send_exit():442] handling exit code: 0
+2022-12-12 13:02:12,501 INFO    SenderThread:27623 [sender.py:send_exit():444] handling runtime: 11
+2022-12-12 13:02:12,502 INFO    SenderThread:27623 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-12 13:02:12,502 INFO    SenderThread:27623 [sender.py:send_exit():450] send defer
+2022-12-12 13:02:12,502 DEBUG   HandlerThread:27623 [handler.py:handle_request():139] handle_request: defer
+2022-12-12 13:02:12,502 INFO    HandlerThread:27623 [handler.py:handle_request_defer():162] handle defer: 0
+2022-12-12 13:02:12,502 DEBUG   SenderThread:27623 [sender.py:send_request():317] send_request: defer
+2022-12-12 13:02:12,502 INFO    SenderThread:27623 [sender.py:send_request_defer():459] handle sender defer: 0
+2022-12-12 13:02:12,502 INFO    SenderThread:27623 [sender.py:transition_state():463] send defer: 1
+2022-12-12 13:02:12,503 DEBUG   HandlerThread:27623 [handler.py:handle_request():139] handle_request: defer
+2022-12-12 13:02:12,503 INFO    HandlerThread:27623 [handler.py:handle_request_defer():162] handle defer: 1
+2022-12-12 13:02:12,503 INFO    HandlerThread:27623 [system_monitor.py:finish():160] Stopping system monitor
+2022-12-12 13:02:12,503 DEBUG   SystemMonitor:27623 [system_monitor.py:_start():130] Starting system metrics aggregation loop
+2022-12-12 13:02:12,503 DEBUG   SystemMonitor:27623 [system_monitor.py:_start():137] Finished system metrics aggregation loop
+2022-12-12 13:02:12,503 DEBUG   SystemMonitor:27623 [system_monitor.py:_start():141] Publishing last batch of metrics
+2022-12-12 13:02:12,504 INFO    HandlerThread:27623 [interfaces.py:finish():175] Joined cpu
+2022-12-12 13:02:12,504 INFO    HandlerThread:27623 [interfaces.py:finish():175] Joined disk
+2022-12-12 13:02:12,571 INFO    HandlerThread:27623 [interfaces.py:finish():175] Joined gpu
+2022-12-12 13:02:12,571 INFO    HandlerThread:27623 [interfaces.py:finish():175] Joined memory
+2022-12-12 13:02:12,571 INFO    HandlerThread:27623 [interfaces.py:finish():175] Joined network
+2022-12-12 13:02:12,571 DEBUG   SenderThread:27623 [sender.py:send_request():317] send_request: defer
+2022-12-12 13:02:12,571 INFO    SenderThread:27623 [sender.py:send_request_defer():459] handle sender defer: 1
+2022-12-12 13:02:12,572 INFO    SenderThread:27623 [sender.py:transition_state():463] send defer: 2
+2022-12-12 13:02:12,572 DEBUG   SenderThread:27623 [sender.py:send():303] send: stats
+2022-12-12 13:02:12,572 DEBUG   HandlerThread:27623 [handler.py:handle_request():139] handle_request: defer
+2022-12-12 13:02:12,572 INFO    HandlerThread:27623 [handler.py:handle_request_defer():162] handle defer: 2
+2022-12-12 13:02:12,572 DEBUG   SenderThread:27623 [sender.py:send_request():317] send_request: defer
+2022-12-12 13:02:12,572 INFO    SenderThread:27623 [sender.py:send_request_defer():459] handle sender defer: 2
+2022-12-12 13:02:12,572 INFO    SenderThread:27623 [sender.py:transition_state():463] send defer: 3
+2022-12-12 13:02:12,572 DEBUG   HandlerThread:27623 [handler.py:handle_request():139] handle_request: defer
+2022-12-12 13:02:12,572 INFO    HandlerThread:27623 [handler.py:handle_request_defer():162] handle defer: 3
+2022-12-12 13:02:12,572 DEBUG   SenderThread:27623 [sender.py:send_request():317] send_request: defer
+2022-12-12 13:02:12,572 INFO    SenderThread:27623 [sender.py:send_request_defer():459] handle sender defer: 3
+2022-12-12 13:02:12,572 INFO    SenderThread:27623 [sender.py:transition_state():463] send defer: 4
+2022-12-12 13:02:12,573 DEBUG   HandlerThread:27623 [handler.py:handle_request():139] handle_request: defer
+2022-12-12 13:02:12,573 INFO    HandlerThread:27623 [handler.py:handle_request_defer():162] handle defer: 4
+2022-12-12 13:02:12,573 DEBUG   SenderThread:27623 [sender.py:send():303] send: summary
+2022-12-12 13:02:12,573 INFO    SenderThread:27623 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-12-12 13:02:12,573 DEBUG   SenderThread:27623 [sender.py:send_request():317] send_request: defer
+2022-12-12 13:02:12,573 INFO    SenderThread:27623 [sender.py:send_request_defer():459] handle sender defer: 4
+2022-12-12 13:02:12,573 INFO    SenderThread:27623 [sender.py:transition_state():463] send defer: 5
+2022-12-12 13:02:12,573 DEBUG   HandlerThread:27623 [handler.py:handle_request():139] handle_request: defer
+2022-12-12 13:02:12,573 INFO    HandlerThread:27623 [handler.py:handle_request_defer():162] handle defer: 5
+2022-12-12 13:02:12,573 DEBUG   SenderThread:27623 [sender.py:send_request():317] send_request: defer
+2022-12-12 13:02:12,573 INFO    SenderThread:27623 [sender.py:send_request_defer():459] handle sender defer: 5
+2022-12-12 13:02:12,863 INFO    Thread-13 :27623 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_130154-2gnknizi/files/wandb-summary.json
+2022-12-12 13:02:12,970 INFO    SenderThread:27623 [sender.py:transition_state():463] send defer: 6
+2022-12-12 13:02:12,970 DEBUG   HandlerThread:27623 [handler.py:handle_request():139] handle_request: defer
+2022-12-12 13:02:12,970 INFO    HandlerThread:27623 [handler.py:handle_request_defer():162] handle defer: 6
+2022-12-12 13:02:12,971 DEBUG   SenderThread:27623 [sender.py:send_request():317] send_request: defer
+2022-12-12 13:02:12,971 INFO    SenderThread:27623 [sender.py:send_request_defer():459] handle sender defer: 6
+2022-12-12 13:02:13,502 DEBUG   HandlerThread:27623 [handler.py:handle_request():139] handle_request: poll_exit
+2022-12-12 13:02:13,864 INFO    Thread-13 :27623 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_130154-2gnknizi/files/config.yaml
+2022-12-12 13:02:14,571 INFO    SenderThread:27623 [sender.py:transition_state():463] send defer: 7
+2022-12-12 13:02:14,571 DEBUG   SenderThread:27623 [sender.py:send_request():317] send_request: poll_exit
+2022-12-12 13:02:14,571 DEBUG   HandlerThread:27623 [handler.py:handle_request():139] handle_request: defer
+2022-12-12 13:02:14,571 INFO    HandlerThread:27623 [handler.py:handle_request_defer():162] handle defer: 7
+2022-12-12 13:02:14,572 DEBUG   SenderThread:27623 [sender.py:send_request():317] send_request: defer
+2022-12-12 13:02:14,572 INFO    SenderThread:27623 [sender.py:send_request_defer():459] handle sender defer: 7
+2022-12-12 13:02:14,572 INFO    SenderThread:27623 [dir_watcher.py:finish():362] shutting down directory watcher
+2022-12-12 13:02:14,864 INFO    Thread-13 :27623 [dir_watcher.py:_on_file_modified():292] file/dir modified: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_130154-2gnknizi/files/output.log
+2022-12-12 13:02:14,864 INFO    SenderThread:27623 [dir_watcher.py:finish():392] scan: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_130154-2gnknizi/files
+2022-12-12 13:02:14,864 INFO    SenderThread:27623 [dir_watcher.py:finish():406] scan save: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_130154-2gnknizi/files/config.yaml config.yaml
+2022-12-12 13:02:14,864 INFO    SenderThread:27623 [dir_watcher.py:finish():406] scan save: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_130154-2gnknizi/files/wandb-summary.json wandb-summary.json
+2022-12-12 13:02:14,866 INFO    SenderThread:27623 [dir_watcher.py:finish():406] scan save: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_130154-2gnknizi/files/requirements.txt requirements.txt
+2022-12-12 13:02:14,868 INFO    SenderThread:27623 [dir_watcher.py:finish():406] scan save: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_130154-2gnknizi/files/conda-environment.yaml conda-environment.yaml
+2022-12-12 13:02:14,868 INFO    SenderThread:27623 [dir_watcher.py:finish():406] scan save: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_130154-2gnknizi/files/wandb-metadata.json wandb-metadata.json
+2022-12-12 13:02:14,868 INFO    SenderThread:27623 [dir_watcher.py:finish():406] scan save: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_130154-2gnknizi/files/output.log output.log
+2022-12-12 13:02:14,868 INFO    SenderThread:27623 [sender.py:transition_state():463] send defer: 8
+2022-12-12 13:02:14,873 DEBUG   HandlerThread:27623 [handler.py:handle_request():139] handle_request: defer
+2022-12-12 13:02:14,873 INFO    HandlerThread:27623 [handler.py:handle_request_defer():162] handle defer: 8
+2022-12-12 13:02:14,873 DEBUG   SenderThread:27623 [sender.py:send_request():317] send_request: defer
+2022-12-12 13:02:14,873 INFO    SenderThread:27623 [sender.py:send_request_defer():459] handle sender defer: 8
+2022-12-12 13:02:14,873 INFO    SenderThread:27623 [file_pusher.py:finish():168] shutting down file pusher
+2022-12-12 13:02:15,383 ERROR   Thread-21 :27623 [internal_api.py:upload_file():1924] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/1053504537/tracking/2gnknizi/output.log?Expires=1670907735&GoogleAccessId=wandb-production%40appspot.gserviceaccount.com&Signature=AoIupnm5dZ9Z%2BF5unWd1Lm0oQpGcwk4HrkgodNJ34dSl%2BZ1pgG8rpsYO0AzUbiI5KGNV2BDhwBTQqiNSJnl%2BWiR9oaFeuBDhaVh5EztUjrfqmGoVy88e64Of6gPVJtVozWN1f98ZMAmBYbCp1ukUqxmYPkLOrMiu6P2grV1CUVmClYt1qCiPd4RFvm8cFGxpqBbVjoXmMsHiLeYk7S2Qq43x%2BZXbRDsQE7X8ZG35sWN75w%2F8EVnKIVeFyhFBPs9F5Llm84JbIzlxNL7LhHoTW4WTGCKWjw%2FOSLKGJxd3osNgbTCDiyAMdenTtxnoAYkACLbzkLk7MzEMzg6mA2uaDQ%3D%3D: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2022-12-12 13:02:15,383 ERROR   Thread-21 :27623 [internal_api.py:upload_file():1926] upload_file request headers: {'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '3006'}
+2022-12-12 13:02:15,383 ERROR   Thread-21 :27623 [internal_api.py:upload_file():1928] upload_file response body: 
+2022-12-12 13:02:15,842 INFO    Thread-20 :27623 [upload_job.py:push():143] Uploaded file /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_130154-2gnknizi/files/conda-environment.yaml
+2022-12-12 13:02:15,846 INFO    Thread-17 :27623 [upload_job.py:push():143] Uploaded file /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_130154-2gnknizi/files/config.yaml
+2022-12-12 13:02:15,884 INFO    Thread-18 :27623 [upload_job.py:push():143] Uploaded file /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_130154-2gnknizi/files/wandb-summary.json
+2022-12-12 13:02:15,930 INFO    Thread-19 :27623 [upload_job.py:push():143] Uploaded file /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_130154-2gnknizi/files/requirements.txt
+2022-12-12 13:02:16,998 INFO    Thread-21 :27623 [upload_job.py:push():143] Uploaded file /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_130154-2gnknizi/files/output.log
+2022-12-12 13:02:17,199 INFO    Thread-12 :27623 [sender.py:transition_state():463] send defer: 9
+2022-12-12 13:02:17,200 DEBUG   HandlerThread:27623 [handler.py:handle_request():139] handle_request: defer
+2022-12-12 13:02:17,200 INFO    HandlerThread:27623 [handler.py:handle_request_defer():162] handle defer: 9
+2022-12-12 13:02:17,200 DEBUG   SenderThread:27623 [sender.py:send_request():317] send_request: defer
+2022-12-12 13:02:17,200 INFO    SenderThread:27623 [sender.py:send_request_defer():459] handle sender defer: 9
+2022-12-12 13:02:17,200 INFO    SenderThread:27623 [file_pusher.py:join():173] waiting for file pusher
+2022-12-12 13:02:17,201 INFO    SenderThread:27623 [sender.py:transition_state():463] send defer: 10
+2022-12-12 13:02:17,201 DEBUG   HandlerThread:27623 [handler.py:handle_request():139] handle_request: defer
+2022-12-12 13:02:17,201 INFO    HandlerThread:27623 [handler.py:handle_request_defer():162] handle defer: 10
+2022-12-12 13:02:17,202 DEBUG   SenderThread:27623 [sender.py:send_request():317] send_request: defer
+2022-12-12 13:02:17,202 INFO    SenderThread:27623 [sender.py:send_request_defer():459] handle sender defer: 10
+2022-12-12 13:02:17,480 INFO    SenderThread:27623 [sender.py:transition_state():463] send defer: 11
+2022-12-12 13:02:17,481 DEBUG   HandlerThread:27623 [handler.py:handle_request():139] handle_request: defer
+2022-12-12 13:02:17,481 INFO    HandlerThread:27623 [handler.py:handle_request_defer():162] handle defer: 11
+2022-12-12 13:02:17,481 DEBUG   SenderThread:27623 [sender.py:send_request():317] send_request: defer
+2022-12-12 13:02:17,481 INFO    SenderThread:27623 [sender.py:send_request_defer():459] handle sender defer: 11
+2022-12-12 13:02:17,481 INFO    SenderThread:27623 [sender.py:transition_state():463] send defer: 12
+2022-12-12 13:02:17,482 DEBUG   SenderThread:27623 [sender.py:send():303] send: final
+2022-12-12 13:02:17,482 DEBUG   SenderThread:27623 [sender.py:send():303] send: footer
+2022-12-12 13:02:17,482 DEBUG   HandlerThread:27623 [handler.py:handle_request():139] handle_request: defer
+2022-12-12 13:02:17,483 INFO    HandlerThread:27623 [handler.py:handle_request_defer():162] handle defer: 12
+2022-12-12 13:02:17,483 DEBUG   SenderThread:27623 [sender.py:send_request():317] send_request: defer
+2022-12-12 13:02:17,483 INFO    SenderThread:27623 [sender.py:send_request_defer():459] handle sender defer: 12
+2022-12-12 13:02:17,484 DEBUG   HandlerThread:27623 [handler.py:handle_request():139] handle_request: poll_exit
+2022-12-12 13:02:17,485 DEBUG   SenderThread:27623 [sender.py:send_request():317] send_request: poll_exit
+2022-12-12 13:02:17,486 DEBUG   HandlerThread:27623 [handler.py:handle_request():139] handle_request: server_info
+2022-12-12 13:02:17,486 DEBUG   SenderThread:27623 [sender.py:send_request():317] send_request: server_info
+2022-12-12 13:02:17,490 DEBUG   HandlerThread:27623 [handler.py:handle_request():139] handle_request: get_summary
+2022-12-12 13:02:17,491 DEBUG   HandlerThread:27623 [handler.py:handle_request():139] handle_request: sampled_history
+2022-12-12 13:02:18,311 INFO    MainThread:27623 [wandb_run.py:_footer_history_summary_info():3408] rendering history
+2022-12-12 13:02:18,312 INFO    MainThread:27623 [wandb_run.py:_footer_history_summary_info():3440] rendering summary
+2022-12-12 13:02:18,312 INFO    MainThread:27623 [wandb_run.py:_footer_sync_info():3364] logging synced files
+2022-12-12 13:02:18,312 DEBUG   HandlerThread:27623 [handler.py:handle_request():139] handle_request: shutdown
+2022-12-12 13:02:18,312 INFO    HandlerThread:27623 [handler.py:finish():814] shutting down handler
+2022-12-12 13:02:18,483 INFO    WriterThread:27623 [datastore.py:close():279] close: /media/cvlab/data1/LY/SOT/Models/OSTrack-main/tracking/tensorboard/train/ostrack/vitb_256_mae_ce_32x4_got10k_ep100/wandb/run-20221212_130154-2gnknizi/run-2gnknizi.wandb
+2022-12-12 13:02:19,311 INFO    SenderThread:27623 [sender.py:finish():1331] shutting down sender
+2022-12-12 13:02:19,311 INFO    SenderThread:27623 [file_pusher.py:finish():168] shutting down file pusher
+2022-12-12 13:02:19,311 INFO    SenderThread:27623 [file_pusher.py:join():173] waiting for file pusher
+2022-12-12 13:02:19,314 INFO    MainThread:27623 [internal.py:handle_exit():77] Internal process exited

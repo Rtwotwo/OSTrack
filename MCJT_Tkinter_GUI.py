@@ -9,9 +9,6 @@ import threading
 import tkinter as tk
 from tkinter import filedialog
 from PIL import Image, ImageTk
-from lib.models.ostrack.ostrack import OSTrack
-from lib.models.layers.head import build_box_head
-from lib.models.ostrack.vit import vit_base_patch16_224
 from utils import ComputeHistogramImage, CalculateSpectrogramImage
 
 

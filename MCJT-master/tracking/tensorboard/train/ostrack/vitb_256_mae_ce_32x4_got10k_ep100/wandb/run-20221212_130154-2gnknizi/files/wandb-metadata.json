@@ -1,0 +1,83 @@
+{
+    "os": "Linux-4.15.0-142-generic-x86_64-with-glibc2.17",
+    "python": "3.8.15",
+    "heartbeatAt": "2022-12-12T05:02:00.881049",
+    "startedAt": "2022-12-12T05:01:54.835961",
+    "docker": null,
+    "cuda": "10.2.89",
+    "args": [],
+    "state": "running",
+    "program": "/media/cvlab/data1/LY/SOT/Models/OSTrack-main/lib/train/run_training.py",
+    "codePath": "run_training.py",
+    "host": "cvlab-MS-7A71",
+    "username": "cvlab",
+    "executable": "/home/cvlab/anaconda3/envs/ostrack/bin/python",
+    "cpu_count": 4,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 4400.033125,
+        "min": 800.0,
+        "max": 4500.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 4400.055,
+            "min": 800.0,
+            "max": 4500.0
+        },
+        {
+            "current": 4400.014,
+            "min": 800.0,
+            "max": 4500.0
+        },
+        {
+            "current": 4400.0,
+            "min": 800.0,
+            "max": 4500.0
+        },
+        {
+            "current": 4400.004,
+            "min": 800.0,
+            "max": 4500.0
+        },
+        {
+            "current": 4400.058,
+            "min": 800.0,
+            "max": 4500.0
+        },
+        {
+            "current": 4400.077,
+            "min": 800.0,
+            "max": 4500.0
+        },
+        {
+            "current": 4400.056,
+            "min": 800.0,
+            "max": 4500.0
+        },
+        {
+            "current": 4400.001,
+            "min": 800.0,
+            "max": 4500.0
+        }
+    ],
+    "disk": {
+        "total": 74.97257995605469,
+        "used": 14.431568145751953
+    },
+    "gpu": "NVIDIA GeForce GTX 1080 Ti",
+    "gpu_count": 2,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce GTX 1080 Ti",
+            "memory_total": 11720130560
+        },
+        {
+            "name": "NVIDIA GeForce GTX 1080 Ti",
+            "memory_total": 11721506816
+        }
+    ],
+    "memory": {
+        "total": 62.88007354736328
+    }
+}

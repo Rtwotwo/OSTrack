@@ -1,0 +1,63 @@
+
+No matching checkpoint file found
+/home/cvlab/anaconda3/envs/ostrack/lib/python3.8/site-packages/torch/_tensor.py:575: UserWarning: floor_divide is deprecated, and will be removed in a future version of pytorch. It currently rounds toward 0 (like the 'trunc' function NOT 'floor'). This results in incorrect rounding for negative values.
+To keep the current behavior, use torch.div(a, b, rounding_mode='trunc'), or for actual floor division, use torch.div(a, b, rounding_mode='floor'). (Triggered internally at  /opt/conda/conda-bld/pytorch_1623448234945/work/aten/src/ATen/native/BinaryOps.cpp:467.)
+  return torch.floor_divide(self, other)
+[train: 1, 50 / 3750] FPS: 23.5 (25.5)  ,  DataTime: 0.067 (0.047)  ,  ForwardTime: 0.566  ,  TotalTime: 0.681  ,  Loss/total: 33.97975  ,  Loss/giou: 1.12275  ,  Loss/l1: 0.23493  ,  Loss/location: 30.55961  ,  IoU: 0.11340
+[train: 1, 100 / 3750] FPS: 24.7 (26.2)  ,  DataTime: 0.035 (0.047)  ,  ForwardTime: 0.565  ,  TotalTime: 0.648  ,  Loss/total: 21.51511  ,  Loss/giou: 1.07535  ,  Loss/l1: 0.21483  ,  Loss/location: 18.29027  ,  IoU: 0.13354
+[train: 1, 150 / 3750] FPS: 25.1 (26.7)  ,  DataTime: 0.025 (0.047)  ,  ForwardTime: 0.564  ,  TotalTime: 0.636  ,  Loss/total: 16.08061  ,  Loss/giou: 1.01251  ,  Loss/l1: 0.19065  ,  Loss/location: 13.10234  ,  IoU: 0.17353
+[train: 1, 200 / 3750] FPS: 25.3 (26.1)  ,  DataTime: 0.020 (0.047)  ,  ForwardTime: 0.565  ,  TotalTime: 0.632  ,  Loss/total: 12.95491  ,  Loss/giou: 0.93782  ,  Loss/l1: 0.16645  ,  Loss/location: 10.24699  ,  IoU: 0.23169
+[train: 1, 250 / 3750] FPS: 25.3 (23.5)  ,  DataTime: 0.017 (0.047)  ,  ForwardTime: 0.567  ,  TotalTime: 0.631  ,  Loss/total: 10.93527  ,  Loss/giou: 0.87228  ,  Loss/l1: 0.14762  ,  Loss/location: 8.45262  ,  IoU: 0.28112
+[train: 1, 300 / 3750] FPS: 25.5 (27.6)  ,  DataTime: 0.015 (0.047)  ,  ForwardTime: 0.566  ,  TotalTime: 0.628  ,  Loss/total: 9.53161  ,  Loss/giou: 0.82191  ,  Loss/l1: 0.13402  ,  Loss/location: 7.21770  ,  IoU: 0.31929
+[train: 1, 350 / 3750] FPS: 25.6 (25.5)  ,  DataTime: 0.013 (0.047)  ,  ForwardTime: 0.564  ,  TotalTime: 0.624  ,  Loss/total: 8.47371  ,  Loss/giou: 0.77554  ,  Loss/l1: 0.12240  ,  Loss/location: 6.31063  ,  IoU: 0.35373
+[train: 1, 400 / 3750] FPS: 25.7 (26.6)  ,  DataTime: 0.012 (0.047)  ,  ForwardTime: 0.564  ,  TotalTime: 0.623  ,  Loss/total: 7.67227  ,  Loss/giou: 0.73859  ,  Loss/l1: 0.11339  ,  Loss/location: 5.62814  ,  IoU: 0.38160
+[train: 1, 450 / 3750] FPS: 25.7 (25.9)  ,  DataTime: 0.011 (0.047)  ,  ForwardTime: 0.564  ,  TotalTime: 0.622  ,  Loss/total: 7.04153  ,  Loss/giou: 0.70887  ,  Loss/l1: 0.10634  ,  Loss/location: 5.09207  ,  IoU: 0.40429
+[train: 1, 500 / 3750] FPS: 25.7 (24.1)  ,  DataTime: 0.011 (0.047)  ,  ForwardTime: 0.564  ,  TotalTime: 0.622  ,  Loss/total: 6.52933  ,  Loss/giou: 0.68360  ,  Loss/l1: 0.10044  ,  Loss/location: 4.65993  ,  IoU: 0.42356
+[train: 1, 550 / 3750] FPS: 25.7 (22.8)  ,  DataTime: 0.010 (0.047)  ,  ForwardTime: 0.566  ,  TotalTime: 0.623  ,  Loss/total: 6.10810  ,  Loss/giou: 0.66283  ,  Loss/l1: 0.09595  ,  Loss/location: 4.30268  ,  IoU: 0.44000
+[train: 1, 600 / 3750] FPS: 25.7 (25.2)  ,  DataTime: 0.010 (0.046)  ,  ForwardTime: 0.566  ,  TotalTime: 0.623  ,  Loss/total: 5.74363  ,  Loss/giou: 0.64263  ,  Loss/l1: 0.09161  ,  Loss/location: 4.00029  ,  IoU: 0.45554
+[train: 1, 650 / 3750] FPS: 25.7 (26.0)  ,  DataTime: 0.010 (0.046)  ,  ForwardTime: 0.566  ,  TotalTime: 0.622  ,  Loss/total: 5.43363  ,  Loss/giou: 0.62486  ,  Loss/l1: 0.08779  ,  Loss/location: 3.74498  ,  IoU: 0.46912
+[train: 1, 700 / 3750] FPS: 25.7 (25.9)  ,  DataTime: 0.009 (0.046)  ,  ForwardTime: 0.566  ,  TotalTime: 0.622  ,  Loss/total: 5.16283  ,  Loss/giou: 0.60871  ,  Loss/l1: 0.08432  ,  Loss/location: 3.52382  ,  IoU: 0.48132
+[train: 1, 750 / 3750] FPS: 25.8 (25.7)  ,  DataTime: 0.009 (0.047)  ,  ForwardTime: 0.565  ,  TotalTime: 0.621  ,  Loss/total: 4.91864  ,  Loss/giou: 0.59268  ,  Loss/l1: 0.08099  ,  Loss/location: 3.32833  ,  IoU: 0.49340
+[train: 1, 800 / 3750] FPS: 25.8 (25.5)  ,  DataTime: 0.009 (0.047)  ,  ForwardTime: 0.565  ,  TotalTime: 0.621  ,  Loss/total: 4.71143  ,  Loss/giou: 0.57985  ,  Loss/l1: 0.07836  ,  Loss/location: 3.15993  ,  IoU: 0.50328
+[train: 1, 850 / 3750] FPS: 25.8 (26.1)  ,  DataTime: 0.008 (0.047)  ,  ForwardTime: 0.565  ,  TotalTime: 0.620  ,  Loss/total: 4.52928  ,  Loss/giou: 0.56876  ,  Loss/l1: 0.07609  ,  Loss/location: 3.01129  ,  IoU: 0.51189
+[train: 1, 900 / 3750] FPS: 25.8 (26.0)  ,  DataTime: 0.008 (0.047)  ,  ForwardTime: 0.565  ,  TotalTime: 0.620  ,  Loss/total: 4.36694  ,  Loss/giou: 0.55884  ,  Loss/l1: 0.07413  ,  Loss/location: 2.87864  ,  IoU: 0.51978
+[train: 1, 950 / 3750] FPS: 25.8 (25.7)  ,  DataTime: 0.008 (0.047)  ,  ForwardTime: 0.565  ,  TotalTime: 0.619  ,  Loss/total: 4.21593  ,  Loss/giou: 0.54867  ,  Loss/l1: 0.07213  ,  Loss/location: 2.75793  ,  IoU: 0.52774
+[train: 1, 1000 / 3750] FPS: 25.9 (25.7)  ,  DataTime: 0.008 (0.047)  ,  ForwardTime: 0.564  ,  TotalTime: 0.619  ,  Loss/total: 4.07702  ,  Loss/giou: 0.53868  ,  Loss/l1: 0.07020  ,  Loss/location: 2.64868  ,  IoU: 0.53554
+[train: 1, 1050 / 3750] FPS: 25.9 (26.2)  ,  DataTime: 0.008 (0.047)  ,  ForwardTime: 0.564  ,  TotalTime: 0.619  ,  Loss/total: 3.95461  ,  Loss/giou: 0.53055  ,  Loss/l1: 0.06854  ,  Loss/location: 2.55079  ,  IoU: 0.54183
+[train: 1, 1100 / 3750] FPS: 25.9 (26.3)  ,  DataTime: 0.007 (0.047)  ,  ForwardTime: 0.564  ,  TotalTime: 0.618  ,  Loss/total: 3.84139  ,  Loss/giou: 0.52274  ,  Loss/l1: 0.06708  ,  Loss/location: 2.46051  ,  IoU: 0.54800
+[train: 1, 1150 / 3750] FPS: 25.9 (25.7)  ,  DataTime: 0.007 (0.047)  ,  ForwardTime: 0.564  ,  TotalTime: 0.618  ,  Loss/total: 3.73642  ,  Loss/giou: 0.51508  ,  Loss/l1: 0.06561  ,  Loss/location: 2.37821  ,  IoU: 0.55403
+[train: 1, 1200 / 3750] FPS: 25.9 (26.0)  ,  DataTime: 0.007 (0.047)  ,  ForwardTime: 0.564  ,  TotalTime: 0.618  ,  Loss/total: 3.64217  ,  Loss/giou: 0.50858  ,  Loss/l1: 0.06440  ,  Loss/location: 2.30298  ,  IoU: 0.55917
+[train: 1, 1250 / 3750] FPS: 25.9 (25.8)  ,  DataTime: 0.007 (0.047)  ,  ForwardTime: 0.564  ,  TotalTime: 0.618  ,  Loss/total: 3.55184  ,  Loss/giou: 0.50188  ,  Loss/l1: 0.06312  ,  Loss/location: 2.23249  ,  IoU: 0.56439
+[train: 1, 1300 / 3750] FPS: 25.9 (26.1)  ,  DataTime: 0.007 (0.047)  ,  ForwardTime: 0.564  ,  TotalTime: 0.617  ,  Loss/total: 3.47160  ,  Loss/giou: 0.49656  ,  Loss/l1: 0.06205  ,  Loss/location: 2.16821  ,  IoU: 0.56853
+[train: 1, 1350 / 3750] FPS: 25.9 (26.1)  ,  DataTime: 0.007 (0.047)  ,  ForwardTime: 0.564  ,  TotalTime: 0.617  ,  Loss/total: 3.39404  ,  Loss/giou: 0.49068  ,  Loss/l1: 0.06093  ,  Loss/location: 2.10806  ,  IoU: 0.57306
+[train: 1, 1400 / 3750] FPS: 25.9 (25.5)  ,  DataTime: 0.007 (0.047)  ,  ForwardTime: 0.564  ,  TotalTime: 0.617  ,  Loss/total: 3.32188  ,  Loss/giou: 0.48516  ,  Loss/l1: 0.05990  ,  Loss/location: 2.05207  ,  IoU: 0.57745
+[train: 1, 1450 / 3750] FPS: 25.9 (25.9)  ,  DataTime: 0.007 (0.047)  ,  ForwardTime: 0.564  ,  TotalTime: 0.617  ,  Loss/total: 3.25510  ,  Loss/giou: 0.48002  ,  Loss/l1: 0.05893  ,  Loss/location: 2.00043  ,  IoU: 0.58148
+[train: 1, 1500 / 3750] FPS: 25.9 (25.6)  ,  DataTime: 0.007 (0.047)  ,  ForwardTime: 0.564  ,  TotalTime: 0.617  ,  Loss/total: 3.19007  ,  Loss/giou: 0.47466  ,  Loss/l1: 0.05797  ,  Loss/location: 1.95091  ,  IoU: 0.58575
+[train: 1, 1550 / 3750] FPS: 25.9 (24.9)  ,  DataTime: 0.007 (0.047)  ,  ForwardTime: 0.564  ,  TotalTime: 0.617  ,  Loss/total: 3.13124  ,  Loss/giou: 0.47016  ,  Loss/l1: 0.05713  ,  Loss/location: 1.90525  ,  IoU: 0.58932
+[train: 1, 1600 / 3750] FPS: 25.9 (26.0)  ,  DataTime: 0.006 (0.047)  ,  ForwardTime: 0.564  ,  TotalTime: 0.617  ,  Loss/total: 3.07493  ,  Loss/giou: 0.46561  ,  Loss/l1: 0.05632  ,  Loss/location: 1.86212  ,  IoU: 0.59294
+[train: 1, 1650 / 3750] FPS: 25.9 (26.1)  ,  DataTime: 0.006 (0.047)  ,  ForwardTime: 0.564  ,  TotalTime: 0.617  ,  Loss/total: 3.02179  ,  Loss/giou: 0.46144  ,  Loss/l1: 0.05555  ,  Loss/location: 1.82114  ,  IoU: 0.59623
+[train: 1, 1700 / 3750] FPS: 25.9 (25.8)  ,  DataTime: 0.006 (0.047)  ,  ForwardTime: 0.564  ,  TotalTime: 0.617  ,  Loss/total: 2.97309  ,  Loss/giou: 0.45773  ,  Loss/l1: 0.05488  ,  Loss/location: 1.78324  ,  IoU: 0.59924
+[train: 1, 1750 / 3750] FPS: 25.9 (25.7)  ,  DataTime: 0.006 (0.047)  ,  ForwardTime: 0.564  ,  TotalTime: 0.617  ,  Loss/total: 2.92562  ,  Loss/giou: 0.45374  ,  Loss/l1: 0.05419  ,  Loss/location: 1.74719  ,  IoU: 0.60241
+[train: 1, 1800 / 3750] FPS: 25.9 (25.8)  ,  DataTime: 0.006 (0.047)  ,  ForwardTime: 0.564  ,  TotalTime: 0.617  ,  Loss/total: 2.88152  ,  Loss/giou: 0.45031  ,  Loss/l1: 0.05357  ,  Loss/location: 1.71302  ,  IoU: 0.60520
+[train: 1, 1850 / 3750] FPS: 26.0 (26.1)  ,  DataTime: 0.006 (0.047)  ,  ForwardTime: 0.564  ,  TotalTime: 0.617  ,  Loss/total: 2.83953  ,  Loss/giou: 0.44692  ,  Loss/l1: 0.05298  ,  Loss/location: 1.68080  ,  IoU: 0.60791
+[train: 1, 1900 / 3750] FPS: 26.0 (25.7)  ,  DataTime: 0.006 (0.047)  ,  ForwardTime: 0.563  ,  TotalTime: 0.616  ,  Loss/total: 2.79833  ,  Loss/giou: 0.44355  ,  Loss/l1: 0.05240  ,  Loss/location: 1.64921  ,  IoU: 0.61065
+[train: 1, 1950 / 3750] FPS: 26.0 (23.2)  ,  DataTime: 0.006 (0.047)  ,  ForwardTime: 0.563  ,  TotalTime: 0.616  ,  Loss/total: 2.75785  ,  Loss/giou: 0.43994  ,  Loss/l1: 0.05177  ,  Loss/location: 1.61911  ,  IoU: 0.61355
+Training crashed at epoch 1
+Traceback for the error!
+Traceback (most recent call last):
+  File "/media/cvlab/data1/LY/SOT/Models/OSTrack-main/lib/train/../../lib/train/trainers/base_trainer.py", line 85, in train
+    self.train_epoch()
+  File "/media/cvlab/data1/LY/SOT/Models/OSTrack-main/lib/train/../../lib/train/trainers/ltr_trainer.py", line 133, in train_epoch
+    self.cycle_dataset(loader)
+  File "/media/cvlab/data1/LY/SOT/Models/OSTrack-main/lib/train/../../lib/train/trainers/ltr_trainer.py", line 86, in cycle_dataset
+    loss, stats = self.actor(data)
+  File "/media/cvlab/data1/LY/SOT/Models/OSTrack-main/lib/train/../../lib/train/actors/ostrack.py", line 34, in __call__
+    loss, status = self.compute_losses(out_dict, data)
+  File "/media/cvlab/data1/LY/SOT/Models/OSTrack-main/lib/train/../../lib/train/actors/ostrack.py", line 80, in compute_losses
+    gt_gaussian_maps = generate_heatmap(gt_dict['search_anno'], self.cfg.DATA.SEARCH.SIZE, self.cfg.MODEL.BACKBONE.STRIDE)
+  File "/media/cvlab/data1/LY/SOT/Models/OSTrack-main/lib/train/../../lib/utils/heapmap_utils.py", line 24, in generate_heatmap
+    CenterNetHeatMap.generate_score_map(gt_scoremap, classes, wh, centers_int, 0.7)
+  File "/media/cvlab/data1/LY/SOT/Models/OSTrack-main/lib/train/../../lib/utils/heapmap_utils.py", line 34, in generate_score_map
+    radius = radius.type(torch.int).cpu().numpy()
+KeyboardInterrupt
+Restarting training from last epoch ...

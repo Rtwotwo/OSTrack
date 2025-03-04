@@ -5,11 +5,12 @@
 """
 import os
 import cv2
-import torch 
+import yaml
+import torch
 import numpy as np
-from lib.models.ostrack.ostrack import build_ostrack
-from lib.models.ostrack import vit_ce
-
+import importlib
+from models.ostrack.ostrack import build_ostrack
+from models.ostrack.vit_ce import vit_base_patch16_224_ce
 
 def ComputeHistogramImage(frame, hist_height=200, hist_width=300):
     """使用 OpenCV 绘制 RGB 直方图
@@ -84,28 +85,20 @@ def CalculateSpectrogramImage(frame, spec_height=200, spec_width=200):
     return spectrogram_color
 
 
-def GetOSTrackModel(model_selection=None, weight_path=None):
-    """加载OSTrack模型,便于后期进行模型实例
-    :param model_selection: 模型base\large的选择
-    :param weight_path: 模型权重路径
-    :return: model 实例化并且加载参数后的模型实例
-    """
-    # 创建模型实例
-    if model_selection == 'base':
-        model = vit_ce.vit_base_patch16_224_ce(pretrained=False)
-    elif model_selection == 'large':
-        model = vit_ce.vit_large_patch16_224_ce(pretrained=False)
-    else:
-        raise ValueError('warning: model_selection must be base or large')
-    # 加载模型权重文件
-    if weight_path is not None:
-        model.load_state_dict(torch.load(weight_path, map_location='cpu'))
-    else:
-        raise ValueError('weight_path must be specified')
-    return model
+###############################  配置模型的解析文件  ############################
+# config_file location:
+# ostrack model: MCJT-master\lib\models\ostrack\ostrack.py
+# ostrack test : MCJT-master\tracking\test.py
+# ostrack config: MCJT-master\lib\config\ostrack\config.py
 
-
+def load_config(config_path):
+    """read the configuration file"""
+    with open(config_path, 'r') as file:
+        config = yaml.safe_load(file)
+    return config
 
 if __name__ == '__main__':
-   # 加载模型
-   model = GetOSTrackModel(model_selection='base', weight_path='weights/OSTrack_ep0060.pth.tar')
+    config_path = './config/vitb_384_mae_ce_32x4_got10k_ep100.yaml'
+    config = load_config(config_path)
+    model = build_ostrack(config, training=False)
+    print(model)

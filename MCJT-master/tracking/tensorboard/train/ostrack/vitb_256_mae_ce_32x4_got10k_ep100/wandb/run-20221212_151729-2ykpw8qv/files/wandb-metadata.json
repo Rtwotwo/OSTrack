@@ -1,0 +1,103 @@
+{
+    "os": "Linux-4.15.0-142-generic-x86_64-with-glibc2.17",
+    "python": "3.8.15",
+    "heartbeatAt": "2022-12-12T07:17:35.952154",
+    "startedAt": "2022-12-12T07:17:29.966628",
+    "docker": null,
+    "cuda": "10.2.89",
+    "args": [
+        "--script",
+        "ostrack",
+        "--config",
+        "vitb_256_mae_ce_32x4_got10k_ep100",
+        "--save_dir",
+        "./output",
+        "--use_lmdb",
+        "0",
+        "--script_prv",
+        "None",
+        "--config_prv",
+        "baseline",
+        "--distill",
+        "0",
+        "--script_teacher",
+        "None",
+        "--config_teacher",
+        "None",
+        "--use_wandb",
+        "1"
+    ],
+    "state": "running",
+    "program": "../lib/train/run_training.py",
+    "host": "cvlab-MS-7A71",
+    "username": "cvlab",
+    "executable": "/home/cvlab/anaconda3/envs/ostrack/bin/python",
+    "cpu_count": 4,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 1600.06825,
+        "min": 800.0,
+        "max": 4500.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 1600.11,
+            "min": 800.0,
+            "max": 4500.0
+        },
+        {
+            "current": 1600.075,
+            "min": 800.0,
+            "max": 4500.0
+        },
+        {
+            "current": 1600.002,
+            "min": 800.0,
+            "max": 4500.0
+        },
+        {
+            "current": 1600.106,
+            "min": 800.0,
+            "max": 4500.0
+        },
+        {
+            "current": 1600.083,
+            "min": 800.0,
+            "max": 4500.0
+        },
+        {
+            "current": 1600.008,
+            "min": 800.0,
+            "max": 4500.0
+        },
+        {
+            "current": 1600.081,
+            "min": 800.0,
+            "max": 4500.0
+        },
+        {
+            "current": 1600.081,
+            "min": 800.0,
+            "max": 4500.0
+        }
+    ],
+    "disk": {
+        "total": 74.97257995605469,
+        "used": 14.431663513183594
+    },
+    "gpu": "NVIDIA GeForce GTX 1080 Ti",
+    "gpu_count": 2,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce GTX 1080 Ti",
+            "memory_total": 11720130560
+        },
+        {
+            "name": "NVIDIA GeForce GTX 1080 Ti",
+            "memory_total": 11721506816
+        }
+    ],
+    "memory": {
+        "total": 62.88007354736328
+    }
+}

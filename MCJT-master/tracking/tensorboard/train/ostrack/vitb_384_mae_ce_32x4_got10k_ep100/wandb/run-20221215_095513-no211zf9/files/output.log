@@ -1,0 +1,36 @@
+
+No matching checkpoint file found
+Training crashed at epoch 1
+Traceback for the error!
+Traceback (most recent call last):
+  File "/media/estar/Data/LY/Models/OSTrack-v2/lib/train/../../lib/train/trainers/base_trainer.py", line 85, in train
+    self.train_epoch()
+  File "/media/estar/Data/LY/Models/OSTrack-v2/lib/train/../../lib/train/trainers/ltr_trainer.py", line 133, in train_epoch
+    self.cycle_dataset(loader)
+  File "/media/estar/Data/LY/Models/OSTrack-v2/lib/train/../../lib/train/trainers/ltr_trainer.py", line 86, in cycle_dataset
+    loss, stats = self.actor(data)
+  File "/media/estar/Data/LY/Models/OSTrack-v2/lib/train/../../lib/train/actors/ostrack.py", line 31, in __call__
+    out_dict = self.forward_pass(data)
+  File "/media/estar/Data/LY/Models/OSTrack-v2/lib/train/../../lib/train/actors/ostrack.py", line 69, in forward_pass
+    out_dict = self.net(template=template_list,
+  File "/home/junjie/libraries/anaconda3/envs/LY-ostrack/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/media/estar/Data/LY/Models/OSTrack-v2/lib/train/../../lib/models/ostrack/ostrack.py", line 46, in forward
+    x, aux_dict = self.backbone(z=template, x=search,
+  File "/home/junjie/libraries/anaconda3/envs/LY-ostrack/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/media/estar/Data/LY/Models/OSTrack-v2/lib/train/../../lib/models/ostrack/vit_ce.py", line 191, in forward
+    x, aux_dict = self.forward_features(z, x, ce_template_mask=ce_template_mask, ce_keep_rate=ce_keep_rate,)
+  File "/media/estar/Data/LY/Models/OSTrack-v2/lib/train/../../lib/models/ostrack/vit_ce.py", line 151, in forward_features
+    blk(x, global_index_t, global_index_s, mask_x, ce_template_mask, ce_keep_rate)
+  File "/home/junjie/libraries/anaconda3/envs/LY-ostrack/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/media/estar/Data/LY/Models/OSTrack-v2/lib/train/../../lib/models/layers/attn_blocks.py", line 93, in forward
+    x_attn, attn = self.attn(self.norm1(x), mask, True)
+  File "/home/junjie/libraries/anaconda3/envs/LY-ostrack/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/media/estar/Data/LY/Models/OSTrack-v2/lib/train/../../lib/models/layers/attn.py", line 40, in forward
+    attn = (q @ k.transpose(-2, -1)) * self.scale
+RuntimeError: CUDA out of memory. Tried to allocate 380.00 MiB (GPU 0; 23.70 GiB total capacity; 4.83 GiB already allocated; 248.56 MiB free; 4.87 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+Restarting training from last epoch ...
+Finished training!
