@@ -96,6 +96,8 @@ def load_config(config_path):
 ###############################  主函数测试分析  ################################ 
 if __name__ == '__main__':
     config_path = './config/vitb_384_mae_ce_32x4_got10k_ep100.yaml'
+    weight_path = './weights/vit_384_mae_ce.pth'
     config = load_config(config_path)
     model = build_ostrack(config, training=False)
     print(model)
+    torch.save(model.state_dict(), weight_path)
