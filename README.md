@@ -15,13 +15,18 @@ OSTrack is an artificial intelligence technology for tracking and locking unmann
 
     Now you can use utils.py to get the ostrack model and use it for training and testing.
     the model architecture is shown below:
-
         ![1](assets/ostrack_1.png)
+
         ![2](assets/ostrack_2.png)
+
         ![3](assets/ostrack_3.png)
+
         ![4](assets/ostrack_4.png)
+
         ![5](assets/ostrack_5.png)
+
         ![6](assets/ostrack_6.png)
+        
 
 ## 3.Thanks
 
