@@ -107,6 +107,7 @@ class VisionTransformerCE(VisionTransformer):
 
         x = self.patch_embed(x)
         z = self.patch_embed(z)
+        self.cat_mode = 'direct'
 
         # attention mask handling
         # B, H, W

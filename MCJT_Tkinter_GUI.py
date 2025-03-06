@@ -4,15 +4,33 @@
 时间: 2025/01/13-Redal
 """
 import os
+import sys
 import cv2 
 import threading
+import torch
 import tkinter as tk
 from tkinter import filedialog
 from PIL import Image, ImageTk
-from utils import ComputeHistogramImage, CalculateSpectrogramImage
+from utils import config
+from utils import ComputeHistogramImage
+from utils import CalculateSpectrogramImage
+from torchvision.transforms import transforms
+
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+current_path = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(current_path)
+template_transform = transforms.Compose([
+    transforms.ToTensor(),
+    transforms.Resize((192, 192)),
+    transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),])
+search_transform = transforms.Compose([
+    transforms.ToTensor(),
+    transforms.Resize((384, 384)),
+    transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),])
 
 
 
+########################  定义GUI界面类  #######################
 class OSTrackGUI(tk.Frame):
     """设计OSTrack主界面,用于完成多功能的介绍
        以及相关功能的选择使用"""
@@ -26,9 +44,12 @@ class OSTrackGUI(tk.Frame):
         self.is_running = False
         self.video_cap = None
         self.video_thread = None
-        # 设立两个标志位
         self.live_video_flag = False
         self.import_video_flag = False
+        # 初始化模型
+        self.ostrack = config()
+        self.template_transform = template_transform
+        self.sreach_transform = search_transform
 
     def __set_widgets(self):
         self.root.title("OSTrack GUI-Redal")
@@ -173,6 +194,7 @@ class OSTrackGUI(tk.Frame):
 
 
 
+################################  主控测试函数  #############################
 if __name__=='__main__':
     root = tk.Tk()
     app = OSTrackGUI(root=root)

@@ -35,7 +35,7 @@ MODEL:
   EXTRA_MERGER: False
   RETURN_INTER: False
   BACKBONE:
-    CAT_MODE: 'concat' 
+    CAT_MODE: 'direct' # direct or concat
     SEP_SEG: True 
     TYPE: vit_base_patch16_224_ce
     STRIDE: 16

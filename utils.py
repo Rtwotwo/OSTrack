@@ -4,14 +4,32 @@
 时间: 2025/01/13-Redal
 """
 import os
+import sys
 import cv2
 import yaml
 import torch
+import argparse
 import numpy as np
-import importlib
+from PIL import Image, ImageDraw
+from torchvision.transforms import transforms
 from models.ostrack.ostrack import build_ostrack
-from models.ostrack.vit_ce import vit_base_patch16_224_ce
 
+current_path = os.path.abspath(os.path.dirname(__file__))
+sys.path.append(current_path)
+os.environ['CUDA_VISIBLE_DEVICES'] = '0'
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+template_transform = transforms.Compose([
+    transforms.ToTensor(),
+    transforms.Resize((192, 192)),
+    transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),])
+search_transform = transforms.Compose([
+    transforms.ToTensor(),
+    transforms.Resize((384, 384)),
+    transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),])
+
+
+
+###############################  tkinter GUI相关绘图函数  ############################
 def ComputeHistogramImage(frame, hist_height=200, hist_width=300):
     """使用 OpenCV 绘制 RGB 直方图
     :param frame: 输入帧(BGR 格式)
@@ -86,18 +104,39 @@ def CalculateSpectrogramImage(frame, spec_height=200, spec_width=200):
 
 
 ###############################  配置模型的解析文件  ############################
-def load_config(config_path):
+def load_config(args):
     """read the configuration file"""
+    config_path = os.path.join(args.config_dir, args.config_file)
     with open(config_path, 'r') as file:
         config = yaml.safe_load(file)
     return config 
 
 
+def config():
+    """make configurations about the vit model"""
+    parser = argparse.ArgumentParser(description='OSTrack model configuration',
+                                     formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+    parser.add_argument('--config_dir', default='./config', type=str,
+                        help='The directory of the configuration file')
+    parser.add_argument('--config_file', default='vitb_384_mae_ce_32x4_got10k_ep100.yaml', type=str,
+                        help='The name of the configuration file')
+    parser.add_argument('--weight_dir', default='./weights', type=str,
+                        help='the directory of the weight file')
+    parser.add_argument('--weight_file', default='vit_384_mae_ce.pth', type=str,
+                        help='the name of the weight file')
+    args = parser.parse_args()
+    # initialize the config and model weight
+    cfg = load_config(args)
+    ostrack_model = build_ostrack(cfg, training=False)
+    weight_path = os.path.join(args.weight_dir, args.weight_file)
+    ostrack_model.load_state_dict(torch.load(weight_path, map_location=device))
+    return ostrack_model
+    
+
+
+
 ###############################  主函数测试分析  ################################ 
 if __name__ == '__main__':
-    config_path = './config/vitb_384_mae_ce_32x4_got10k_ep100.yaml'
-    weight_path = './weights/vit_384_mae_ce.pth'
-    config = load_config(config_path)
+    cfg = config()
+    config = load_config(cfg)
     model = build_ostrack(config, training=False)
-    print(model)
-    torch.save(model.state_dict(), weight_path)
