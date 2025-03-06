@@ -3,7 +3,7 @@
 OSTrack is an artificial intelligence technology for tracking and locking unmanned aerial vehicles based on the ViT deep network model. OSTrack is based on the Vision of Transformer deep learning model. For unmanned aerial vehicles moving at high speed in the near and far fields, it uses visual tracking to lock the position of the unmanned aerial vehicle in real-time video frames. The model mainly uses multiple initial anchor bounding boxes, obtains feature maps through feature extraction based on network input, and the position of the unmanned aerial vehicle is determined by the votes of the anchor boxes given by the network model. The trained network model has certain robustness to near and far fields, partial occlusion, and light changes.  
 ![Cover Image](assets/cover_img.png)
 
-## 1.Runtime Environment
+## 1.Environment
 
 | Name | Version |   Name | Version |
 |------|---------|--------|---------|
@@ -13,12 +13,17 @@ OSTrack is an artificial intelligence technology for tracking and locking unmann
 
 ## 2.Usage
 
-Now you can use utils.py to get the ostrack model and use it for training and testing.
-the model architecture is shown below:  
+Now you can use utils.py to get the ostrack model and use it for training and testing.the model architecture is shown below:  CEblock has 12 layers, and there is also a detection head with five layers behind it. However, in reality, the test input data of Ostrack requires template and search images. Only through manual annotation or automatic annotation can the specific location of the small - scale drone in the first - frame image of the video sequence, that is, the template image, be determined. While the search image doesn't need to be processed, and a normal sequence frame can be selected.
 
 ![1](assets/ostrack_1.png)
 
-## 3.Thanks
+## 3.TODO
+
+- [x] Finish the model configuration code and import the vit_base_384_model_ce model.
+- [] Train an initial - frame localization model using YOLOv5 for the automatic annotation of templates.
+- [] Complete the function of drone tracking for imported videos in OSTrack.
+
+## 4.Thanks
 
 ```bash
 # If you are interested in the original project, you can click on the link below.
