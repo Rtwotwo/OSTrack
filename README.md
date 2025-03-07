@@ -15,13 +15,15 @@ OSTrack is an artificial intelligence technology for tracking and locking unmann
 
 Now you can use utils.py to get the ostrack model and use it for training and testing.the model architecture is shown below:  CEblock has 12 layers, and there is also a detection head with five layers behind it. However, in reality, the test input data of Ostrack requires template and search images. Only through manual annotation or automatic annotation can the specific location of the small - scale drone in the first - frame image of the video sequence, that is, the template image, be determined. While the search image doesn't need to be processed, and a normal sequence frame can be selected.
 
-![1](assets/ostrack_1.png)
+![1](assets/ostrack_1.png)  ![2](assets/ostrack_2.png)
 
 ## 3.TODO
 
 - [x] Finish the model configuration code and import the vit_base_384_model_ce model.
 - [ ] Train an initial - frame localization model using YOLOv5 for the automatic annotation of templates.
 - [ ] Complete the function of drone tracking for imported videos in OSTrack.
+
+![template_image](assets/uav_1.jpg)  ![search_image](assets/uav_2.jpg)
 
 ## 4.Thanks
 
