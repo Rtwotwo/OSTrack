@@ -1,6 +1,11 @@
+# 使用git reset更新.gitignore
+
 # 原始项目文件不上传
 MCJT/
 
 # 忽略权重文件
 weights/
+
+# 数据集不上传
+datasets/
 
