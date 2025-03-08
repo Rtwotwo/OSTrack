@@ -1,0 +1,5 @@
+train: ./datasets/images/train
+val: ./datasets/images/val
+
+nc: 1 
+names: ['drone'] 
