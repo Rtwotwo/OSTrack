@@ -26,7 +26,7 @@ Now you can use utils.py to get the ostrack model and use it for training and te
 - [x] Finish the model configuration code and import the vit_base_384_model_ce model.
 - [x] Train an initial - frame localization model using YOLOv5 for the automatic annotation of templates.
 - [ ] Complete the function of drone tracking for imported videos in OSTrack.
-- [ ] Finish the GUI interface for OSTrack and YOLOv3 models' deployment.
+- [ ] Finish the GUI interface for OSTrack and YOLOv3 models' deployment.  
 
 | search | template |
 | ------ | ------------- |
