@@ -28,7 +28,7 @@ Now you can use utils.py to get the ostrack model and use it for training and te
 - [ ] Complete the function of drone tracking for imported videos in OSTrack.
 - [ ] Finish the GUI interface for OSTrack and YOLOv3 models' deployment.
 
-| template | search |
+| search | template |
 | ------ | ------------- |
 | ![template_image](assets/uav_1.jpg) | ![search_image](assets/uav_2.jpg) |
 

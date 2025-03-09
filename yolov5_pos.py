@@ -1,6 +1,7 @@
 """
 TODO: 使用YOLOv5进行无人机图像检测定位测试,
       数据集采用红外影像数据./datasets/test1
+      进行分割重构数据集
 Time: 2025/03/07-Redal
 """
 import os
