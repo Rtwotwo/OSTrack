@@ -15,17 +15,41 @@ OSTrack is an artificial intelligence technology for tracking and locking unmann
 
 Now you can use utils.py to get the ostrack model and use it for training and testing.the model architecture is shown below:  CEblock has 12 layers, and there is also a detection head with five layers behind it. However, in reality, the test input data of Ostrack requires template and search images. Only through manual annotation or automatic annotation can the specific location of the small - scale drone in the first - frame image of the video sequence, that is, the template image, be determined. While the search image doesn't need to be processed, and a normal sequence frame can be selected.
 
-![1](assets/ostrack_1.png)  ![2](assets/ostrack_2.png)
+| CEBlock | Detection Head |
+| ------ | ------------- |
+| ![1](assets/ostrack_1.png) | ![2](assets/ostrack_5.jpg) |
 
 ## 3.TODO
 
 - [x] Finish the model configuration code and import the vit_base_384_model_ce model.
-- [ ] Train an initial - frame localization model using YOLOv5 for the automatic annotation of templates.
+- [x] Train an initial - frame localization model using YOLOv5 for the automatic annotation of templates.
 - [ ] Complete the function of drone tracking for imported videos in OSTrack.
+- [ ] Finish the GUI interface for OSTrack and YOLOv3 models' deployment.
 
-![template_image](assets/uav_1.jpg)  ![search_image](assets/uav_2.jpg)
+| template | search |
+| ------ | ------------- |
+| ![template_image](assets/uav_1.jpg) | ![search_image](assets/uav_2.jpg) |
 
-## 4.Thanks
+## 4.Results
+
+Now this is YOLOv3 model's  training results, consisting of confusion_matrix, labels_correlogram, F1_curve, labels and PR/P/R_curve. The training results of YOLOv5 are not included in this project.  
+
+| confusion_matrix | labels_correlogram |
+| ------ | ------------- |
+| ![confusion_matrix](assets\results\confusion_matrix.jpg) | ![labels_correlogram](assets\results\labels_correlogram.jpg) |
+
+| F1_curve | labels |
+| ------ | ------------- |
+| ![F1_curve](assets\results\F1_curve.jpg) | ![labels](assets\results\labels.jpg) |
+
+| PR_curve | P_curve | R_curve |
+| ------ | ------------- | ------------- |
+| ![PR/P/PR_curve](assets\results\PR_curve.png) | ![P_curve](assets\results\P_curve.png) | ![R_curve](assets\results\R_curve.png) |
+
+Before training, the dataset architecture is shown below:
+![path](assets\results\paths.png)
+
+## 5.Thanks
 
 ```bash
 # If you are interested in the original project, you can click on the link below.
