@@ -36,18 +36,18 @@ Now this is YOLOv3 model's  training results, consisting of confusion_matrix, la
 
 | confusion_matrix | labels_correlogram |
 | ------ | ------------- |
-| ![confusion_matrix](assets\results\confusion_matrix.jpg) | ![labels_correlogram](assets\results\labels_correlogram.jpg) |
+| ![confusion_matrix](assets/results/confusion_matrix.jpg) | ![labels_correlogram](assets/results/labels_correlogram.jpg) |
 
 | F1_curve | labels |
 | ------ | ------------- |
-| ![F1_curve](assets\results\F1_curve.jpg) | ![labels](assets\results\labels.jpg) |
+| ![F1_curve](assets/results/F1_curve.jpg) | ![labels](assets/results/labels.jpg) |
 
 | PR_curve | P_curve | R_curve |
 | ------ | ------------- | ------------- |
-| ![PR/P/PR_curve](assets\results\PR_curve.png) | ![P_curve](assets\results\P_curve.png) | ![R_curve](assets\results\R_curve.png) |
+| ![PR_curve](assets/results/PR_curve.png) | ![P_curve](assets/results/P_curve.png) | ![R_curve](assets/results/R_curve.png) |
 
 Before training, the dataset architecture is shown below:
-![path](assets\results\paths.png)
+![path](assets/results/paths.png)
 
 ## 5.Thanks
 
