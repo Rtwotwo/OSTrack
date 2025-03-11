@@ -3,7 +3,7 @@
 ![result](assets/results/train_batch1.jpg)
 
 OSTrack is an artificial intelligence technology for tracking and locking unmanned aerial vehicles based on the ViT deep network model. OSTrack is based on the Vision of Transformer deep learning model. For unmanned aerial vehicles moving at high speed in the near and far fields, it uses visual tracking to lock the position of the unmanned aerial vehicle in real-time video frames. The model mainly uses multiple initial anchor bounding boxes, obtains feature maps through feature extraction based on network input, and the position of the unmanned aerial vehicle is determined by the votes of the anchor boxes given by the network model. The trained network model has certain robustness to near and far fields, partial occlusion, and light changes.  
-![Cover Image](assets/cover_img.png)
+![Cover Image](assets/cover_img.jpg)
 
 ## 1.Environment
 
@@ -51,7 +51,7 @@ pathlib.PosixPath = pathlib.WindowsPath
 如果您想压缩无人机红外视频,您可以选择下面的命令来压缩视频为.gif格式.
 
 ```bash
-ffmpeg -ss 00:00:05 -t 00:00:05 -i video/infrared.mp4 -vf "fps=1,scale=240:\
+ffmpeg -ss 00:00:05 -t 00:00:05 -i video/infrared.mp4 -vf "fps=1,scale=640:\
 -1:flags=lanczos,split[s0][s1];[s0]palettegen=stats_mode=single:max_colors=16[p];\
 [s1][p]paletteuse=dither=floyd_steinberg" -gifflags +transdiff -loop 0 \
 -final_delay 20 -y output_3mb.gif
