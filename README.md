@@ -31,12 +31,7 @@ Now you can use utils.py to get the ostrack model and use it for training and te
 | search | template |
 | ------ | ------------- |
 | ![template_image](assets/uav_1.jpg) | ![search_image](assets/uav_2.jpg) |
-| ![orig_video](video/infrared.mp4) | ![result](assets/detection_result.jpg) |
-
-<video width="320" height="240" controls>
-  <source src="video/infrared.mp4" type="video/mp4">
-  您的浏览器不支持 video 标签。
-</video>
+| ![orig_video](video/infrared.gif) | ![result](assets/detection_result.jpg) |
 
 ## 4.Results
 
