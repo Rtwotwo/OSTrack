@@ -3,15 +3,23 @@ TODO: 使用YOLOv5进行无人机图像检测定位测试,
       数据集采用红外影像数据./datasets/test1
       进行分割重构数据集
 Time: 2025/03/07-Redal
+Warn: when the question occurred, ' raise NotImplementedError("cannot instantiate %r on your system"'
+      import pathlib
+      temp = pathlib.PosixPath
+      pathlib.PosixPath = pathlib.WindowsPath
 """
 import os
 import cv2
 import argparse
 import sys
 import torch
+from pathlib import Path
 os.environ['CUDA_VISIBLE_DEVICES'] = '0'
+proj_path = os.getcwd()
+sys.path.append(os.path.join(proj_path, "yolov5"))
 sys.path.append(os.path.abspath(os.path.join(os.getcwd(), "..")))
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+from yolov5.models.experimental import attempt_load 
 
 
 
@@ -19,16 +27,24 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 def config():
     parser = argparse.ArgumentParser(description='YOLOv5 inference config',
                                      formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+    parser.add_argument_group('YOLOv5 Dataset Reconstruction')
     parser.add_argument('--gt_dir',  type=str, default=r'datasets\images', help='ground truth file directory path(s)')
     parser.add_argument('--gt_mode', type=str, default=r'train', help='ground truth file mode [train, val]')
     parser.add_argument('--gt_file', type=str, default=r'groundtruth.txt', help='ground truth file name')
     parser.add_argument('--label_dir', type=str, default=r'datasets\labels', help='labels file directory path(s)')
     parser.add_argument('--label_mode', type=str, default=r'train', help='labels file mode [train, val]')
     parser.add_argument('--origin_dir', type=str, default=r'datasets\test', help='images file directory path(s)')
+    # related to YOLOv5 model and weights
+    parser.add_argument_group('YOLOv5 Model Configuration')
+    parser.add_argument('--weights_dir', type=str, default=r'weights', help='weights file directory path(s)')
+    parser.add_argument('--weights_file', type=str, default=r'yolov5s.pt', help='weights file name yolov5s/m/l/x.pt')
+    parser.add_argument('--yolo_dir', type=str, default=r'yolov5', help='yolov5 file directory path(s)')
     args = parser.parse_args()
     return args
 
 
+
+##############################  重构Got_10k数据集  ###############################
 def split_groundtruth_to_individual_labels(args):
     """Split the label information in the groundtruth.txt file into the txt file for each image
     :param input image is 640x512 pixels width x height"""
@@ -81,11 +97,22 @@ def rebuild_data(args):
             with open(txt_filepath, 'w') as txtf:
                 txtf.write(f'{0} {cneter_w} {center_h} {bounding_w} {bounding_h}\n')
             print(f'{dirpath}: {txt_filepath} and {img_save_path} has been written', end='\r', flush=True)
-                
+
+
+
+##############################  部署Yolov5模型  ###############################
+def load_yolo(args):
+    """Load the yolov5 model weights and return the model
+    :param args.weights_dir: weights file directory path(s)"""
+    weights_fp = os.path.join(args.weights_dir, args.weights_file)
+    print(f'Loading weights from {weights_fp} and yolov5 is {args.yolo_dir}')
+    yolo_model = attempt_load(weights=weights_fp, device=device)
+    return yolo_model.to(device)
+    
 
 
 ##############################  主函数测试分析  ###############################
 if __name__ == '__main__':
     args = config()
-    # split_groundtruth_to_individual_labels(args)
-    rebuild_data(args)
+    yolo_model = load_yolo(args)
+    print(yolo_model) 

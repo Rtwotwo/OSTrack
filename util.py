@@ -13,6 +13,7 @@ import numpy as np
 from PIL import Image, ImageDraw
 from torchvision.transforms import transforms
 from models.ostrack.ostrack import build_ostrack
+import matplotlib.pyplot as plt
 
 current_path = os.path.abspath(os.path.dirname(__file__))
 sys.path.append(current_path)
@@ -103,7 +104,7 @@ def CalculateSpectrogramImage(frame, spec_height=200, spec_width=200):
     return spectrogram_color
 
 
-###############################  配置模型的解析文件  ############################
+###############################  配置ostrack模型解析文件  ############################
 def load_config(args):
     """read the configuration file"""
     config_path = os.path.join(args.config_dir, args.config_file)
@@ -137,6 +138,33 @@ def config():
 
 ###############################  主函数测试分析  ################################ 
 if __name__ == '__main__':
-    cfg = config()
-    config = load_config(cfg)
-    model = build_ostrack(config, training=False)
+    # test the model function, and the model is processing the neighbor frames
+    # called the template and search image with boundding box 2~5 times
+    ostrack_model = config().eval().to(device)
+    print(ostrack_model)
+
+
+    # template_img = Image.open('assets/uav_0.jpg')
+    # search_img = Image.open('assets/uav_3.jpg')
+    # template_img = template_transform(template_img).unsqueeze(0).to(device)
+    # search_img = search_transform(search_img).unsqueeze(0).to(device)
+    # results = ostrack_model(template_img, search_img)
+    # answer = results['pred_boxes'][0]
+    # bbox = answer.detach().cpu().numpy()[0]
+    # # depict the result
+    # search_img = cv2.imread('assets/uav_3.jpg')
+    # print(results, bbox)
+    # height, width, _ = search_img.shape
+    # x_min = int(bbox[0] * width)
+    # y_min = int(bbox[1] * height)
+    # x_max = int(bbox[2] * width)
+    # y_max = int(bbox[3] * height)
+
+    # color = (255, 0, 0)  # 绿色
+    # thickness = 2
+    # cv2.rectangle(search_img, (x_min, y_min), (x_max, y_max), color, thickness)
+    # # 使用 matplotlib 显示图像
+    # plt.imshow(cv2.cvtColor(search_img, cv2.COLOR_BGR2RGB))
+    # plt.axis('off')  # 关闭坐标轴
+    # plt.show()
+    # cv2.imwrite('assets/uav_1_result.jpg', search_img)

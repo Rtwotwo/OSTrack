@@ -11,9 +11,9 @@ import torch
 import tkinter as tk
 from tkinter import filedialog
 from PIL import Image, ImageTk
-from utils import config
-from utils import ComputeHistogramImage
-from utils import CalculateSpectrogramImage
+from util import config
+from util import ComputeHistogramImage
+from util import CalculateSpectrogramImage
 from torchvision.transforms import transforms
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
