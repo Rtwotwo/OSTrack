@@ -31,7 +31,7 @@ Now you can use utils.py to get the ostrack model and use it for training and te
 | search | template |
 | ------ | ------------- |
 | ![template_image](assets/uav_1.jpg) | ![search_image](assets/uav_2.jpg) |
-| ![orig_video](video/infrared.gif) | ![result](assets/detection_result.jpg) |
+| ![orig_video](video/infrared_1mb.gif) | ![result](assets/detection_result.jpg) |
 
 ## 4.Results
 
@@ -51,7 +51,10 @@ pathlib.PosixPath = pathlib.WindowsPath
 如果您想压缩无人机红外视频,您可以选择下面的命令来压缩视频为.gif格式.
 
 ```bash
-ffmpeg -ss 00:00:05 -t 00:00:05 -i video/infrared.mp4 -vf "fps=1,scale=240:-1:flags=lanczos,split[s0][s1];[s0]palettegen=stats_mode=single:max_colors=16[p];[s1][p]paletteuse=dither=floyd_steinberg" -gifflags +transdiff -loop 0 -final_delay 20 -y output_3mb.gif
+ffmpeg -ss 00:00:05 -t 00:00:05 -i video/infrared.mp4 -vf "fps=1,scale=240:\
+-1:flags=lanczos,split[s0][s1];[s0]palettegen=stats_mode=single:max_colors=16[p];\
+[s1][p]paletteuse=dither=floyd_steinberg" -gifflags +transdiff -loop 0 \
+-final_delay 20 -y output_3mb.gif
 ```
 
 | confusion_matrix | labels_correlogram |
