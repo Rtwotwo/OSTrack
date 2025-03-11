@@ -3,23 +3,32 @@ TODO: 使用YOLOv5进行无人机图像检测定位测试,
       数据集采用红外影像数据./datasets/test1
       进行分割重构数据集
 Time: 2025/03/07-Redal
-Warn: when the question occurred, ' raise NotImplementedError("cannot instantiate %r on your system"'
-      import pathlib
-      temp = pathlib.PosixPath
-      pathlib.PosixPath = pathlib.WindowsPath
 """
+import pathlib
+temp = pathlib.PosixPath
+pathlib.PosixPath = pathlib.WindowsPath
+
 import os
 import cv2
 import argparse
 import sys
 import torch
-from pathlib import Path
+import numpy as np
+import matplotlib.pyplot as plt
+from yolov5.models.experimental import attempt_load 
+from torchvision.transforms import transforms
+from yolov5.utils.general import non_max_suppression, scale_boxes
+from yolov5.utils.augmentations import letterbox
+
 os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 proj_path = os.getcwd()
 sys.path.append(os.path.join(proj_path, "yolov5"))
 sys.path.append(os.path.abspath(os.path.join(os.getcwd(), "..")))
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-from yolov5.models.experimental import attempt_load 
+yolo_transform = transforms.Compose([
+    transforms.ToTensor(),
+    transforms.Resize((640, 640)),
+    transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225]),])
 
 
 
@@ -107,12 +116,67 @@ def load_yolo(args):
     weights_fp = os.path.join(args.weights_dir, args.weights_file)
     print(f'Loading weights from {weights_fp} and yolov5 is {args.yolo_dir}')
     yolo_model = attempt_load(weights=weights_fp, device=device)
-    return yolo_model.to(device)
+    return yolo_model.eval()
     
+def plot_one_box(x, img, color=None, label=None, line_thickness=None):
+    """Plots one bounding box on image img."""
+    import random
+    tl = line_thickness or round(0.002 * (img.shape[0] + img.shape[1]) / 2) + 1  # line/font thickness
+    color = color or [random.randint(0, 255) for _ in range(3)]
+    c1, c2 = (int(x[0]), int(x[1])), (int(x[2]), int(x[3]))
+    cv2.rectangle(img, c1, c2, color, thickness=tl, lineType=cv2.LINE_AA)
+    if label:
+        tf = max(tl - 1, 1)  # font thickness
+        t_size = cv2.getTextSize(label, 0, fontScale=tl / 3, thickness=tf)[0]
+        c2 = c1[0] + t_size[0], c1[1] - t_size[1] - 3
+        cv2.rectangle(img, c1, c2, color, -1, cv2.LINE_AA)  # filled
+        cv2.putText(img, label, (c1[0], c1[1] - 2), 0, tl / 3, [225, 255, 255], thickness=tf, lineType=cv2.LINE_AA)
 
 
 ##############################  主函数测试分析  ###############################
 if __name__ == '__main__':
     args = config()
-    yolo_model = load_yolo(args)
-    print(yolo_model) 
+    model = load_yolo(args).to(device)
+
+    # 图像预处理
+    img0 = cv2.imread(r'assets\uav_1.jpg')  # 原始图像
+    img = letterbox(img0, new_shape=640)[0]  # 调整大小并填充
+    img = img[:, :, ::-1].transpose(2, 0, 1)  # BGR to RGB, to 3x416x416
+    img = np.ascontiguousarray(img)
+
+    # 推理
+    img = torch.from_numpy(img).to(device)
+    img = img.float()  # uint8 to fp32
+    img /= 255.0  # 归一化
+    if img.ndimension() == 3:
+        img = img.unsqueeze(0)  # 添加批次维度
+
+    with torch.no_grad():
+        pred = model(img)[0]
+
+    # 应用NMS
+    conf_thres = 0.25
+    iou_thres = 0.45
+    pred = non_max_suppression(pred, conf_thres, iou_thres)
+
+    # 后处理
+    for det in pred:  # 对每张图片的检测结果进行遍历
+        if len(det):
+            # 将预测框从img尺寸缩放回img0尺寸
+            det[:, :4] = scale_boxes(img.shape[2:], det[:, :4], img0.shape).round()
+
+            # 打印每个检测对象的信息
+            for *xyxy, conf, cls in reversed(det):
+                # xyxy包含的是边界框的左上角和右下角坐标，conf是置信度，cls是类别编号
+                label = f'{model.names[int(cls)]} {conf:.2f}'
+                print(f"Detected object: {label} at {xyxy}")
+
+                # 绘制边界框和标签
+                plot_one_box(xyxy, img0, label=label, color=(0, 255, 0), line_thickness=3)
+
+    # 显示处理后的图像
+    cv2.imwrite('detection_result.jpg', img0)
+    print("检测结果已保存为 detection_result.jpg")
+    # cv2.imshow('Detection Result', img0)
+    # cv2.waitKey(0)  # 等待按键关闭窗口
+    # cv2.destroyAllWindows()

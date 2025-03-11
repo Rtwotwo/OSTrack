@@ -144,27 +144,27 @@ if __name__ == '__main__':
     print(ostrack_model)
 
 
-    # template_img = Image.open('assets/uav_0.jpg')
-    # search_img = Image.open('assets/uav_3.jpg')
-    # template_img = template_transform(template_img).unsqueeze(0).to(device)
-    # search_img = search_transform(search_img).unsqueeze(0).to(device)
-    # results = ostrack_model(template_img, search_img)
-    # answer = results['pred_boxes'][0]
-    # bbox = answer.detach().cpu().numpy()[0]
-    # # depict the result
-    # search_img = cv2.imread('assets/uav_3.jpg')
-    # print(results, bbox)
-    # height, width, _ = search_img.shape
-    # x_min = int(bbox[0] * width)
-    # y_min = int(bbox[1] * height)
-    # x_max = int(bbox[2] * width)
-    # y_max = int(bbox[3] * height)
+    template_img = Image.open('assets/uav_0.jpg')
+    search_img = Image.open('assets/uav_3.jpg')
+    template_img = template_transform(template_img).unsqueeze(0).to(device)
+    search_img = search_transform(search_img).unsqueeze(0).to(device)
+    results = ostrack_model(template_img, search_img)
+    answer = results['pred_boxes'][0]
+    bbox = answer.detach().cpu().numpy()[0]
+    # depict the result
+    search_img = cv2.imread('assets/uav_3.jpg')
+    print(results, bbox)
+    height, width, _ = search_img.shape
+    x_min = int(bbox[0] * width)
+    y_min = int(bbox[1] * height)
+    x_max = int(bbox[2] * width)
+    y_max = int(bbox[3] * height)
 
-    # color = (255, 0, 0)  # 绿色
-    # thickness = 2
-    # cv2.rectangle(search_img, (x_min, y_min), (x_max, y_max), color, thickness)
-    # # 使用 matplotlib 显示图像
-    # plt.imshow(cv2.cvtColor(search_img, cv2.COLOR_BGR2RGB))
-    # plt.axis('off')  # 关闭坐标轴
-    # plt.show()
-    # cv2.imwrite('assets/uav_1_result.jpg', search_img)
+    color = (255, 0, 0)  # 绿色
+    thickness = 2
+    cv2.rectangle(search_img, (x_min, y_min), (x_max, y_max), color, thickness)
+    # 使用 matplotlib 显示图像
+    plt.imshow(cv2.cvtColor(search_img, cv2.COLOR_BGR2RGB))
+    plt.axis('off')  # 关闭坐标轴
+    plt.show()
+    cv2.imwrite('assets/uav_1_result.jpg', search_img)

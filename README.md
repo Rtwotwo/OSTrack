@@ -19,7 +19,7 @@ Now you can use utils.py to get the ostrack model and use it for training and te
 
 | CEBlock | Detection Head |
 | ------ | ------------- |
-| ![1](assets/ostrack_1.png) | ![2](assets/ostrack_5.jpg) |
+| ![1](assets/architecture/ostrack_1.jpg) | ![2](assets/architecture/ostrack_5.jpg) |
 
 ## 3.TODO
 
@@ -39,6 +39,7 @@ Now this is YOLOv5 model's  training results, consisting of confusion_matrix, la
 ```bash
 # the error is as follows:
 raise NotImplementedError("cannot instantiate %r on your system")
+NotImplementedError: cannot instantiate 'PosixPath' on your system
 
 # you can add the following code to the first line of the ./yolov5/utils/general.py file.
 import pathlib
