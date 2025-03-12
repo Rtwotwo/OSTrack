@@ -1,12 +1,17 @@
 """
 任务: 导入模型,创建GUI界面,实现对实时视频
       捕获或者视频导入的无人机定位
-时间: 2025/01/13-Redal
+时间: 2025/03/13-Redal
 """
+import pathlib
+temp = pathlib.PosixPath
+pathlib.PosixPath = pathlib.WindowsPath
+
 import os
 import sys
 import cv2 
 import threading
+import argparse
 import torch
 import tkinter as tk
 from tkinter import filedialog
@@ -15,10 +20,15 @@ from util import config
 from util import ComputeHistogramImage
 from util import CalculateSpectrogramImage
 from torchvision.transforms import transforms
+from yolov5.models.experimental import attempt_load
+from yolo_model import parser
+from yolo_model import load_yolo
+from bbox import decoder
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 current_path = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(current_path)
+os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 template_transform = transforms.Compose([
     transforms.ToTensor(),
     transforms.Resize((192, 192)),
@@ -46,10 +56,20 @@ class OSTrackGUI(tk.Frame):
         self.video_thread = None
         self.live_video_flag = False
         self.import_video_flag = False
+        self.track_video_flag = False
+        self.export_video_flag = False
         # 初始化模型
         self.ostrack = config()
         self.template_transform = template_transform
         self.sreach_transform = search_transform
+        self.args = parser()
+        self.yolo_model = load_yolo(self.args).to(device)
+        # 定义缓存变量
+        self.img_cached = []
+        self.fps = 0
+        self.frame_width, self.frame_height = 0, 0
+        self.fourcc = cv2.VideoWriter_fourcc('m', 'p', '4', 'v')
+        self.video_processed_dir = './video'
 
     def __set_widgets(self):
         self.root.title("OSTrack GUI-Redal")
@@ -115,6 +135,8 @@ class OSTrackGUI(tk.Frame):
                 self.video_cap.release()
             self.import_video_flag = True
             self.live_video_flag = False
+            self.track_video_flag = False
+            self.export_video_flag = False
             text = "导入视频: 导入用户自定义视频文件\n进行视频帧捕捉,再进行跟踪处理。\n注意: 退出此模式,请双击'退出导入'\n用户视频导入中......"
             self.message_label.config(text=text)
 
@@ -123,6 +145,13 @@ class OSTrackGUI(tk.Frame):
             self.video_thread = threading.Thread(target=self.__video_loop__)
             self.video_thread.daemon = True
             self.video_thread.start()
+            self.img_cached = [] # 每次导入清除缓存
+
+            file_name = os.path.basename(file_path)
+            self.fps = int(self.video_cap.get(cv2.CAP_PROP_FPS))
+            self.frame_height = int(self.video_cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+            self.frame_width = int(self.video_cap.get(cv2.CAP_PROP_FRAME_WIDTH))
+            self.video_processed_dir = os.path.join(self.video_processed_dir, f'processed_{file_name}')
     
     def __end_import_video__(self):
         """功能: 退出导入视频捕获"""
@@ -151,23 +180,48 @@ class OSTrackGUI(tk.Frame):
         """功能: 应用模型进行跟踪处理"""
         text = "视频跟踪: 对视频进行无人机跟踪\n并将无人机以边框的形势展示。\n无人机视频跟踪中......"
         self.message_label.config(text=text)
-        pass
+        self.track_video_flag = not self.track_video_flag
+        self.export_video_flag = False
 
     def __video_export__(self):
         """功能: 导出当前处理好的用户自定义的视频"""
         text = "视频导出: 对用户导入视频跟踪处理\n处理视频存放在processed文件夹。\n无人机视频导出中......"
         self.message_label.config(text=text)
-        pass
+        self.export_video_flag = not self.export_video_flag
+        if self.export_video_flag:
+            # 如果开启导出,初始化视频类
+            self.video_processed = cv2.VideoWriter(self.video_processed_dir, self.fourcc,
+                                     self.fps, (self.frame_width, self.frame_height))
+        if not self.export_video_flag:
+            self.video_processed.release()
+
 
     def __video_loop__(self):
         """程序主界面播放视频"""
         while self.is_running and self.video_cap.isOpened():
             success, frame = self.video_cap.read()
             if success:
+                # 实时调用电脑摄像头捕获
                 if self.live_video_flag:
                     self.frame = cv2.flip(cv2.resize( cv2.cvtColor(frame, 
                                 cv2.COLOR_BGR2RGB), (500, 400)) ,1)
-                else: self.frame = cv2.resize( cv2.cvtColor(frame, cv2.COLOR_BGR2RGB), (500, 400))
+                
+                # 调用用户自定义视频捕获
+                elif self.import_video_flag:
+                    self.frame = cv2.resize( cv2.cvtColor(frame, cv2.COLOR_BGR2RGB), 
+                                            (self.frame_width, self.frame_height))
+                    # 跟踪无人机
+                    if self.track_video_flag:
+                        self.frame = decoder(self.yolo_model, self.frame)
+
+                    # 导出无人机视频画面
+                    if self.export_video_flag:
+                        self.frame = cv2.resize( cv2.cvtColor(self.frame, cv2.COLOR_BGR2RGB),
+                                                (self.frame_width, self.frame_height))
+                        self.video_processed.write(self.frame)
+                        text ="视频跟踪: 对视频进行无人机跟踪\n并将无人机以边框的形势展示。\n无人机视频跟踪中......\n视频导出中......"
+                        self.message_label.config(text=text)
+
                 # 计算直方图以及频谱图并显示
                 hist_image = ComputeHistogramImage(cv2.cvtColor(self.frame, cv2.COLOR_BGR2RGB))
                 spec_image = CalculateSpectrogramImage(self.frame)

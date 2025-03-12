@@ -12,7 +12,7 @@ import argparse
 import numpy as np
 from PIL import Image, ImageDraw
 from torchvision.transforms import transforms
-from models.ostrack.ostrack import build_ostrack
+from model.ostrack.ostrack import build_ostrack
 import matplotlib.pyplot as plt
 
 current_path = os.path.abspath(os.path.dirname(__file__))

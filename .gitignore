@@ -11,3 +11,6 @@ datasets/
 
 # 忽略日志文件
 logs/
+
+# 忽略测试视频
+video/
