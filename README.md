@@ -67,10 +67,11 @@ ffmpeg -ss 00:00:05 -t 00:00:05 -i video/infrared.mp4 -vf "fps=1,scale=640:\
 
 | PR_curve | P_curve | R_curve |
 | ------ | ------------- | ------------- |
-| ![PR_curve](assets/results/PR_curve.png) | ![P_curve](assets/results/P_curve.png) | ![R_curve](assets/results/R_curve.png) |
+| ![PR_curve](assets/results/PR_curve.jpg) | ![P_curve](assets/results/P_curve.jpg) | ![R_curve](assets/results/R_curve.jpg) |
 
 Before training, the dataset architecture is shown below:
-![path](assets/results/paths.png)
+![loss curve](assets/results/results.jpg)
+![path](assets/results/paths.jpg)
 
 ## 5.Thanks
 

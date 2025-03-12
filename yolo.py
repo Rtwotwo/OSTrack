@@ -25,10 +25,6 @@ proj_path = os.getcwd()
 sys.path.append(os.path.join(proj_path, "yolov5"))
 sys.path.append(os.path.abspath(os.path.join(os.getcwd(), "..")))
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-yolo_transform = transforms.Compose([
-    transforms.ToTensor(),
-    transforms.Resize((640, 640)),
-    transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225]),])
 
 
 
