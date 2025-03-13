@@ -32,7 +32,7 @@ Now you can use utils.py to get the ostrack model and use it for training and te
 | ![template_image](assets/uav_1.jpg) | ![search_image](assets/uav_2.jpg) |
 | ![orig_video](assets/infrared_5.gif) | ![result](assets/processed_infrared_5.gif) |
 
-## 4.Results
+## 4.YOLO Results
 
 Now this is YOLOv5 model's  training results, consisting of confusion_matrix, labels_correlogram, F1_curve, labels and PR/P/R_curve. The training results of YOLOv5 are not included in this project.  Next, you'll deploy the s/m/l/x models of YOLOv5. When you encounter the following error in a Windows 10/11 system environment: raise NotImplementedError("cannot instantiate %r on your system"), you can add the following code to the first line of the ./yolov5/utils/general.py file.
 
@@ -47,7 +47,7 @@ temp = pathlib.PosixPath
 pathlib.PosixPath = pathlib.WindowsPath
 ```
 
-如果您想压缩无人机红外视频,您可以选择下面的命令来压缩视频为.gif格式.
+If you want to compress drone IR video, you can choose below command to compress video to .gif format. The training dataset of Yolov5 is reconstructed based on the Got_10k drone infrared dataset used by OSTrack. The purpose of using the Yolov5 model is to locate the coordinates of the first frame image of the drone, so as to provide coordinates for the template image and search image required for tracking by the Ostrack model later.
 
 ```bash
 ffmpeg -ss 00:00:05 -t 00:00:05 -i video/infrared.mp4 -vf "fps=1,scale=640:\
@@ -56,23 +56,55 @@ ffmpeg -ss 00:00:05 -t 00:00:05 -i video/infrared.mp4 -vf "fps=1,scale=640:\
 -final_delay 20 -y output_3mb.gif
 ```
 
-| confusion_matrix | labels_correlogram |
-| ------ | ------------- |
-| ![confusion_matrix](assets/results/confusion_matrix.jpg) | ![labels_correlogram](assets/results/labels_correlogram.jpg) |
+![confusion_matrix](assets/results/confusion_matrix.jpg)  
 
-| F1_curve | labels |
-| ------ | ------------- |
-| ![F1_curve](assets/results/F1_curve.jpg) | ![labels](assets/results/labels.jpg) |
+| labels | labels_correlogram |
+| ------------- | ------------- |
+| ![labels](assets/results/labels.jpg) | ![labels_correlogram](assets/results/labels_correlogram.jpg) |
 
-| PR_curve | P_curve | R_curve |
+| PR_curve | P_curve | R_curve | F1_score |
 | ------ | ------------- | ------------- |
-| ![PR_curve](assets/results/PR_curve.jpg) | ![P_curve](assets/results/P_curve.jpg) | ![R_curve](assets/results/R_curve.jpg) |
+| ![PR_curve](assets/results/PR_curve.jpg) | ![P_curve](assets/results/P_curve.jpg) | ![R_curve](assets/results/R_curve.jpg) | ![F1_curve](assets/results/F1_curve.jpg) |
 
-Before training, the dataset architecture is shown below:
+Before training, the dataset architecture is shown below. And the YOLOv5 s/m/l/x version model training results are shown below. This datasets consisting of 39965 training infrared images and 40355 valing infrared images.  The images directory are mainly about original infrared images and the labels dirrectory are mainly about the coordinates of the upper left corner of the bounding box (x, y) and the width and height of the bounding box (w, h).
+
+| train_batch | val_batch | val preds |
+| ------------- | ------------- | ------------- |
+|![train_batch](assets/results/train_batch0.jpg)| ![val_batch](assets/results/val_batch0_labels.jpg)|![val_preds](assets/results/val_batch0_pred.jpg)|
+
 ![loss curve](assets/results/results.jpg)
-![path](assets/results/paths.jpg)
 
-## 5.Thanks
+```bash
+# the yolov5 training dataset architecture is as follows.
+datasets
+    |
+    |____images
+    |       |
+    |       |____train
+    |       |       |____00000001.jpg
+    |       |       |____00000002.jpg
+    |       |       |____...
+    |       |____val
+    |               |____00000001.jpg
+    |               |____00000002.jpg
+    |               |____...
+    |____labels
+            |
+            |____train
+            |       |____00000001.txt
+            |       |____00000002.txt
+            |       |____...
+            |____val
+                    |____00000001.txt
+                    |____00000002.txt
+                    |____...
+```
+
+## 5.OSTrack Results
+
+The automatic annotation of Template Image and Search Image required by OSTrack, and then use Opencv to crop out the obtained drone center coordinates with 2 times and 5 times the size of the bounding box as Template Image and Search Image, respectively.
+
+## 6.Thanks
 
 ```bash
 # If you are interested in the original project, you can click on the link below.
