@@ -62,8 +62,8 @@ ffmpeg -ss 00:00:05 -t 00:00:05 -i video/infrared.mp4 -vf "fps=1,scale=640:\
 | ------------- | ------------- |
 | ![labels](assets/results/labels.jpg) | ![labels_correlogram](assets/results/labels_correlogram.jpg) |
 
-| PR_curve | P_curve | R_curve | F1_score |
-| ------ | ------------- | ------------- |
+| PR curve | P curve | R curve | F1 score |
+| ------ | ------------- | ------------- | ------------- |
 | ![PR_curve](assets/results/PR_curve.jpg) | ![P_curve](assets/results/P_curve.jpg) | ![R_curve](assets/results/R_curve.jpg) | ![F1_curve](assets/results/F1_curve.jpg) |
 
 Before training, the dataset architecture is shown below. And the YOLOv5 s/m/l/x version model training results are shown below. This datasets consisting of 39965 training infrared images and 40355 valing infrared images.  The images directory are mainly about original infrared images and the labels dirrectory are mainly about the coordinates of the upper left corner of the bounding box (x, y) and the width and height of the bounding box (w, h).
