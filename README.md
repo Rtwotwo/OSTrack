@@ -70,7 +70,7 @@ Before training, the dataset architecture is shown below. And the YOLOv5 s/m/l/x
 
 | train_batch | val_batch | val preds |
 | ------------- | ------------- | ------------- |
-|![train_batch](assets/results/train_batch0.jpg)| ![val_batch](assets/results/val_batch0_labels.jpg)|![val_preds](assets/results/val_batch0_pred.jpg)|
+|![train_batch](assets/results/train_batch2.jpg)| ![val_batch](assets/results/val_batch2_labels.jpg)|![val_preds](assets/results/val_batch2_pred.jpg)|
 
 ![loss curve](assets/results/results.jpg)
 
