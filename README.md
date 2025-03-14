@@ -111,4 +111,12 @@ The automatic annotation of Template Image and Search Image required by OSTrack,
 https://github.com/LY-1/MCJT
 ```
 
+If you need the pre-trained YOLOv5 infrared drone positioning model and OSTrack model weights, you can download it on Baidu Netdisk. The relevant download links are as follows:
+
+```bash
+# Files shared via online disk：ostrack
+link: https://pan.baidu.com/s/1lPM_ACRkc-g8WDkB0tw7EA?pwd=92fk 
+extraction code: 92fk
+```
+
 Meanwhile, it is declared that this project is the reproduction and improvement based on the work of [original author](https://github.com/LY-1/MCJT). We used a new self-made dataset for training and designed the GUI interface for deployment based on the trained model. Subsequently, we will also conduct actual operations to test the actual effect of the model. We are very grateful to the original author for his work. Of course, if you think our work based on this can attract you, please also give a little star.
