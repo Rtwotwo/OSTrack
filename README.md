@@ -104,6 +104,8 @@ datasets
 
 The automatic annotation of Template Image and Search Image required by OSTrack, and then use Opencv to crop out the obtained drone center coordinates with 2 times and 5 times the size of the bounding box as Template Image and Search Image, respectively.
 
+## Continuously updating
+
 ## 6.Thanks
 
 ```bash
