@@ -14,6 +14,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 
 
+###########################  用于YOLOv5模型解析输出  #############################################
 def plot_one_box(x, img, color=None, label=None, line_thickness=None):
       """Plots one bounding box on image img"""
       tl = line_thickness or round(0.002 * (img.shape[0] + img.shape[1]) / 2) + 1
@@ -57,3 +58,13 @@ def decoder(model, img0):
                         print(f"Detected object: {label} at {xyxy}")
                         plot_one_box(xyxy, img0, label=label, color=(0, 255, 0), line_thickness=3)
       return img0
+
+
+
+###########################  用于OSTrack模型规范输入  #############################################
+def ScaleClip(img, center, width, height, mode=None):
+      """ScaleClip is used to clip frame for template and search area
+      :param img: the frame image must consists of UAV pixels
+      :param center: the positioned uav image's coordinates
+      :param width: the width of the UAV bounding box
+      :param height: the height of the UAV bounding box"""
