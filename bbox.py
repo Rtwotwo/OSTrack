@@ -62,9 +62,33 @@ def decoder(model, img0):
 
 
 ###########################  用于OSTrack模型规范输入  #############################################
-def ScaleClip(img, center, width, height, mode=None):
+def ScaleClip(img, xyxy, mode=None):
       """ScaleClip is used to clip frame for template and search area
       :param img: the frame image must consists of UAV pixels
-      :param center: the positioned uav image's coordinates
-      :param width: the width of the UAV bounding box
-      :param height: the height of the UAV bounding box"""
+      :param xyxy: the up-left and down-right coordinates of the UAV bounding box"""
+      img_array = np.array(img)
+      width, height = xyxy[2] - xyxy[0], xyxy[3] - xyxy[1]
+      center = np.array([xyxy[0] + width / 2, xyxy[1] + height / 2])
+      scale_factor = {'template': 2, 'search': 5}.get(mode, 0)
+      scaled_width = int(scale_factor * width)
+      scaled_height = int(scale_factor * height)
+      # Calculate the cropping rectangle ensuring it does not exceed image boundaries.
+      top_left_x = max(int(center[0] - scaled_width / 2), 0)
+      top_left_y = max(int(center[1] - scaled_height / 2), 0)
+      bottom_right_x = min(int(center[0] + scaled_width / 2), img_array.shape[1])
+      bottom_right_y = min(int(center[1] + scaled_height / 2), img_array.shape[0])
+      # Clip the image
+      img_clipped = img_array[top_left_y:bottom_right_y, top_left_x:bottom_right_x, :]
+      return img_clipped
+
+
+
+#############################  主函数测试分析  #############################################
+if __name__ == '__main__':
+      img0 = cv2.imread('assets/uav_2.jpg')
+      img_templete = ScaleClip(img0, [150, 150, 250, 250], mode='template')
+      img_search = ScaleClip(img0, [150, 150, 250, 250], mode='search')
+      cv2.imshow('template', img_templete)
+      cv2.imshow('search', img_search)
+      cv2.waitKey(0)
+      cv2.destroyAllWindows()
