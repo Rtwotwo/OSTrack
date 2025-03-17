@@ -1,5 +1,8 @@
 """
-任务: 结合OSTrack和YOLOv5模型进行测试
+任务: 结合OSTrack和YOLOv5模型进行测试:
+      1. YOLOv5作为视频第一帧图像定位, OSTrack处理连续帧跟踪
+      2. YOLOv5与OSTrack模型结合,将视频每N帧分组处理
+      3. 测试YOLOv5与OSTrack的模型处理速度FPS
 时间: 2025/03/15-Redal
 """
 import pathlib

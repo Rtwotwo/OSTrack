@@ -1,10 +1,14 @@
-# __OSTrack__
+<p align="center">
+<img src="assets/OSTrack.jpg" alt="OSTrack">
+</p>
+
+# :rocket:__OSTrack__
 
 ![result](assets/bandicam.gif)
 
 OSTrack is an artificial intelligence technology for tracking and locking unmanned aerial vehicles based on the ViT deep network model. OSTrack is based on the Vision of Transformer deep learning model. For unmanned aerial vehicles moving at high speed in the near and far fields, it uses visual tracking to lock the position of the unmanned aerial vehicle in real-time video frames. The model mainly uses multiple initial anchor bounding boxes, obtains feature maps through feature extraction based on network input, and the position of the unmanned aerial vehicle is determined by the votes of the anchor boxes given by the network model. The trained network model has certain robustness to near and far fields, partial occlusion, and light changes.  
 
-## 1.Environment
+## 1.Environment :bulb:
 
 | Name | Version |   Name | Version |
 |------|---------|--------|---------|
@@ -12,7 +16,7 @@ OSTrack is an artificial intelligence technology for tracking and locking unmann
 | opencv-python | 4.9.0.80 |   Tkinter | 8.6 |
 | pillow | 10.2.0 | torchvision | 0.19.1 |
 
-## 2.Usage
+## 2.Usage :heart:
 
 Now you can use utils.py to get the ostrack model and use it for training and testing.the model architecture is shown below:  CEblock has 12 layers, and there is also a detection head with five layers behind it. However, in reality, the test input data of Ostrack requires template and search images. Only through manual annotation or automatic annotation can the specific location of the small - scale drone in the first - frame image of the video sequence, that is, the template image, be determined. While the search image doesn't need to be processed, and a normal sequence frame can be selected.
 
@@ -20,7 +24,7 @@ Now you can use utils.py to get the ostrack model and use it for training and te
 | ------ | ------------- |
 | ![1](assets/architecture/ostrack_1.jpg) | ![2](assets/architecture/ostrack_5.jpg) |
 
-## 3.TODO
+## 3.TODO :book:
 
 - [x] Finish the model configuration code and import the vit_base_384_model_ce model.
 - [x] Train an initial - frame localization model using YOLOv5 for the automatic annotation of templates.
@@ -32,7 +36,7 @@ Now you can use utils.py to get the ostrack model and use it for training and te
 | ![template_image](assets/uav_1.jpg) | ![search_image](assets/uav_2.jpg) |
 | ![orig_video](assets/infrared_5.gif) | ![result](assets/processed_infrared_5.gif) |
 
-## 4.YOLO Results
+## 4.YOLO Results :magnifying:
 
 Now this is YOLOv5 model's  training results, consisting of confusion_matrix, labels_correlogram, F1_curve, labels and PR/P/R_curve. The training results of YOLOv5 are not included in this project.  Next, you'll deploy the s/m/l/x models of YOLOv5. When you encounter the following error in a Windows 10/11 system environment: raise NotImplementedError("cannot instantiate %r on your system"), you can add the following code to the first line of the ./yolov5/utils/general.py file.
 
@@ -100,13 +104,13 @@ datasets
                     |____...
 ```
 
-## 5.OSTrack Results
+## 5.OSTrack Results :bulb:
 
 The automatic annotation of Template Image and Search Image required by OSTrack, and then use Opencv to crop out the obtained drone center coordinates with 2 times and 5 times the size of the bounding box as Template Image and Search Image, respectively.
 
 ## Continuously updating
 
-## 6.Thanks
+## 6.Thanks :heart:
 
 ```bash
 # If you are interested in the original project, you can click on the link below.
