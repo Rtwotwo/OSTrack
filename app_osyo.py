@@ -26,6 +26,7 @@ from yolov5.models.experimental import attempt_load
 from yolo_model import parser
 from yolo_model import load_yolo
 from bbox import decoder
+from bbox import ScaleClip
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 current_path = os.path.dirname(os.path.abspath(__file__))

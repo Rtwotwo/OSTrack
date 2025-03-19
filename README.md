@@ -106,9 +106,29 @@ datasets
 
 ## 5.OSTrack Results :bulb:
 
-The automatic annotation of Template Image and Search Image required by OSTrack, and then use Opencv to crop out the obtained drone center coordinates with 2 times and 5 times the size of the bounding box as Template Image and Search Image, respectively.
+The automatic annotation of Template Image and Search Image required by OSTrack, and then use Opencv to crop out the obtained drone center coordinates with 2 times and 5 times the size of the bounding box as Template Image and Search Image, respectively. The main purpose of using OSTrack is to eliminate the interference of infrared drone instance images by environmental background, and to reduce the positioning range of single frame images by using template and search methods to improve positioning accuracy and reduce the possibility of environmental interference, thereby greatly improving the tracking performance. The results of the OSTrack model are shown below.
 
-## Continuously updating
+```bash
+# this function is used to clip frame for template and search area
+def ScaleClip(img, xyxy, mode=None):
+      """ScaleClip is used to clip frame for template and search area
+      :param img: the frame image must consists of UAV pixels
+      :param xyxy: the up-left and down-right coordinates of the UAV bounding box"""
+      img_array = np.array(img)
+      width, height = xyxy[2] - xyxy[0], xyxy[3] - xyxy[1]
+      center = np.array([xyxy[0] + width / 2, xyxy[1] + height / 2])
+      scale_factor = {'template': 2, 'search': 5}.get(mode, 0)
+      scaled_width = int(scale_factor * width)
+      scaled_height = int(scale_factor * height)
+      # Calculate the cropping rectangle ensuring it does not exceed image boundaries.
+      top_left_x = max(int(center[0] - scaled_width / 2), 0)
+      top_left_y = max(int(center[1] - scaled_height / 2), 0)
+      bottom_right_x = min(int(center[0] + scaled_width / 2), img_array.shape[1])
+      bottom_right_y = min(int(center[1] + scaled_height / 2), img_array.shape[0])
+      # Clip the image
+      img_clipped = img_array[top_left_y:bottom_right_y, top_left_x:bottom_right_x, :]
+      return img_clipped
+```
 
 ## 6.Thanks :heart:
 
