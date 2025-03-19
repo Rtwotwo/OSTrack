@@ -16,7 +16,7 @@ OSTrack is an artificial intelligence technology for tracking and locking unmann
 | opencv-python | 4.9.0.80 |   Tkinter | 8.6 |
 | pillow | 10.2.0 | torchvision | 0.19.1 |
 
-## 2.Usage :heart:
+## 2.Usage :computer:
 
 Now you can use utils.py to get the ostrack model and use it for training and testing.the model architecture is shown below:  CEblock has 12 layers, and there is also a detection head with five layers behind it. However, in reality, the test input data of Ostrack requires template and search images. Only through manual annotation or automatic annotation can the specific location of the small - scale drone in the first - frame image of the video sequence, that is, the template image, be determined. While the search image doesn't need to be processed, and a normal sequence frame can be selected.
 
@@ -36,7 +36,7 @@ Now you can use utils.py to get the ostrack model and use it for training and te
 | ![template_image](assets/uav_1.jpg) | ![search_image](assets/uav_2.jpg) |
 | ![orig_video](assets/infrared_5.gif) | ![result](assets/processed_infrared_5.gif) |
 
-## 4.YOLO Results :magnifying:
+## 4.YOLO Results :football:
 
 Now this is YOLOv5 model's  training results, consisting of confusion_matrix, labels_correlogram, F1_curve, labels and PR/P/R_curve. The training results of YOLOv5 are not included in this project.  Next, you'll deploy the s/m/l/x models of YOLOv5. When you encounter the following error in a Windows 10/11 system environment: raise NotImplementedError("cannot instantiate %r on your system"), you can add the following code to the first line of the ./yolov5/utils/general.py file.
 
