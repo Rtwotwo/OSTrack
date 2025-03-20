@@ -130,6 +130,25 @@ def ScaleClip(img, xyxy, mode=None):
       return img_clipped
 ```
 
+After testing, the ostrack pretrained model offered by the [original author](https://github.com/LY-1/MCJT) has no effect on the tracking performance. And the testing code in app_osyo.py is as follows.  
+![pretrained model image](assets/ostrack_test0320.jpg)
+
+```bash
+ # 调用OSTrack模型测试
+self.xyxy = [xy.detach().cpu().numpy() for xy in self.xyxy]
+# 进行OSTrack模型裁剪,调用GPUs
+template_img = template_transform( ScaleClip(self.frame, self.xyxy, mode='template') ).unsqueeze(0).to(device)
+search_img = search_transform( ScaleClip(self.frame, self.xyxy, mode='search') ).unsqueeze(0).to(device)
+ostrack_results = self.ostrack(template_img, search_img)
+ostrack_results = ostrack_results['pred_boxes'][0]
+ostrack_results = ostrack_results.detach().cpu().numpy()[0]
+whwh = [int(ostrack_results[0]*self.frame_width), int(ostrack_results[1]*self.frame_height),
+        int(ostrack_results[2]*self.frame_width), int(ostrack_results[3]*self.frame_height)]
+cv2.rectangle(self.frame, (whwh[0], whwh[1]), (whwh[2], whwh[3]), (0, 0, 255), 2)
+print(f'the OSTrack results: {ostrack_results}')
+print('the yolov5 preds: ',type(self.xyxy), '\t', self.xyxy)
+```
+
 ## 6.Thanks :heart:
 
 ```bash
