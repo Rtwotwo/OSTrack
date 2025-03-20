@@ -52,6 +52,7 @@ class OSTrackGUI(tk.Frame):
         self.root = root
         self.__set_widgets()
         self.frame = None
+        self.last_frame = None
         self.xyxy = None # YOLOv5定位的坐上-右下坐标
         self.video_cap = cv2.VideoCapture(0)
 
@@ -199,6 +200,7 @@ class OSTrackGUI(tk.Frame):
 
     def __video_loop__(self):
         """程序主界面播放视频"""
+        _, self.last_frame = self.video_cap.read() # 读取第一帧
         while self.is_running and self.video_cap.isOpened():
             success, frame = self.video_cap.read()
             if success:
@@ -230,7 +232,7 @@ class OSTrackGUI(tk.Frame):
                         # 调用OSTrack模型测试
                         self.xyxy = [xy.detach().cpu().numpy() for xy in self.xyxy]
                         # 进行OSTrack模型裁剪,调用GPUs
-                        template_img = template_transform( ScaleClip(self.frame, self.xyxy, mode='template') ).unsqueeze(0).to(device)
+                        template_img = template_transform( ScaleClip(self.last_frame, self.xyxy, mode='template') ).unsqueeze(0).to(device)
                         search_img = search_transform( ScaleClip(self.frame, self.xyxy, mode='search') ).unsqueeze(0).to(device)
                         ostrack_results = self.ostrack(template_img, search_img)
                         ostrack_results = ostrack_results['pred_boxes'][0]
@@ -253,6 +255,7 @@ class OSTrackGUI(tk.Frame):
                 hist_image = ComputeHistogramImage(cv2.cvtColor(self.frame, cv2.COLOR_BGR2RGB))
                 spec_image = CalculateSpectrogramImage(self.frame)
                 self.__show_frame__(hist_image=hist_image, spec_image=spec_image)
+                self.last_frame = self.frame.copy() # 保存前一帧
             else:break   
             self.root.update_idletasks() 
 
