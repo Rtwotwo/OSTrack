@@ -131,7 +131,8 @@ def ScaleClip(img, xyxy, mode=None):
 ```
 
 After testing, the ostrack pretrained model offered by the [original author](https://github.com/LY-1/MCJT) has no effect on the tracking performance. And the testing code in app_osyo.py is as follows.  
-![pretrained model image](assets/ostrack_test0320.jpg)
+
+![pretrained model image](assets/ostrack_test0320.jpg)  
 
 ```bash
  # 调用OSTrack模型测试
