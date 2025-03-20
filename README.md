@@ -154,7 +154,7 @@ When using the software test, it was found that when the drone appeared in the b
 
 |   infrared uav case 1   |   infrared uav case 2   |
 |   -------------------   |   -------------------   |
-| ![case1](video/exception1.mp4) | ![case2](video/exception2.mp4) |
+| ![case1](assets/exception/exception1.gif) | ![case2](assets/exception/exception2.gif) |
 
 ## 6.Thanks :heart:
 
