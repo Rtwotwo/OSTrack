@@ -57,7 +57,8 @@ def decoder(model, img0):
                         label = f'{model.names[int(cls)]} {conf:.2f}'
                         print(f"Detected object: {label} at {xyxy}")
                         plot_one_box(xyxy, img0, label=label, color=(0, 255, 0), line_thickness=3)
-      return img0, xyxy
+      try:  return img0, xyxy
+      except: return img0, None
 
 
 

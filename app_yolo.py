@@ -121,6 +121,7 @@ class OSTrackGUI(tk.Frame):
         if self.video_cap is not None:
             self.video_cap.release()
         self.live_video_flag = False
+        self.export_video_flag = False
         self.video_cap = None
         self.video_thread = None
         # 恢复为初始状态
@@ -136,7 +137,6 @@ class OSTrackGUI(tk.Frame):
             self.import_video_flag = True
             self.live_video_flag = False
             self.track_video_flag = False
-            self.export_video_flag = False
             text = "导入视频: 导入用户自定义视频文件\n进行视频帧捕捉,再进行跟踪处理。\n注意: 退出此模式,请双击'退出导入'\n用户视频导入中......"
             self.message_label.config(text=text)
 
@@ -181,7 +181,6 @@ class OSTrackGUI(tk.Frame):
         text = "视频跟踪: 对视频进行无人机跟踪\n并将无人机以边框的形势展示。\n无人机视频跟踪中......"
         self.message_label.config(text=text)
         self.track_video_flag = not self.track_video_flag
-        self.export_video_flag = False
 
     def __video_export__(self):
         """功能: 导出当前处理好的用户自定义的视频"""
@@ -205,6 +204,16 @@ class OSTrackGUI(tk.Frame):
                 if self.live_video_flag:
                     self.frame = cv2.flip(cv2.resize( cv2.cvtColor(frame, 
                                 cv2.COLOR_BGR2RGB), (500, 400)) ,1)
+                    # 跟踪无人机
+                    if self.track_video_flag:
+                        self.frame, _ = decoder(self.yolo_model, self.frame)
+                    # 导出无人机视频画面
+                    if self.export_video_flag:
+                        self.frame = cv2.resize( cv2.cvtColor(self.frame, cv2.COLOR_BGR2RGB),
+                                                (self.frame_width, self.frame_height))
+                        self.video_processed.write(self.frame)
+                        text ="视频跟踪: 对视频进行无人机跟踪\n并将无人机以边框的形势展示。\n无人机视频跟踪中......\n视频导出中......"
+                        self.message_label.config(text=text)
                 
                 # 调用用户自定义视频捕获
                 elif self.import_video_flag:
@@ -212,7 +221,7 @@ class OSTrackGUI(tk.Frame):
                                             (self.frame_width, self.frame_height))
                     # 跟踪无人机
                     if self.track_video_flag:
-                        self.frame = decoder(self.yolo_model, self.frame)
+                        self.frame, _ = decoder(self.yolo_model, self.frame)
 
                     # 导出无人机视频画面
                     if self.export_video_flag:
@@ -226,7 +235,7 @@ class OSTrackGUI(tk.Frame):
                 hist_image = ComputeHistogramImage(cv2.cvtColor(self.frame, cv2.COLOR_BGR2RGB))
                 spec_image = CalculateSpectrogramImage(self.frame)
                 self.__show_frame__(hist_image=hist_image, spec_image=spec_image)
-            else:break   
+            else: break   
             self.root.update_idletasks() 
 
     def __show_frame__(self, hist_image=None, spec_image=None):

@@ -112,6 +112,12 @@ def load_config(args):
         config = yaml.safe_load(file)
     return config 
 
+class Params:
+    """Load retrained model parameters"""
+    def __init__(self, args):
+        self.checkpoint = os.path.join(args.weight_dir, args.weight_file)
+        self.debug = False
+        self.save_all_boxes = False
 
 def config():
     """make configurations about the vit model"""
@@ -124,16 +130,19 @@ def config():
     parser.add_argument('--weight_dir', default='./weights', type=str,
                         help='the directory of the weight file')
     parser.add_argument('--weight_file', default='vit_384_mae_ce.pth', type=str,
-                        help='the name of the weight file')
+                        help='the name of the weight file OSTrack_ep0060.pth.tar / vit_384_mae_ce.pth')
     args = parser.parse_args()
     # initialize the config and model weight
     cfg = load_config(args)
     ostrack_model = build_ostrack(cfg, training=False)
     weight_path = os.path.join(args.weight_dir, args.weight_file)
     ostrack_model.load_state_dict(torch.load(weight_path, map_location=device))
+
+    # params = Params(args)
+    # ostrack_model = build_ostrack(cfg, training=False)
+    # ostrack_model.load_state_dict(torch.load(params.checkpoint, map_location='cpu')['net'], strict=True)
     return ostrack_model
     
-
 
 
 ###############################  主函数测试分析  ################################ 
@@ -144,7 +153,7 @@ if __name__ == '__main__':
     print(ostrack_model)
 
 
-    template_img = Image.open('assets/uav_0.jpg')
+    template_img = Image.open('assets/uav_1.jpg')
     search_img = Image.open('assets/uav_3.jpg')
     template_img = template_transform(template_img).unsqueeze(0).to(device)
     search_img = search_transform(search_img).unsqueeze(0).to(device)
