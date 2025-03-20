@@ -130,7 +130,7 @@ def config():
     parser.add_argument('--weight_dir', default='./weights', type=str,
                         help='the directory of the weight file')
     parser.add_argument('--weight_file', default='vit_384_mae_ce.pth', type=str,
-                        help='the name of the weight file OSTrack_ep0060.pth.tar / vit_384_mae_ce.pth')
+                        help='the name of the weight file OSTrack_ep0061.pth / vit_384_mae_ce.pth')
     args = parser.parse_args()
     # initialize the config and model weight
     cfg = load_config(args)

@@ -206,7 +206,19 @@ class OSTrackGUI(tk.Frame):
                 if self.live_video_flag:
                     self.frame = cv2.flip(cv2.resize( cv2.cvtColor(frame, 
                                 cv2.COLOR_BGR2RGB), (500, 400)) ,1)
-                
+
+                    # 跟踪无人机: 结合yolov5和OSTrack模型定位跟踪
+                    if self.track_video_flag:
+                        self.frame, self.xyxy = decoder(self.yolo_model, self.frame)
+
+                    # 导出无人机视频画面
+                    if self.export_video_flag:
+                        self.frame = cv2.resize( cv2.cvtColor(self.frame, cv2.COLOR_BGR2RGB),
+                                                (self.frame_width, self.frame_height))
+                        self.video_processed.write(self.frame)
+                        text ="视频跟踪: 对视频进行无人机跟踪\n并将无人机以边框的形势展示。\n无人机视频跟踪中......\n视频导出中......"
+                        self.message_label.config(text=text)
+
                 # 调用用户自定义视频捕获
                 elif self.import_video_flag:
                     self.frame = cv2.resize( cv2.cvtColor(frame, cv2.COLOR_BGR2RGB), 
