@@ -52,6 +52,7 @@ class OSTrackGUI(tk.Frame):
         self.root = root
         self.__set_widgets()
         self.frame = None
+        self.xyxy = None # YOLOv5定位的坐上-右下坐标
         self.video_cap = cv2.VideoCapture(0)
 
         self.is_running = False
@@ -210,9 +211,23 @@ class OSTrackGUI(tk.Frame):
                 elif self.import_video_flag:
                     self.frame = cv2.resize( cv2.cvtColor(frame, cv2.COLOR_BGR2RGB), 
                                             (self.frame_width, self.frame_height))
-                    # 跟踪无人机
+                    # 跟踪无人机: 结合yolov5和OSTrack模型定位跟踪
                     if self.track_video_flag:
-                        self.frame = decoder(self.yolo_model, self.frame)
+                        self.frame, self.xyxy = decoder(self.yolo_model, self.frame)
+
+                        # 调用OSTrack模型测试
+                        self.xyxy = [xy.detach().cpu().numpy() for xy in self.xyxy]
+                        # 进行OSTrack模型裁剪,调用GPUs
+                        template_img = template_transform( ScaleClip(self.frame, self.xyxy, mode='template') ).unsqueeze(0).to(device)
+                        search_img = search_transform( ScaleClip(self.frame, self.xyxy, mode='search') ).unsqueeze(0).to(device)
+                        ostrack_results = self.ostrack(template_img, search_img)
+                        ostrack_results = ostrack_results['pred_boxes'][0]
+                        ostrack_results = ostrack_results.detach().cpu().numpy()[0]
+                        whwh = [int(ostrack_results[0]*self.frame_width), int(ostrack_results[1]*self.frame_height),
+                                int(ostrack_results[2]*self.frame_width), int(ostrack_results[3]*self.frame_height)]
+                        cv2.rectangle(self.frame, (whwh[0], whwh[1]), (whwh[2], whwh[3]), (0, 0, 255), 2)
+                        print(f'the OSTrack results: {ostrack_results}')
+                        print('the yolov5 preds: ',type(self.xyxy), '\t', self.xyxy)
 
                     # 导出无人机视频画面
                     if self.export_video_flag:

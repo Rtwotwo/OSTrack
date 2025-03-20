@@ -57,7 +57,7 @@ def decoder(model, img0):
                         label = f'{model.names[int(cls)]} {conf:.2f}'
                         print(f"Detected object: {label} at {xyxy}")
                         plot_one_box(xyxy, img0, label=label, color=(0, 255, 0), line_thickness=3)
-      return img0
+      return img0, xyxy
 
 
 
@@ -86,9 +86,9 @@ def ScaleClip(img, xyxy, mode=None):
 #############################  主函数测试分析  #############################################
 if __name__ == '__main__':
       img0 = cv2.imread('assets/uav_2.jpg')
-      img_templete = ScaleClip(img0, [150, 150, 250, 250], mode='template')
-      img_search = ScaleClip(img0, [150, 150, 250, 250], mode='search')
-      cv2.imshow('template', img_templete)
-      cv2.imshow('search', img_search)
+      # img_templete = ScaleClip(img0, [150, 150, 250, 250], mode='template')
+      # img_search = ScaleClip(img0, [150, 150, 250, 250], mode='search')
+      # cv2.imshow('template', img_templete)
+      # cv2.imshow('search', img_search)
       cv2.waitKey(0)
       cv2.destroyAllWindows()
