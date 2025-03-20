@@ -150,6 +150,12 @@ print(f'the OSTrack results: {ostrack_results}')
 print('the yolov5 preds: ',type(self.xyxy), '\t', self.xyxy)
 ```
 
+When using the software test, it was found that when the drone appeared in the background to generate strong infrared light, it could not perform the normal location tracking task normally. For example, in the following two cases, there was a short-term drone tracking loss. Therefore, we consider using the YOLOv5 + OSTrack model, combined with the excellent positioning ability of the YOLOv5 model and the powerful continuous frame tracking ability of OSTrack, so as to achieve better location tracking effect.  
+
+|   infrared uav case 1   |   infrared uav case 2   |
+|   -------------------   |   -------------------   |
+| ![case1](video/exception1.mp4) | ![case2](video/exception2.mp4) |
+
 ## 6.Thanks :heart:
 
 ```bash
