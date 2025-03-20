@@ -20,6 +20,16 @@ OSTrack is an artificial intelligence technology for tracking and locking unmann
 
 Now you can use utils.py to get the ostrack model and use it for training and testing.the model architecture is shown below:  CEblock has 12 layers, and there is also a detection head with five layers behind it. However, in reality, the test input data of Ostrack requires template and search images. Only through manual annotation or automatic annotation can the specific location of the small - scale drone in the first - frame image of the video sequence, that is, the template image, be determined. While the search image doesn't need to be processed, and a normal sequence frame can be selected.
 
+```bash
+# if you want to use the yolo model
+# you can use the following command
+python app_yolo.py
+
+# if you want to use the ostrack model
+# you can use the following command
+python app_osyo.py
+```
+
 | CEBlock | Detection Head |
 | ------ | ------------- |
 | ![1](assets/architecture/ostrack_1.jpg) | ![2](assets/architecture/ostrack_5.jpg) |
