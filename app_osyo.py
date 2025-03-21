@@ -1,9 +1,7 @@
 """
-任务: 结合OSTrack和YOLOv5模型进行测试:
-      1. YOLOv5作为视频第一帧图像定位, OSTrack处理连续帧跟踪
-      2. YOLOv5与OSTrack模型结合,将视频每N帧分组处理
-      3. 测试YOLOv5与OSTrack的模型处理速度FPS
-时间: 2025/03/15-Redal
+任务: 导入模型,创建GUI界面,实现对实时视频
+      捕获或者视频导入的无人机定位
+时间: 2025/03/13-Redal
 """
 import pathlib
 temp = pathlib.PosixPath
@@ -26,7 +24,6 @@ from yolov5.models.experimental import attempt_load
 from yolo_model import parser
 from yolo_model import load_yolo
 from bbox import decoder
-from bbox import ScaleClip
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 current_path = os.path.dirname(os.path.abspath(__file__))
@@ -52,8 +49,9 @@ class OSTrackGUI(tk.Frame):
         self.root = root
         self.__set_widgets()
         self.frame = None
-        self.last_frame = None
-        self.xyxy = None # YOLOv5定位的坐上-右下坐标
+        self.last_xyxy = None
+        self.dx, self.dy = 0, 0
+        self.lost_frame_num = 0
         self.video_cap = cv2.VideoCapture(0)
 
         self.is_running = False
@@ -64,11 +62,13 @@ class OSTrackGUI(tk.Frame):
         self.track_video_flag = False
         self.export_video_flag = False
         # 初始化模型
-        self.ostrack = config().to(device).eval()
+        self.ostrack = config()
         self.template_transform = template_transform
         self.sreach_transform = search_transform
         self.args = parser()
         self.yolo_model = load_yolo(self.args).to(device)
+        # 定义缓存变量
+        self.img_cached = []
         self.fps = 0
         self.frame_width, self.frame_height = 0, 0
         self.fourcc = cv2.VideoWriter_fourcc('m', 'p', '4', 'v')
@@ -124,6 +124,7 @@ class OSTrackGUI(tk.Frame):
         if self.video_cap is not None:
             self.video_cap.release()
         self.live_video_flag = False
+        self.export_video_flag = False
         self.video_cap = None
         self.video_thread = None
         # 恢复为初始状态
@@ -139,7 +140,6 @@ class OSTrackGUI(tk.Frame):
             self.import_video_flag = True
             self.live_video_flag = False
             self.track_video_flag = False
-            self.export_video_flag = False
             text = "导入视频: 导入用户自定义视频文件\n进行视频帧捕捉,再进行跟踪处理。\n注意: 退出此模式,请双击'退出导入'\n用户视频导入中......"
             self.message_label.config(text=text)
 
@@ -148,6 +148,7 @@ class OSTrackGUI(tk.Frame):
             self.video_thread = threading.Thread(target=self.__video_loop__)
             self.video_thread.daemon = True
             self.video_thread.start()
+            self.img_cached = [] # 每次导入清除缓存
 
             file_name = os.path.basename(file_path)
             self.fps = int(self.video_cap.get(cv2.CAP_PROP_FPS))
@@ -183,7 +184,6 @@ class OSTrackGUI(tk.Frame):
         text = "视频跟踪: 对视频进行无人机跟踪\n并将无人机以边框的形势展示。\n无人机视频跟踪中......"
         self.message_label.config(text=text)
         self.track_video_flag = not self.track_video_flag
-        self.export_video_flag = False
 
     def __video_export__(self):
         """功能: 导出当前处理好的用户自定义的视频"""
@@ -200,7 +200,6 @@ class OSTrackGUI(tk.Frame):
 
     def __video_loop__(self):
         """程序主界面播放视频"""
-        _, self.last_frame = self.video_cap.read() # 读取第一帧
         while self.is_running and self.video_cap.isOpened():
             success, frame = self.video_cap.read()
             if success:
@@ -208,11 +207,9 @@ class OSTrackGUI(tk.Frame):
                 if self.live_video_flag:
                     self.frame = cv2.flip(cv2.resize( cv2.cvtColor(frame, 
                                 cv2.COLOR_BGR2RGB), (500, 400)) ,1)
-
-                    # 跟踪无人机: 结合yolov5和OSTrack模型定位跟踪
+                    # 跟踪无人机
                     if self.track_video_flag:
-                        self.frame, self.xyxy = decoder(self.yolo_model, self.frame)
-
+                        self.frame, _ = decoder(self.yolo_model, self.frame)
                     # 导出无人机视频画面
                     if self.export_video_flag:
                         self.frame = cv2.resize( cv2.cvtColor(self.frame, cv2.COLOR_BGR2RGB),
@@ -220,29 +217,31 @@ class OSTrackGUI(tk.Frame):
                         self.video_processed.write(self.frame)
                         text ="视频跟踪: 对视频进行无人机跟踪\n并将无人机以边框的形势展示。\n无人机视频跟踪中......\n视频导出中......"
                         self.message_label.config(text=text)
-
+                
                 # 调用用户自定义视频捕获
                 elif self.import_video_flag:
                     self.frame = cv2.resize( cv2.cvtColor(frame, cv2.COLOR_BGR2RGB), 
                                             (self.frame_width, self.frame_height))
-                    # 跟踪无人机: 结合yolov5和OSTrack模型定位跟踪
+                    # 跟踪无人机
                     if self.track_video_flag:
                         self.frame, self.xyxy = decoder(self.yolo_model, self.frame)
-
-                        # # 调用OSTrack模型测试
-                        # self.xyxy = [xy.detach().cpu().numpy() for xy in self.xyxy]
-                        # # 进行OSTrack模型裁剪,调用GPUs
-                        # template_img = template_transform( ScaleClip(self.last_frame, self.xyxy, mode='template') ).unsqueeze(0).to(device)
-                        # search_img = search_transform( ScaleClip(self.frame, self.xyxy, mode='search') ).unsqueeze(0).to(device)
-                        # ostrack_results = self.ostrack(template_img, search_img)
-                        # ostrack_results = ostrack_results['pred_boxes'][0]
-                        # ostrack_results = ostrack_results.detach().cpu().numpy()[0]
-                        # whwh = [int(ostrack_results[0]*self.frame_width), int(ostrack_results[1]*self.frame_height),
-                        #         int(ostrack_results[2]*self.frame_width), int(ostrack_results[3]*self.frame_height)]
-                        # cv2.rectangle(self.frame, (whwh[0], whwh[1]), (whwh[2], whwh[3]), (0, 0, 255), 2)
-                        # print(f'the OSTrack results: {ostrack_results}')
-                        # print('the yolov5 preds: ',type(self.xyxy), '\t', self.xyxy)
-
+                        # if self.xyxy is not None:
+                        #     self.lost_frame_num = 0
+                        #     if self.last_xyxy is not None:
+                        #         # 计算差值
+                        #         self.dx = self.last_xyxy[0] - self.xyxy[0]
+                        #         self.dy = self.last_xyxy[1] - self.xyxy[1]
+                        #     self.last_xyxy = self.xyxy
+                        # if self.xyxy is None: 
+                        #     self.lost_frame_num += 1
+                        #     # 确保坐标为整数
+                        #     pt1 = (int(self.last_xyxy[0] + self.dx*self.lost_frame_num), int(self.last_xyxy[1] + self.dy*self.lost_frame_num))
+                        #     pt2 = (int(self.last_xyxy[2] + self.dx*self.lost_frame_num), int(self.last_xyxy[3] + self.dy*self.lost_frame_num))
+                        #     cv2.rectangle(self.frame, pt1, pt2, (0, 255, 0), -1, cv2.LINE_AA)
+                        #     # 动态计算tl的值
+                        #     tl = round(0.002 * (self.frame.shape[0] + self.frame.shape[1]) / 2) + 1 if round(0.002 * (self.frame.shape[0] + self.frame.shape[1]) / 2) + 1 > 3 else 3
+                        #     tf = max(tl - 1, 1)
+                        #     cv2.putText(self.frame, f'drone: 0.9', (int(self.last_xyxy[0]), int(self.last_xyxy[1]) - 2), 0, tl / 3, [225, 255, 255], thickness=tf, lineType=cv2.LINE_AA)
                     # 导出无人机视频画面
                     if self.export_video_flag:
                         self.frame = cv2.resize( cv2.cvtColor(self.frame, cv2.COLOR_BGR2RGB),
@@ -255,8 +254,7 @@ class OSTrackGUI(tk.Frame):
                 hist_image = ComputeHistogramImage(cv2.cvtColor(self.frame, cv2.COLOR_BGR2RGB))
                 spec_image = CalculateSpectrogramImage(self.frame)
                 self.__show_frame__(hist_image=hist_image, spec_image=spec_image)
-                self.last_frame = self.frame.copy() # 保存前一帧
-            else:break   
+            else: break   
             self.root.update_idletasks() 
 
     def __show_frame__(self, hist_image=None, spec_image=None):
