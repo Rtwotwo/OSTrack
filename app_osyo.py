@@ -62,7 +62,7 @@ class OSTrackGUI(tk.Frame):
         self.track_video_flag = False
         self.export_video_flag = False
         # 初始化模型
-        self.ostrack = config()
+        # self.ostrack = config()
         self.template_transform = template_transform
         self.sreach_transform = search_transform
         self.args = parser()
